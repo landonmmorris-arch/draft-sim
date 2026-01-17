@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(~/.bun/bin/bunx tsc:*)",
+      "WebFetch(domain:www.espn.com)",
+      "WebFetch(domain:www.tankathon.com)",
+      "WebSearch"
+    ]
+  }
+}
