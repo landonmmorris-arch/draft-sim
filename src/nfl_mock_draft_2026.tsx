@@ -1822,6 +1822,8 @@ const NFLMockDraft = () => {
             </div>
           </div>
         </div>
+        {/* NFL Draft Theme Audio - must be available in setup state */}
+        <audio ref={draftAudioRef} src="/nfl-draft-theme.mp3" preload="auto" />
       </div>
     );
   }
