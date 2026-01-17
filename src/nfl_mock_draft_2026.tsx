@@ -2633,7 +2633,7 @@ const NFLMockDraft = () => {
         </div>
 
         {/* NFL Draft Theme Audio */}
-        <audio ref={draftAudioRef} src="/nfl-draft (1).mp3" preload="auto" />
+        <audio ref={draftAudioRef} src="/nfl-draft-theme.mp3" preload="auto" />
       </div>
     </div>
   );

@@ -4,7 +4,12 @@
       "Bash(~/.bun/bin/bunx tsc:*)",
       "WebFetch(domain:www.espn.com)",
       "WebFetch(domain:www.tankathon.com)",
-      "WebSearch"
+      "WebSearch",
+      "WebFetch(domain:draft-sim-2026.vercel.app)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git rm:*)"
     ]
   }
 }
