@@ -2132,10 +2132,10 @@ const NFLMockDraft = () => {
                         <p className="text-gray-300 text-sm">
                           {tradeMode === 'up' ? (
                             option.useFuturePicks ? (
-                              <>You give: {option.additionalPicks.map((p: DraftPick) => `${p.year} R${p.round}`).join(', ')}</>
+                              <>You give: {option.additionalPicks.map((p: DraftPick) => formatPickDisplay(p.round, p.year, p.fromTeam)).join(', ')}</>
                             ) : (
                               <>You give: Pick #{option.userPickInRound}
-                                {option.additionalPicks.length > 0 && ` + ${option.additionalPicks.map((p: DraftPick) => `${p.year} R${p.round}`).join(', ')}`}
+                                {option.additionalPicks.length > 0 && ` + ${option.additionalPicks.map((p: DraftPick) => formatPickDisplay(p.round, p.year, p.fromTeam)).join(', ')}`}
                               </>
                             )
                           ) : (
