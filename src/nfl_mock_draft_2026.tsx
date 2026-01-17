@@ -2460,8 +2460,7 @@ const NFLMockDraft = () => {
                           onClick={() => toggleCustomGivePick(p, i)}
                           className={`p-2 rounded-lg text-sm ${isSelected ? 'bg-red-600 text-white' : 'bg-white/10 text-gray-300 hover:bg-white/20'}`}
                         >
-                          {p.year} R{p.round}
-                          {p.fromTeam && <span className="text-xs block">({p.fromTeam.split(' ').pop()})</span>}
+                          {formatPickDisplay(p.round, p.year, p.fromTeam)}
                         </button>
                       );
                     })}
@@ -2486,8 +2485,7 @@ const NFLMockDraft = () => {
                           onClick={() => toggleCustomReceivePick(p, i)}
                           className={`p-2 rounded-lg text-sm ${isSelected ? 'bg-green-600 text-white' : 'bg-white/10 text-gray-300 hover:bg-white/20'}`}
                         >
-                          {p.year} R{p.round}
-                          {p.fromTeam && <span className="text-xs block">({p.fromTeam.split(' ').pop()})</span>}
+                          {formatPickDisplay(p.round, p.year, p.fromTeam)}
                         </button>
                       );
                     })}
