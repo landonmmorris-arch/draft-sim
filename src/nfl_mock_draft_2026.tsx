@@ -74,7 +74,7 @@ const NFLMockDraft = () => {
     'Buffalo Bills': ['WR', 'EDGE', 'DT', 'OT', 'RB'],
     'San Francisco 49ers': ['OT', 'EDGE', 'CB', 'DT', 'S'],
     'Houston Texans': ['EDGE', 'CB', 'OT', 'DT', 'WR'],
-    'New England Patriots': ['QB', 'WR', 'OT', 'EDGE', 'CB'],
+    'New England Patriots': ['WR', 'EDGE', 'OT', 'LB', 'DT'],
     'Denver Broncos': ['EDGE', 'OT', 'CB', 'DT', 'WR'],
     'Seattle Seahawks': ['OT', 'EDGE', 'DT', 'LB', 'CB']
   };
@@ -253,300 +253,300 @@ const NFLMockDraft = () => {
       // User's Top 50 from NFL Draft 2026.txt
       { name: 'Fernando Mendoza', position: 'QB', school: 'Indiana', grade: 98, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4837248.png', analysis: 'Elite QB prospect with exceptional arm talent and field vision. Mendoza displays NFL-level accuracy on all levels of the field and shows impressive poise in the pocket. His ability to process defenses quickly and make quick decisions makes him a Day 1 starter candidate. NFL Comparison: Joe Burrow - elite processor with deadly accuracy.' },
       { name: 'Arvell Reese', position: 'LB', school: 'Ohio State', grade: 97.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4950400.png', analysis: 'Dynamic linebacker with sideline-to-sideline speed and exceptional instincts. Reese excels in coverage and shows the versatility to rush the passer. His high football IQ and leadership qualities make him a three-down linebacker at the next level. NFL Comparison: Roquan Smith - versatile playmaker who impacts every phase.' },
-      { name: 'Caleb Downs', position: 'S', school: 'Ohio State', grade: 97, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870706.png', analysis: 'Premium safety prospect with rare range and ball skills. Downs combines elite athleticism with excellent football instincts. His versatility allows him to play both deep safety and in the box, making him scheme-diverse and a potential All-Pro caliber player. NFL Comparison: Derwin James - do-it-all safety with Pro Bowl upside.' },
-      { name: 'David Bailey', position: 'EDGE', school: 'Texas Tech', grade: 96.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685248.png', analysis: 'Elite pass rusher with rare blend of speed and power. Bailey showcases exceptional get-off and bend around the edge. His relentless motor and array of pass-rush moves make him a game-changing presence off the edge. NFL Comparison: Myles Garrett - explosive athlete with dominant pass-rush ability.' },
-      { name: 'Rueben Bain Jr.', position: 'EDGE', school: 'Miami', grade: 96, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870618.png', analysis: 'Explosive edge defender with natural pass-rush instincts and exceptional athleticism. Bain excels at converting speed to power and shows advanced hand usage for his experience level. Projects as an impact starter from day one. NFL Comparison: Nick Bosa - technically refined with relentless motor.' },
-      { name: 'Jordyn Tyson', position: 'WR', school: 'Arizona State', grade: 95.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4880281.png', analysis: 'Dynamic playmaker with elite route-running ability and exceptional ball tracking. Tyson creates separation at all levels and shows strong hands in traffic. His versatility to line up anywhere makes him a matchup nightmare. NFL Comparison: CeeDee Lamb - polished route runner with exceptional playmaking ability.' },
-      { name: 'Carnell Tate', position: 'WR', school: 'Ohio State', grade: 95, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4871023.png', analysis: 'Smooth receiver with outstanding body control and reliable hands. Tate runs crisp routes and shows excellent awareness in zone coverage. His size-speed combination and competitive nature make him a complete receiver prospect. NFL Comparison: Chris Olave - smooth technician with reliable hands and route precision.' },
-      { name: 'Mansoor Delane', position: 'CB', school: 'LSU', grade: 94.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4880124.png', analysis: 'Lockdown corner with excellent length and fluid hips. Delane mirrors receivers in man coverage and shows great anticipation in zone. His physicality at the line and ball skills make him a true CB1 prospect. NFL Comparison: Jalen Ramsey - physical lockdown corner with elite ball skills.' },
-      { name: 'Peter Woods', position: 'DT', school: 'Clemson', grade: 94, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4871063.png', analysis: 'Dominant interior presence with exceptional strength and quickness. Woods consistently wins one-on-ones and shows the ability to collapse the pocket. His motor never stops and he impacts both run and pass defense. NFL Comparison: Quinnen Williams - disruptive interior force with rare quickness.' },
-      { name: 'Jeremiyah Love', position: 'RB', school: 'Notre Dame', grade: 93.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870808.png', analysis: 'Electric runner with home-run speed and excellent vision. Love shows patience behind blockers and burst through gaps. His receiving ability out of the backfield adds another dimension to his game as a true three-down back. NFL Comparison: Jahmyr Gibbs - explosive playmaker with three-down capability.' },
-      { name: 'Spencer Fano', position: 'OT', school: 'Utah', grade: 93, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870723.png', analysis: 'Massive tackle with excellent footwork and power at the point of attack. Fano anchors well against bull rushes and shows surprising agility for his size. His technique and consistency make him a safe pick who can start immediately. NFL Comparison: Lane Johnson - athletic mauler with excellent technique.' },
-      { name: 'Jermod McCoy', position: 'CB', school: 'Tennessee', grade: 92.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5157289.png', analysis: 'Instinctive cornerback with excellent ball production and tight coverage skills. McCoy shows great anticipation to jump routes and close speed to recover. His aggressive style and playmaking ability make him a valuable asset in any secondary. NFL Comparison: Trevon Diggs - ball-hawking corner with big-play ability.' },
-      { name: 'Francis Mauigoa', position: 'OT', school: 'Miami', grade: 92, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870914.png', analysis: 'Athletic tackle with impressive movement skills and strength. Mauigoa excels in pass protection with quick hands and solid technique. His upside is through the roof as he continues to develop his craft and add strength. NFL Comparison: Tristan Wirfs - athletic tackle with elite upside.' },
-      { name: 'Makai Lemon', position: 'WR', school: 'USC', grade: 91.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870795.png', analysis: 'Big-bodied receiver with excellent catch radius and contested-catch ability. Lemon uses his size well to box out defenders and makes tough grabs look routine. His red zone presence and physicality add immediate value. NFL Comparison: Mike Evans - physical red zone weapon with strong hands.' },
-      { name: 'Avieon Terrell', position: 'CB', school: 'Clemson', grade: 91, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870988.png', analysis: 'Versatile defensive back with elite speed and coverage skills. Terrell shows the ability to match up against any receiver type and excels in press-man coverage. His awareness and ball skills translate to consistent playmaking ability. NFL Comparison: Sauce Gardner - press-man specialist with elite coverage ability.' },
-      { name: 'Sonny Styles', position: 'LB', school: 'Ohio State', grade: 90.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5081807.png', analysis: 'Versatile defender who can play multiple positions in the secondary and at linebacker. Styles brings physicality and range, excelling against both run and pass. His football intelligence and leadership make him a defensive captain type. NFL Comparison: Isaiah Simmons - positionless defender with rare versatility.' },
-      { name: 'Keldric Faulk', position: 'EDGE', school: 'Auburn', grade: 90, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870707.png', analysis: 'Explosive edge rusher with quick first step and violent hands. Faulk shows the ability to win with speed or power and has developed a nice array of counter moves. His relentless effort and motor make him a consistent disruptor. NFL Comparison: Brian Burns - quick-twitch edge with relentless motor.' },
-      { name: 'Cashius Howell', position: 'EDGE', school: 'Texas A&M', grade: 89.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4710752.png', analysis: 'Powerful edge defender with exceptional length and strength. Howell sets a strong edge against the run and shows improving pass-rush skills. His high upside and physicality make him an intriguing developmental prospect. NFL Comparison: Montez Sweat - long, athletic edge with developing pass-rush arsenal.' },
-      { name: 'Caleb Banks', position: 'DT', school: 'Florida', grade: 89, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4602019.png', analysis: 'Powerful interior lineman with exceptional strength and a non-stop motor. Banks clogs running lanes and pushes the pocket consistently. His size and physicality make him a force in the trenches who can anchor a defensive line. NFL Comparison: Vita Vea - massive run-stuffer with interior power.' },
-      { name: 'Kayden McDonald', position: 'DT', school: 'Ohio State', grade: 88.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870893.png', analysis: 'Athletic defensive tackle with quickness off the snap and solid technique. McDonald shows good gap penetration and pursuit. His combination of size and agility makes him a disruptive force in both run and pass defense. NFL Comparison: Dexter Lawrence - athletic interior force with gap penetration.' },
-      { name: 'KC Concepcion', position: 'WR', school: 'Texas A&M', grade: 88, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870653.png', analysis: 'Explosive playmaker with exceptional speed and yards-after-catch ability. Concepcion creates separation vertically and shows great hands. His big-play ability and route versatility make him a dangerous weapon at all levels. NFL Comparison: Tyreek Hill - game-breaking speed with big-play ability.' },
-      { name: 'Olaivavega Ioane', position: 'OG', school: 'Penn State', grade: 87.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4832793.png', analysis: 'Massive guard with road-grading ability in the run game. Ioane shows impressive power at the point of attack and solid anchor in pass protection. His physicality and mean streak make him an ideal interior run blocker. NFL Comparison: Zack Martin - powerful run blocker with elite technique.' },
-      { name: 'Akheem Mesidor', position: 'EDGE', school: 'Miami', grade: 87, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4429190.png', analysis: 'Experienced edge rusher with power and relentless effort. Mesidor wins with bull rushes and shows improving pass-rush moves. His consistency and production make him a reliable starter at the next level. NFL Comparison: Josh Sweat - productive edge with power and effort.' },
-      { name: 'Denzel Boston', position: 'WR', school: 'Washington', grade: 86.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4832800.png', analysis: 'Reliable receiver with excellent hands and route precision. Boston consistently gets open and makes contested catches. His football IQ and dependability make him a trusted target in crucial situations. NFL Comparison: Keenan Allen - reliable possession receiver with great hands.' },
-      { name: 'Ty Simpson', position: 'QB', school: 'Alabama', grade: 86, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685522.png', analysis: 'Mobile quarterback with strong arm and good decision-making. Simpson shows poise under pressure and ability to make plays with his legs. His dual-threat capability and leadership traits make him an intriguing developmental QB. NFL Comparison: Jalen Hurts - dual-threat QB with leadership intangibles.' },
-      { name: 'Kenyon Sadiq', position: 'TE', school: 'Oregon', grade: 85.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5083315.png', analysis: 'Athletic tight end with excellent receiving skills and soft hands. Sadiq creates mismatches in the passing game and shows solid blocking fundamentals. His versatility and upside make him a modern pass-catching TE prospect. NFL Comparison: David Njoku - athletic receiving TE with upside.' },
-      { name: 'Caleb Lomu', position: 'OT', school: 'Utah', grade: 85, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4921438.png', analysis: 'Massive tackle with elite length and strength. Lomu dominates at the point of attack in the run game and shows steady improvement in pass protection. His physical tools and technique make him a high-floor starter. NFL Comparison: Penei Sewell - powerful tackle with elite physical tools.' },
-      { name: 'Kadyn Proctor', position: 'OT', school: 'Alabama', grade: 84.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870976.png', analysis: 'Highly-touted tackle with impressive athleticism and footwork. Proctor shows smooth movement in space and solid anchor. His upside is significant as he continues developing his craft at the highest level of competition. NFL Comparison: Evan Neal - high-ceiling tackle with elite traits.' },
-      { name: 'CJ Allen', position: 'LB', school: 'Georgia', grade: 84, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870598.png', analysis: 'Instinctive linebacker with excellent gap discipline and tackling ability. Allen reads plays quickly and flows to the ball with urgency. His consistency and football IQ make him a dependable starter at the next level. NFL Comparison: Devin Lloyd - instinctive linebacker with high football IQ.' },
-      { name: 'R Mason Thomas', position: 'EDGE', school: 'Oklahoma', grade: 83.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5081927.png', analysis: 'Long and athletic edge rusher with high motor and good bend. Thomas shows potential as both a rusher and in coverage. His length and motor make him an intriguing developmental edge defender with starter upside. NFL Comparison: Azeez Ojulari - athletic edge with developing pass-rush moves.' },
-      { name: 'Colton Hood', position: 'CB', school: 'Tennessee', grade: 83, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4921249.png', analysis: 'Physical corner with excellent size and press technique. Hood is comfortable in man coverage and shows solid ball skills. His physicality and competitive nature make him a reliable outside corner prospect. NFL Comparison: Carlton Davis - physical press corner with size.' },
-      { name: 'Christen Miller', position: 'DT', school: 'Georgia', grade: 82.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685479.png', analysis: 'Powerful defensive tackle with excellent lateral quickness. Miller commands double teams and pursues well sideline-to-sideline. His motor and versatility along the defensive line make him a valuable rotational piece. NFL Comparison: Javon Hargrave - versatile interior defender with motor.' },
-      { name: 'Elijah Sarratt', position: 'WR', school: 'Indiana', grade: 82, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5088338.png', analysis: 'Productive receiver with reliable hands and strong route running. Sarratt finds soft spots in zone coverage and makes clutch catches. His consistency and high-level production make him a dependable NFL receiver. NFL Comparison: Adam Thielen - reliable possession receiver with production.' },
-      { name: 'Brandon Cisse', position: 'CB', school: 'South Carolina', grade: 81.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5076652.png', analysis: 'Long corner with good speed and press ability. Cisse shows potential in man coverage and has the frame to match up with bigger receivers. His physical tools and improving technique make him a solid developmental corner. NFL Comparison: Tre\'Davious White - long corner with press ability.' },
-      { name: 'Anthony Hill Jr.', position: 'LB', school: 'Texas', grade: 81, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870805.png', analysis: 'Athletic linebacker with elite speed and pursuit ability. Hill excels in space and shows potential as a blitzer. His sideline-to-sideline range and athletic upside make him an exciting modern linebacker prospect. NFL Comparison: Jeremiah Owusu-Koramoah - athletic hybrid linebacker.' },
-      { name: 'Chris Bell', position: 'WR', school: 'Louisville', grade: 80.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4869961.png', analysis: 'Smooth receiver with excellent body control and adjustment skills. Bell wins at the catch point and shows strong hands. His reliable play and ability to win contested catches make him a solid WR2/3 option. NFL Comparison: Darnell Mooney - smooth route runner with reliable hands.' },
-      { name: 'Monroe Freeling', position: 'OT', school: 'Georgia', grade: 80, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870694.png', analysis: 'Well-coached tackle with solid fundamentals and good size. Freeling shows consistent technique and reliable pass protection. His steady play and Georgia pedigree make him a dependable starting tackle prospect. NFL Comparison: Garrett Bolles - technically sound tackle with consistency.' },
-      { name: 'Keith Abney II', position: 'CB', school: 'Arizona State', grade: 79.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5093004.png', analysis: 'Quick corner with good ball skills and aggressiveness. Abney plays physical at the catch point and shows solid man-coverage ability. His competitiveness and production make him a quality mid-round corner option. NFL Comparison: Emmanuel Moseley - aggressive corner with ball skills.' },
-      { name: 'Germie Bernard', position: 'WR', school: 'Alabama', grade: 79, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685261.png', analysis: 'Explosive slot receiver with excellent quickness and route running. Bernard creates separation from the slot and makes plays after the catch. His versatility and playmaking ability make him a valuable weapon in the passing game. NFL Comparison: Jamison Crowder - versatile slot receiver with quickness.' },
-      { name: 'Emmanuel Pregnon', position: 'OG', school: 'Oregon', grade: 78.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4608929.png', analysis: 'Strong interior lineman with good power and technique. Pregnon moves well for his size and anchors in pass protection. His consistency and physicality make him a solid guard prospect who can start early. NFL Comparison: Wyatt Teller - powerful guard with run-blocking strength.' },
-      { name: 'A.J. Haulcy', position: 'S', school: 'LSU', grade: 77, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4905664.png', analysis: 'Versatile safety with good range and instincts. Haulcy shows ability to play both deep and in the box effectively. His football IQ and tackling ability make him a reliable safety option at the next level. NFL Comparison: Jayron Kearse - versatile safety with size and range.' },
-      { name: 'Chris Johnson', position: 'CB', school: 'San Diego State', grade: 76.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4869579.png', analysis: 'Competitive corner with solid technique and good speed. Johnson shows consistency in coverage and willingness to tackle. His well-rounded game and production make him a quality rotational corner prospect. NFL Comparison: Chidobe Awuzie - solid technical corner with consistency.' },
-      { name: 'Zion Young', position: 'EDGE', school: 'Missouri', grade: 76, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4839501.png', analysis: 'Athletic edge defender with length and potential. Young shows flashes of pass-rush ability and solid run defense. His physical tools and motor give him developmental upside as a rotational edge rusher. NFL Comparison: Uchenna Nwosu - athletic edge with developmental upside.' },
-      { name: 'Eli Stowers', position: 'TE', school: 'Vanderbilt', grade: 75.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4431574.png', analysis: 'Productive tight end with reliable hands and good blocking. Stowers shows versatility as both a receiver and blocker. His well-rounded skill set makes him a solid mid-round TE prospect. NFL Comparison: Tyler Conklin - reliable TE with balanced skill set.' },
-      { name: 'Caleb Tiernan', position: 'OT', school: 'Northwestern', grade: 75, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4430901.png', analysis: 'Technically sound tackle with good length and footwork. Tiernan shows consistent fundamentals and steady play. His technique and intelligence make him a developmental tackle with starting potential. NFL Comparison: Matt Peart - technically sound developmental tackle.' },
-      { name: 'Jonah Coleman', position: 'RB', school: 'Washington', grade: 74.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4430875.png', analysis: 'Versatile running back with good vision and receiving ability. Coleman shows patience and ability to create after contact. His well-rounded skill set makes him a quality backup with three-down potential. NFL Comparison: Devin Singletary - patient runner with receiving ability.' },
-      { name: 'Dillon Thieneman', position: 'S', school: 'Oregon', grade: 74, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4954445.png', analysis: 'Hard-hitting safety with good instincts and tackling ability. Thieneman shows range in coverage and physicality near the line. His versatility and aggressive style make him a valuable safety prospect. NFL Comparison: Vonn Bell - hard-hitting safety with physicality.' },
-      { name: 'LT Overton', position: 'EDGE', school: 'Alabama', grade: 73.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685725.png', analysis: 'Strong edge defender with power and effort. Overton sets a solid edge and shows improving pass-rush skills. His motor and physicality make him a developmental edge prospect with rotational value. NFL Comparison: Charles Omenihu - developmental edge with power.' },
+      { name: 'Caleb Downs', position: 'S', school: 'Ohio State', grade: 97.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870706.png', analysis: 'Premium safety prospect with rare range and ball skills. Downs combines elite athleticism with excellent football instincts. His versatility allows him to play both deep safety and in the box, making him scheme-diverse and a potential All-Pro caliber player. NFL Comparison: Derwin James - do-it-all safety with Pro Bowl upside.' },
+      { name: 'David Bailey', position: 'EDGE', school: 'Texas Tech', grade: 97, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685248.png', analysis: 'Elite pass rusher with rare blend of speed and power. Bailey showcases exceptional get-off and bend around the edge. His relentless motor and array of pass-rush moves make him a game-changing presence off the edge. NFL Comparison: Myles Garrett - explosive athlete with dominant pass-rush ability.' },
+      { name: 'Rueben Bain Jr.', position: 'EDGE', school: 'Miami', grade: 97, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870618.png', analysis: 'Explosive edge defender with natural pass-rush instincts and exceptional athleticism. Bain excels at converting speed to power and shows advanced hand usage for his experience level. Projects as an impact starter from day one. NFL Comparison: Nick Bosa - technically refined with relentless motor.' },
+      { name: 'Jordyn Tyson', position: 'WR', school: 'Arizona State', grade: 96.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4880281.png', analysis: 'Dynamic playmaker with elite route-running ability and exceptional ball tracking. Tyson creates separation at all levels and shows strong hands in traffic. His versatility to line up anywhere makes him a matchup nightmare. NFL Comparison: CeeDee Lamb - polished route runner with exceptional playmaking ability.' },
+      { name: 'Carnell Tate', position: 'WR', school: 'Ohio State', grade: 96.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4871023.png', analysis: 'Smooth receiver with outstanding body control and reliable hands. Tate runs crisp routes and shows excellent awareness in zone coverage. His size-speed combination and competitive nature make him a complete receiver prospect. NFL Comparison: Chris Olave - smooth technician with reliable hands and route precision.' },
+      { name: 'Mansoor Delane', position: 'CB', school: 'LSU', grade: 96, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4880124.png', analysis: 'Lockdown corner with excellent length and fluid hips. Delane mirrors receivers in man coverage and shows great anticipation in zone. His physicality at the line and ball skills make him a true CB1 prospect. NFL Comparison: Jalen Ramsey - physical lockdown corner with elite ball skills.' },
+      { name: 'Peter Woods', position: 'DT', school: 'Clemson', grade: 95.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4871063.png', analysis: 'Dominant interior presence with exceptional strength and quickness. Woods consistently wins one-on-ones and shows the ability to collapse the pocket. His motor never stops and he impacts both run and pass defense. NFL Comparison: Quinnen Williams - disruptive interior force with rare quickness.' },
+      { name: 'Jeremiyah Love', position: 'RB', school: 'Notre Dame', grade: 95.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870808.png', analysis: 'Electric runner with home-run speed and excellent vision. Love shows patience behind blockers and burst through gaps. His receiving ability out of the backfield adds another dimension to his game as a true three-down back. NFL Comparison: Jahmyr Gibbs - explosive playmaker with three-down capability.' },
+      { name: 'Spencer Fano', position: 'OT', school: 'Utah', grade: 95, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870723.png', analysis: 'Massive tackle with excellent footwork and power at the point of attack. Fano anchors well against bull rushes and shows surprising agility for his size. His technique and consistency make him a safe pick who can start immediately. NFL Comparison: Lane Johnson - athletic mauler with excellent technique.' },
+      { name: 'Jermod McCoy', position: 'CB', school: 'Tennessee', grade: 95, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5157289.png', analysis: 'Instinctive cornerback with excellent ball production and tight coverage skills. McCoy shows great anticipation to jump routes and close speed to recover. His aggressive style and playmaking ability make him a valuable asset in any secondary. NFL Comparison: Trevon Diggs - ball-hawking corner with big-play ability.' },
+      { name: 'Francis Mauigoa', position: 'OT', school: 'Miami', grade: 94.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870914.png', analysis: 'Athletic tackle with impressive movement skills and strength. Mauigoa excels in pass protection with quick hands and solid technique. His upside is through the roof as he continues to develop his craft and add strength. NFL Comparison: Tristan Wirfs - athletic tackle with elite upside.' },
+      { name: 'Makai Lemon', position: 'WR', school: 'USC', grade: 94.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870795.png', analysis: 'Big-bodied receiver with excellent catch radius and contested-catch ability. Lemon uses his size well to box out defenders and makes tough grabs look routine. His red zone presence and physicality add immediate value. NFL Comparison: Mike Evans - physical red zone weapon with strong hands.' },
+      { name: 'Avieon Terrell', position: 'CB', school: 'Clemson', grade: 94, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870988.png', analysis: 'Versatile defensive back with elite speed and coverage skills. Terrell shows the ability to match up against any receiver type and excels in press-man coverage. His awareness and ball skills translate to consistent playmaking ability. NFL Comparison: Sauce Gardner - press-man specialist with elite coverage ability.' },
+      { name: 'Sonny Styles', position: 'LB', school: 'Ohio State', grade: 93.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5081807.png', analysis: 'Versatile defender who can play multiple positions in the secondary and at linebacker. Styles brings physicality and range, excelling against both run and pass. His football intelligence and leadership make him a defensive captain type. NFL Comparison: Isaiah Simmons - positionless defender with rare versatility.' },
+      { name: 'Keldric Faulk', position: 'EDGE', school: 'Auburn', grade: 93.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870707.png', analysis: 'Explosive edge rusher with quick first step and violent hands. Faulk shows the ability to win with speed or power and has developed a nice array of counter moves. His relentless effort and motor make him a consistent disruptor. NFL Comparison: Brian Burns - quick-twitch edge with relentless motor.' },
+      { name: 'Cashius Howell', position: 'EDGE', school: 'Texas A&M', grade: 93, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4710752.png', analysis: 'Powerful edge defender with exceptional length and strength. Howell sets a strong edge against the run and shows improving pass-rush skills. His high upside and physicality make him an intriguing developmental prospect. NFL Comparison: Montez Sweat - long, athletic edge with developing pass-rush arsenal.' },
+      { name: 'Caleb Banks', position: 'DT', school: 'Florida', grade: 93, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4602019.png', analysis: 'Powerful interior lineman with exceptional strength and a non-stop motor. Banks clogs running lanes and pushes the pocket consistently. His size and physicality make him a force in the trenches who can anchor a defensive line. NFL Comparison: Vita Vea - massive run-stuffer with interior power.' },
+      { name: 'Kayden McDonald', position: 'DT', school: 'Ohio State', grade: 92.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870893.png', analysis: 'Athletic defensive tackle with quickness off the snap and solid technique. McDonald shows good gap penetration and pursuit. His combination of size and agility makes him a disruptive force in both run and pass defense. NFL Comparison: Dexter Lawrence - athletic interior force with gap penetration.' },
+      { name: 'KC Concepcion', position: 'WR', school: 'Texas A&M', grade: 92.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870653.png', analysis: 'Explosive playmaker with exceptional speed and yards-after-catch ability. Concepcion creates separation vertically and shows great hands. His big-play ability and route versatility make him a dangerous weapon at all levels. NFL Comparison: Tyreek Hill - game-breaking speed with big-play ability.' },
+      { name: 'Olaivavega Ioane', position: 'OG', school: 'Penn State', grade: 92, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4832793.png', analysis: 'Massive guard with road-grading ability in the run game. Ioane shows impressive power at the point of attack and solid anchor in pass protection. His physicality and mean streak make him an ideal interior run blocker. NFL Comparison: Zack Martin - powerful run blocker with elite technique.' },
+      { name: 'Akheem Mesidor', position: 'EDGE', school: 'Miami', grade: 91.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4429190.png', analysis: 'Experienced edge rusher with power and relentless effort. Mesidor wins with bull rushes and shows improving pass-rush moves. His consistency and production make him a reliable starter at the next level. NFL Comparison: Josh Sweat - productive edge with power and effort.' },
+      { name: 'Denzel Boston', position: 'WR', school: 'Washington', grade: 91.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4832800.png', analysis: 'Reliable receiver with excellent hands and route precision. Boston consistently gets open and makes contested catches. His football IQ and dependability make him a trusted target in crucial situations. NFL Comparison: Keenan Allen - reliable possession receiver with great hands.' },
+      { name: 'Ty Simpson', position: 'QB', school: 'Alabama', grade: 91, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685522.png', analysis: 'Mobile quarterback with strong arm and good decision-making. Simpson shows poise under pressure and ability to make plays with his legs. His dual-threat capability and leadership traits make him an intriguing developmental QB. NFL Comparison: Jalen Hurts - dual-threat QB with leadership intangibles.' },
+      { name: 'Kenyon Sadiq', position: 'TE', school: 'Oregon', grade: 91, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5083315.png', analysis: 'Athletic tight end with excellent receiving skills and soft hands. Sadiq creates mismatches in the passing game and shows solid blocking fundamentals. His versatility and upside make him a modern pass-catching TE prospect. NFL Comparison: David Njoku - athletic receiving TE with upside.' },
+      { name: 'Caleb Lomu', position: 'OT', school: 'Utah', grade: 90.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4921438.png', analysis: 'Massive tackle with elite length and strength. Lomu dominates at the point of attack in the run game and shows steady improvement in pass protection. His physical tools and technique make him a high-floor starter. NFL Comparison: Penei Sewell - powerful tackle with elite physical tools.' },
+      { name: 'Kadyn Proctor', position: 'OT', school: 'Alabama', grade: 90.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870976.png', analysis: 'Highly-touted tackle with impressive athleticism and footwork. Proctor shows smooth movement in space and solid anchor. His upside is significant as he continues developing his craft at the highest level of competition. NFL Comparison: Evan Neal - high-ceiling tackle with elite traits.' },
+      { name: 'CJ Allen', position: 'LB', school: 'Georgia', grade: 90, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870598.png', analysis: 'Instinctive linebacker with excellent gap discipline and tackling ability. Allen reads plays quickly and flows to the ball with urgency. His consistency and football IQ make him a dependable starter at the next level. NFL Comparison: Devin Lloyd - instinctive linebacker with high football IQ.' },
+      { name: 'R Mason Thomas', position: 'EDGE', school: 'Oklahoma', grade: 89.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5081927.png', analysis: 'Long and athletic edge rusher with high motor and good bend. Thomas shows potential as both a rusher and in coverage. His length and motor make him an intriguing developmental edge defender with starter upside. NFL Comparison: Azeez Ojulari - athletic edge with developing pass-rush moves.' },
+      { name: 'Colton Hood', position: 'CB', school: 'Tennessee', grade: 89.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4921249.png', analysis: 'Physical corner with excellent size and press technique. Hood is comfortable in man coverage and shows solid ball skills. His physicality and competitive nature make him a reliable outside corner prospect. NFL Comparison: Carlton Davis - physical press corner with size.' },
+      { name: 'Christen Miller', position: 'DT', school: 'Georgia', grade: 89, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685479.png', analysis: 'Powerful defensive tackle with excellent lateral quickness. Miller commands double teams and pursues well sideline-to-sideline. His motor and versatility along the defensive line make him a valuable rotational piece. NFL Comparison: Javon Hargrave - versatile interior defender with motor.' },
+      { name: 'Elijah Sarratt', position: 'WR', school: 'Indiana', grade: 89, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5088338.png', analysis: 'Productive receiver with reliable hands and strong route running. Sarratt finds soft spots in zone coverage and makes clutch catches. His consistency and high-level production make him a dependable NFL receiver. NFL Comparison: Adam Thielen - reliable possession receiver with production.' },
+      { name: 'Brandon Cisse', position: 'CB', school: 'South Carolina', grade: 88.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5076652.png', analysis: 'Long corner with good speed and press ability. Cisse shows potential in man coverage and has the frame to match up with bigger receivers. His physical tools and improving technique make him a solid developmental corner. NFL Comparison: Tre\'Davious White - long corner with press ability.' },
+      { name: 'Anthony Hill Jr.', position: 'LB', school: 'Texas', grade: 88.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870805.png', analysis: 'Athletic linebacker with elite speed and pursuit ability. Hill excels in space and shows potential as a blitzer. His sideline-to-sideline range and athletic upside make him an exciting modern linebacker prospect. NFL Comparison: Jeremiah Owusu-Koramoah - athletic hybrid linebacker.' },
+      { name: 'Chris Bell', position: 'WR', school: 'Louisville', grade: 88, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4869961.png', analysis: 'Smooth receiver with excellent body control and adjustment skills. Bell wins at the catch point and shows strong hands. His reliable play and ability to win contested catches make him a solid WR2/3 option. NFL Comparison: Darnell Mooney - smooth route runner with reliable hands.' },
+      { name: 'Monroe Freeling', position: 'OT', school: 'Georgia', grade: 87.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870694.png', analysis: 'Well-coached tackle with solid fundamentals and good size. Freeling shows consistent technique and reliable pass protection. His steady play and Georgia pedigree make him a dependable starting tackle prospect. NFL Comparison: Garrett Bolles - technically sound tackle with consistency.' },
+      { name: 'Keith Abney II', position: 'CB', school: 'Arizona State', grade: 87.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5093004.png', analysis: 'Quick corner with good ball skills and aggressiveness. Abney plays physical at the catch point and shows solid man-coverage ability. His competitiveness and production make him a quality mid-round corner option. NFL Comparison: Emmanuel Moseley - aggressive corner with ball skills.' },
+      { name: 'Germie Bernard', position: 'WR', school: 'Alabama', grade: 87, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685261.png', analysis: 'Explosive slot receiver with excellent quickness and route running. Bernard creates separation from the slot and makes plays after the catch. His versatility and playmaking ability make him a valuable weapon in the passing game. NFL Comparison: Jamison Crowder - versatile slot receiver with quickness.' },
+      { name: 'Emmanuel Pregnon', position: 'OG', school: 'Oregon', grade: 87, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4608929.png', analysis: 'Strong interior lineman with good power and technique. Pregnon moves well for his size and anchors in pass protection. His consistency and physicality make him a solid guard prospect who can start early. NFL Comparison: Wyatt Teller - powerful guard with run-blocking strength.' },
+      { name: 'A.J. Haulcy', position: 'S', school: 'LSU', grade: 86, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4905664.png', analysis: 'Versatile safety with good range and instincts. Haulcy shows ability to play both deep and in the box effectively. His football IQ and tackling ability make him a reliable safety option at the next level. NFL Comparison: Jayron Kearse - versatile safety with size and range.' },
+      { name: 'Chris Johnson', position: 'CB', school: 'San Diego State', grade: 85.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4869579.png', analysis: 'Competitive corner with solid technique and good speed. Johnson shows consistency in coverage and willingness to tackle. His well-rounded game and production make him a quality rotational corner prospect. NFL Comparison: Chidobe Awuzie - solid technical corner with consistency.' },
+      { name: 'Zion Young', position: 'EDGE', school: 'Missouri', grade: 85.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4839501.png', analysis: 'Athletic edge defender with length and potential. Young shows flashes of pass-rush ability and solid run defense. His physical tools and motor give him developmental upside as a rotational edge rusher. NFL Comparison: Uchenna Nwosu - athletic edge with developmental upside.' },
+      { name: 'Eli Stowers', position: 'TE', school: 'Vanderbilt', grade: 85, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4431574.png', analysis: 'Productive tight end with reliable hands and good blocking. Stowers shows versatility as both a receiver and blocker. His well-rounded skill set makes him a solid mid-round TE prospect. NFL Comparison: Tyler Conklin - reliable TE with balanced skill set.' },
+      { name: 'Caleb Tiernan', position: 'OT', school: 'Northwestern', grade: 85, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4430901.png', analysis: 'Technically sound tackle with good length and footwork. Tiernan shows consistent fundamentals and steady play. His technique and intelligence make him a developmental tackle with starting potential. NFL Comparison: Matt Peart - technically sound developmental tackle.' },
+      { name: 'Jonah Coleman', position: 'RB', school: 'Washington', grade: 84.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4430875.png', analysis: 'Versatile running back with good vision and receiving ability. Coleman shows patience and ability to create after contact. His well-rounded skill set makes him a quality backup with three-down potential. NFL Comparison: Devin Singletary - patient runner with receiving ability.' },
+      { name: 'Dillon Thieneman', position: 'S', school: 'Oregon', grade: 84.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4954445.png', analysis: 'Hard-hitting safety with good instincts and tackling ability. Thieneman shows range in coverage and physicality near the line. His versatility and aggressive style make him a valuable safety prospect. NFL Comparison: Vonn Bell - hard-hitting safety with physicality.' },
+      { name: 'Trinidad Chambliss', position: 'QB', school: 'Ole Miss', grade: 84, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4911529.png', analysis: 'Strong-armed quarterback with excellent mobility and upside. Chambliss shows impressive physical tools and playmaking ability. His dual-threat capability and improving mechanics make him a high-upside QB3 prospect. NFL Comparison: Anthony Richardson - athletic QB with elite physical tools and developmental upside.' },
       // Additional prospects (ranks 51+)
-      { name: 'Trevor Goosby', position: 'OT', school: 'Texas', grade: 73, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4918430.png', analysis: 'Experienced tackle with good size and solid fundamentals. Goosby shows consistency in pass protection and improving run blocking. His technique and football IQ make him a reliable backup tackle. NFL Comparison: Cam Robinson - solid starter with consistency.' },
-      { name: 'T.J. Parker', position: 'LB', school: 'Clemson', grade: 72.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870886.png', analysis: 'Athletic linebacker with good range and solid tackling. Parker shows ability to cover ground and make plays in space. His Clemson pedigree and fundamentals make him a quality rotational linebacker. NFL Comparison: Shaq Thompson - athletic linebacker with coverage ability.' },
-      { name: 'Harold Perkins Jr.', position: 'LB', school: 'LSU', grade: 72, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685502.png', analysis: 'Explosive linebacker with elite athleticism and blitzing ability. Perkins shows burst off the edge and can make plays all over the field. His versatility and playmaking make him an exciting linebacker prospect. NFL Comparison: Devin White - explosive athletic linebacker with blitz ability.' },
-      { name: 'Taurean York', position: 'LB', school: 'Texas A&M', grade: 71.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4917859.png', analysis: 'Physical linebacker with strong tackling and run-stopping ability. York excels near the line of scrimmage and shows improving coverage skills. His toughness makes him a valuable two-down linebacker. NFL Comparison: Josey Jewell - physical thumper with run-stopping ability.' },
-      { name: 'Ja\'Kobi Lane', position: 'WR', school: 'USC', grade: 71, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870847.png', analysis: 'Elusive receiver with excellent quickness and route running from the slot. Lane creates separation quickly and makes plays after the catch. His agility makes him a dangerous weapon in space. NFL Comparison: Jakobi Meyers - crafty slot receiver with separation quickness.' },
-      { name: 'Austin Barber', position: 'OT', school: 'Florida', grade: 70.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4597310.png', analysis: 'Long tackle with good athleticism and developing technique. Barber shows potential in pass protection and continues to add strength. His physical tools give him developmental upside. NFL Comparison: Kaleb McGary - athletic tackle with developing technique.' },
-      { name: 'Matayo Uiagalelei', position: 'EDGE', school: 'Oregon', grade: 70, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4871052.png', analysis: 'Powerful edge rusher with excellent size and strength. Uiagalelei wins with power and shows improving pass-rush technique. His physicality makes him a valuable run defender and developing pass rusher. NFL Comparison: Chauncey Golston - powerful edge with size and strength.' },
-      { name: 'Davison Igbinosun', position: 'CB', school: 'Ohio State', grade: 69.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4832035.png', analysis: 'Versatile defensive back with good size and coverage skills. Igbinosun shows consistency in man coverage and solid ball skills. His reliability makes him a quality depth corner. NFL Comparison: Rock Ya-Sin - versatile corner with solid technique.' },
-      { name: 'Tyreak Sapp', position: 'DT', school: 'Florida', grade: 69, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4889957.png', analysis: 'Strong interior defender with good power and motor. Sapp clogs lanes and shows effort as a pass rusher. His strength makes him a valuable rotational defensive tackle. NFL Comparison: Jonathan Hankins - powerful run-stuffer with size.' },
-      { name: 'Malik Muhammad', position: 'CB', school: 'Texas', grade: 68.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870953.png', analysis: 'Quick corner with good anticipation and ball skills. Muhammad shows solid technique in coverage and willingness to tackle. His competitiveness makes him a reliable depth corner. NFL Comparison: Tre Flowers - athletic corner with size and length.' },
-      { name: 'Jake Golday', position: 'LB', school: 'Cincinnati', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4877652.png', analysis: 'Productive linebacker with excellent instincts and tackling ability. Golday reads plays well and flows to the ball consistently. His high production and football IQ make him a valuable backup. NFL Comparison: Nick Vigil - instinctive linebacker with production.' },
-      { name: 'Emmanuel McNeil-Warren', position: 'S', school: 'Toledo', grade: 67.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4837186.png', analysis: 'Versatile safety with good ball skills and coverage ability. McNeil-Warren shows range in the deep third and can play near the line. His playmaking ability makes him an intriguing developmental safety. NFL Comparison: Tre Boston - versatile safety with ball skills.' },
-      { name: 'Max Klare', position: 'TE', school: 'Ohio State', grade: 67, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4833029.png', analysis: 'Big-bodied tight end with reliable hands and solid blocking. Klare shows ability as a red zone target and improving route running. His size makes him a useful H-back type. NFL Comparison: Harrison Bryant - reliable receiving TE with size.' },
-      { name: 'Lee Hunter', position: 'DT', school: 'Texas Tech', grade: 66.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4431551.png', analysis: 'Powerful defensive tackle with good strength and motor. Hunter occupies blockers and shows effort in pursuit. His size and power make him a rotational run defender. NFL Comparison: P.J. Hall - powerful interior defender with motor.' },
-      { name: 'Logan Jones', position: 'C', school: 'Iowa', grade: 66, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4686907.png', analysis: 'Smart center with excellent technique and consistency. Jones shows solid fundamentals and good snap accuracy. His football IQ and Iowa pedigree make him a reliable backup center. NFL Comparison: J.C. Tretter - technically sound center with smarts.' },
-      { name: 'Zxavian Harris', position: 'DT', school: 'Ole Miss', grade: 65.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685365.png', analysis: 'Quick defensive tackle with good penetration ability. Harris shows burst off the snap and effort in pursuit. His quickness makes him a disruptive interior rotational piece. NFL Comparison: Derrick Nnadi - quick interior defender with penetration.' },
-      { name: 'Connor Lew', position: 'C', school: 'Auburn', grade: 65, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870866.png', analysis: 'Tough center with good strength and competitive nature. Lew shows solid blocking fundamentals and leadership. His toughness makes him a quality backup center. NFL Comparison: Bradley Bozeman - tough, competitive center.' },
-      { name: 'Domani Jackson', position: 'CB', school: 'Alabama', grade: 64.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685402.png', analysis: 'Athletic corner with good length and coverage potential. Jackson shows flashes of press ability and solid speed. His physical traits give him developmental upside as a corner. NFL Comparison: Greg Stroman - athletic corner with developmental traits.' },
-      { name: 'Jake Slaughter', position: 'C', school: 'Florida', grade: 64, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4682506.png', analysis: 'Experienced center with solid technique and consistency. Slaughter shows good snap mechanics and blocking fundamentals. His reliability makes him a solid backup center option. NFL Comparison: Ethan Pocic - reliable backup center with experience.' },
-      { name: 'John Mateer', position: 'QB', school: 'Oklahoma', grade: 63.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4915980.png', analysis: 'Dual-threat quarterback with good mobility and playmaking ability. Mateer shows ability to extend plays with his legs and decent arm strength. His athleticism gives him developmental QB2 potential. NFL Comparison: Tyler Huntley - mobile backup QB with playmaking ability.' },
-      { name: 'Drew Allar', position: 'QB', school: 'Penn State', grade: 63, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4714771.png', analysis: 'Big-armed quarterback with good size and pocket presence. Allar shows ability to make tight-window throws and solid decision-making. His arm talent and pedigree give him developmental QB potential. NFL Comparison: Sam Darnold - talented QB with developmental potential.' },
-      { name: 'Carter Smith', position: 'OT', school: 'Indiana', grade: 62.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4819239.png', analysis: 'Solid tackle with good length and improving technique. Smith shows consistency in pass protection and solid fundamentals. His steady play makes him a developmental tackle option. NFL Comparison: Jamarco Jones - reliable backup tackle with fundamentals.' },
-      { name: 'Michael Taaffe', position: 'S', school: 'Texas', grade: 62, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4880346.png', analysis: 'Physical safety with good tackling ability and run support. Taaffe shows toughness near the line and developing coverage skills. His physicality makes him a valuable special teams contributor. NFL Comparison: Deon Bush - physical safety with special teams value.' },
-      { name: 'Eric Singleton Jr.', position: 'WR', school: 'Auburn', grade: 61.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5095360.png', analysis: 'Speedy receiver with good vertical ability and route running. Singleton shows ability to stretch the field and make plays downfield. His speed makes him a vertical threat. NFL Comparison: John Ross - speed receiver with vertical ability.' },
-      { name: 'Austin Siereveld', position: 'OT', school: 'Ohio State', grade: 61, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4917984.png', analysis: 'Developing tackle with good size and improving fundamentals. Siereveld shows potential in pass protection and continues to develop. His Ohio State coaching gives him developmental potential. NFL Comparison: Thayer Munford - developmental tackle with size.' },
-      { name: 'Kaytron Allen', position: 'RB', school: 'Penn State', grade: 60.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685246.png', analysis: 'Physical runner with good power and contact balance. Allen shows ability to run between the tackles and solid hands. His physicality makes him a valuable short-yardage back. NFL Comparison: Damien Harris - physical downhill runner.' },
-      { name: 'Chris Brazzell II', position: 'WR', school: 'Tennessee', grade: 60, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5091739.png', analysis: 'Big receiver with good size and developing route running. Brazzell shows ability to win contested catches and solid hands. His size makes him a red zone option. NFL Comparison: Josh Palmer - big receiver with developing skills.' },
-      { name: 'Antonio Williams', position: 'WR', school: 'Clemson', grade: 59.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5081432.png', analysis: 'Athletic receiver with good speed and route running ability. Williams shows ability to create separation and make plays. His athleticism makes him an intriguing developmental receiver. NFL Comparison: Laviska Shenault - athletic playmaker with versatility.' },
-      { name: 'Garrett Nussmeier', position: 'QB', school: 'LSU', grade: 59, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4567747.png', analysis: 'Experienced quarterback with good arm strength and leadership. Nussmeier shows ability to make throws and manage the game. His experience makes him a solid developmental QB. NFL Comparison: Will Grier - experienced college QB with arm talent.' },
-      { name: 'Carson Beck', position: 'QB', school: 'Miami', grade: 58.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4430841.png', analysis: 'Veteran quarterback with good size and pocket awareness. Beck shows experience reading defenses and solid arm talent. His veteran presence makes him a backup QB option. NFL Comparison: Jake Fromm - experienced QB with game management skills.' },
-      { name: 'Jadarian Price', position: 'RB', school: 'Notre Dame', grade: 58, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685512.png', analysis: 'Explosive runner with good speed and elusiveness. Price shows ability to hit holes quickly and make defenders miss. His burst makes him a change-of-pace back. NFL Comparison: Nyheim Hines - elusive speedster with receiving ability.' },
-      { name: 'Zachariah Branch', position: 'WR', school: 'Georgia', grade: 57.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870612.png', analysis: 'Dynamic playmaker with excellent speed and return ability. Branch shows big-play potential as a receiver and returner. His explosiveness makes him a special teams weapon. NFL Comparison: Mecole Hardman - speed weapon with return value.' },
-      { name: 'Kamari Ramsey', position: 'S', school: 'USC', grade: 57, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685518.png', analysis: 'Athletic safety with good range and ball skills. Ramsey shows ability to cover ground and make plays on the ball. His athleticism makes him a developmental safety. NFL Comparison: Terrell Burgess - athletic safety with coverage ability.' },
-      { name: 'A\'Mauri Washington', position: 'DT', school: 'Oregon', grade: 56.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4899488.png', analysis: 'Big defensive tackle with good size and power. Washington shows ability to occupy blockers and clog running lanes. His size makes him a valuable rotational nose tackle. NFL Comparison: Daniel Ekuale - big-bodied rotational nose tackle.' },
-      { name: 'Quincy Rhodes Jr.', position: 'EDGE', school: 'Arkansas', grade: 56, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4918136.png', analysis: 'Athletic edge rusher with good speed and developing moves. Rhodes shows ability to bend and hustle to the ball. His motor makes him a rotational pass rusher. NFL Comparison: Wyatt Hubert - developmental edge with motor.' },
-      { name: 'LaNorris Sellers', position: 'QB', school: 'South Carolina', grade: 55.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4875127.png', analysis: 'Athletic quarterback with good mobility and arm strength. Sellers shows ability to make plays with his legs and developing accuracy. His dual-threat ability makes him a developmental project. NFL Comparison: Malik Willis - athletic project QB with tools.' },
-      { name: 'Domonique Orange', position: 'DT', school: 'Iowa State', grade: 55, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4698728.png', analysis: 'Strong interior defender with good power and effort. Orange shows ability to push the pocket and pursue. His strength makes him a rotational interior defender. NFL Comparison: Grady Jarrett - undersized interior force with power.' },
-      { name: 'Jaishawn Barham', position: 'LB', school: 'Michigan', grade: 54.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685266.png', analysis: 'Versatile linebacker with good athleticism and football IQ. Barham shows ability to play multiple positions and special teams value. His versatility makes him a valuable depth piece. NFL Comparison: Curtis Bolton - versatile backup linebacker.' },
-      { name: 'Michael Trigg', position: 'TE', school: 'Baylor', grade: 54, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4594749.png', analysis: 'Athletic tight end with good hands and route running. Trigg shows ability to create separation and make plays. His receiving ability makes him a developmental pass-catching TE. NFL Comparison: Ian Thomas - athletic receiving tight end.' },
-      { name: 'Deion Burks', position: 'WR', school: 'Oklahoma', grade: 54, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4683151.png', analysis: 'Big receiver with good size and contested-catch ability. Burks shows solid hands and improving route running. His size makes him a developmental red zone target. NFL Comparison: Allen Lazard - big-bodied possession receiver.' },
-      { name: 'Derrick Moore', position: 'EDGE', school: 'Michigan', grade: 53, analysis: 'Physical edge rusher with good power and motor. Moore shows ability to set the edge and developing pass-rush moves. His effort and toughness make him a developmental rotational edge. NFL Comparison: Austin Bryant - developmental edge with physicality.' },
-      { name: 'Zane Durant', position: 'DT', school: 'Penn State', grade: 53, analysis: 'Solid defensive tackle with good strength and fundamentals. Durant shows ability to hold the point and pursue. His Penn State coaching makes him a reliable backup interior defender. NFL Comparison: Tyler Lancaster - solid backup interior defender.' },
-      { name: 'Darrell Jackson Jr.', position: 'DT', school: 'Florida State', grade: 52, analysis: 'Powerful interior defender with good size and strength. Jackson shows ability to clog lanes and occupy blockers. His power makes him a rotational run-stuffer. NFL Comparison: Corey Liuget - powerful rotational interior presence.' },
-      { name: 'Josiah Trotter', position: 'LB', school: 'Missouri', grade: 52, analysis: 'Instinctive linebacker with good football IQ and tackling. Trotter shows solid fundamentals and understanding of the game. His intelligence makes him a valuable backup linebacker. NFL Comparison: Joe Schobert - smart backup linebacker with fundamentals.' },
-      { name: 'Dontay Corleone', position: 'DT', school: 'Cincinnati', grade: 51, analysis: 'Physical nose tackle with good power and toughness. Corleone shows ability to anchor and clog the middle. His strength makes him a developmental nose tackle. NFL Comparison: Eli Ankou - powerful backup nose tackle.' },
-      { name: 'Anthony Lucas', position: 'DT', school: 'USC', grade: 51, analysis: 'Athletic interior defender with good quickness and motor. Lucas shows ability to penetrate gaps and pursue. His athleticism makes him an intriguing developmental tackle. NFL Comparison: Matt Ioannidis - athletic interior defender with upside.' },
-      { name: 'Jeremiah Cobb', position: 'RB', school: 'Auburn', grade: 50, analysis: 'Versatile running back with good hands and vision. Cobb shows ability to contribute on third down and as a receiver. His versatility makes him a valuable depth running back. NFL Comparison: Boston Scott - versatile change-of-pace back.' },
-      { name: 'Mikail Kamara', position: 'EDGE', school: 'Indiana', grade: 50, analysis: 'Developing edge rusher with good length and athleticism. Kamara shows flashes of pass-rush ability and motor. His physical tools give him developmental upside. NFL Comparison: Quinton Bell - developmental edge with tools.' },
-      { name: 'Tacario Davis', position: 'CB', school: 'Washington', grade: 49, analysis: 'Quick corner with good ball skills and competitiveness. Davis shows solid technique in coverage and willingness to tackle. His competitive nature makes him a depth corner option. NFL Comparison: Torry McTyer - developmental corner with competitiveness.' },
-      { name: 'Jack Endries', position: 'TE', school: 'Texas', grade: 49, analysis: 'Big tight end with good hands and developing blocking. Endries shows ability to be a red zone target and improving route running. His size makes him a developmental H-back type. NFL Comparison: Eric Saubert - big-bodied backup tight end.' },
-      { name: 'Jyaire Hill', position: 'CB', school: 'Michigan', grade: 48, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870767.png', analysis: 'Smooth corner with good technique and ball awareness. Hill shows solid coverage skills and good recovery speed. His consistency makes him a developmental outside corner. NFL Comparison: Tre Brown - technically sound corner with good awareness.' },
-      { name: 'Julian Neal', position: 'CB', school: 'Arkansas', grade: 48, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870831.png', analysis: 'Physical corner with good size and press technique. Neal shows willingness to support the run and compete at the catch point. His physicality makes him an intriguing boundary corner. NFL Comparison: Isaac Yiadom - physical developmental corner.' },
+      { name: 'LT Overton', position: 'EDGE', school: 'Alabama', grade: 84, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685725.png', analysis: 'Strong edge defender with power and effort. Overton sets a solid edge and shows improving pass-rush skills. His motor and physicality make him a developmental edge prospect with rotational value. NFL Comparison: Charles Omenihu - developmental edge with power.' },
+      { name: 'Trevor Goosby', position: 'OT', school: 'Texas', grade: 84, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4918430.png', analysis: 'Experienced tackle with good size and solid fundamentals. Goosby shows consistency in pass protection and improving run blocking. His technique and football IQ make him a reliable backup tackle. NFL Comparison: Cam Robinson - solid starter with consistency.' },
+      { name: 'T.J. Parker', position: 'LB', school: 'Clemson', grade: 83.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870886.png', analysis: 'Athletic linebacker with good range and solid tackling. Parker shows ability to cover ground and make plays in space. His Clemson pedigree and fundamentals make him a quality rotational linebacker. NFL Comparison: Shaq Thompson - athletic linebacker with coverage ability.' },
+      { name: 'Harold Perkins Jr.', position: 'LB', school: 'LSU', grade: 83, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685502.png', analysis: 'Explosive linebacker with elite athleticism and blitzing ability. Perkins shows burst off the edge and can make plays all over the field. His versatility and playmaking make him an exciting linebacker prospect. NFL Comparison: Devin White - explosive athletic linebacker with blitz ability.' },
+      { name: 'Taurean York', position: 'LB', school: 'Texas A&M', grade: 83, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4917859.png', analysis: 'Physical linebacker with strong tackling and run-stopping ability. York excels near the line of scrimmage and shows improving coverage skills. His toughness makes him a valuable two-down linebacker. NFL Comparison: Josey Jewell - physical thumper with run-stopping ability.' },
+      { name: 'Ja\'Kobi Lane', position: 'WR', school: 'USC', grade: 82.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870847.png', analysis: 'Elusive receiver with excellent quickness and route running from the slot. Lane creates separation quickly and makes plays after the catch. His agility makes him a dangerous weapon in space. NFL Comparison: Jakobi Meyers - crafty slot receiver with separation quickness.' },
+      { name: 'Austin Barber', position: 'OT', school: 'Florida', grade: 82.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4597310.png', analysis: 'Long tackle with good athleticism and developing technique. Barber shows potential in pass protection and continues to add strength. His physical tools give him developmental upside. NFL Comparison: Kaleb McGary - athletic tackle with developing technique.' },
+      { name: 'Matayo Uiagalelei', position: 'EDGE', school: 'Oregon', grade: 82, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4871052.png', analysis: 'Powerful edge rusher with excellent size and strength. Uiagalelei wins with power and shows improving pass-rush technique. His physicality makes him a valuable run defender and developing pass rusher. NFL Comparison: Chauncey Golston - powerful edge with size and strength.' },
+      { name: 'Davison Igbinosun', position: 'CB', school: 'Ohio State', grade: 82, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4832035.png', analysis: 'Versatile defensive back with good size and coverage skills. Igbinosun shows consistency in man coverage and solid ball skills. His reliability makes him a quality depth corner. NFL Comparison: Rock Ya-Sin - versatile corner with solid technique.' },
+      { name: 'Tyreak Sapp', position: 'DT', school: 'Florida', grade: 81.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4889957.png', analysis: 'Strong interior defender with good power and motor. Sapp clogs lanes and shows effort as a pass rusher. His strength makes him a valuable rotational defensive tackle. NFL Comparison: Jonathan Hankins - powerful run-stuffer with size.' },
+      { name: 'Malik Muhammad', position: 'CB', school: 'Texas', grade: 81, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870953.png', analysis: 'Quick corner with good anticipation and ball skills. Muhammad shows solid technique in coverage and willingness to tackle. His competitiveness makes him a reliable depth corner. NFL Comparison: Tre Flowers - athletic corner with size and length.' },
+      { name: 'Jake Golday', position: 'LB', school: 'Cincinnati', grade: 81, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4877652.png', analysis: 'Productive linebacker with excellent instincts and tackling ability. Golday reads plays well and flows to the ball consistently. His high production and football IQ make him a valuable backup. NFL Comparison: Nick Vigil - instinctive linebacker with production.' },
+      { name: 'Emmanuel McNeil-Warren', position: 'S', school: 'Toledo', grade: 80.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4837186.png', analysis: 'Versatile safety with good ball skills and coverage ability. McNeil-Warren shows range in the deep third and can play near the line. His playmaking ability makes him an intriguing developmental safety. NFL Comparison: Tre Boston - versatile safety with ball skills.' },
+      { name: 'Max Klare', position: 'TE', school: 'Ohio State', grade: 80.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4833029.png', analysis: 'Big-bodied tight end with reliable hands and solid blocking. Klare shows ability as a red zone target and improving route running. His size makes him a useful H-back type. NFL Comparison: Harrison Bryant - reliable receiving TE with size.' },
+      { name: 'Lee Hunter', position: 'DT', school: 'Texas Tech', grade: 80, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4431551.png', analysis: 'Powerful defensive tackle with good strength and motor. Hunter occupies blockers and shows effort in pursuit. His size and power make him a rotational run defender. NFL Comparison: P.J. Hall - powerful interior defender with motor.' },
+      { name: 'Logan Jones', position: 'C', school: 'Iowa', grade: 80, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4686907.png', analysis: 'Smart center with excellent technique and consistency. Jones shows solid fundamentals and good snap accuracy. His football IQ and Iowa pedigree make him a reliable backup center. NFL Comparison: J.C. Tretter - technically sound center with smarts.' },
+      { name: 'Zxavian Harris', position: 'DT', school: 'Ole Miss', grade: 79.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685365.png', analysis: 'Quick defensive tackle with good penetration ability. Harris shows burst off the snap and effort in pursuit. His quickness makes him a disruptive interior rotational piece. NFL Comparison: Derrick Nnadi - quick interior defender with penetration.' },
+      { name: 'Connor Lew', position: 'C', school: 'Auburn', grade: 79, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870866.png', analysis: 'Tough center with good strength and competitive nature. Lew shows solid blocking fundamentals and leadership. His toughness makes him a quality backup center. NFL Comparison: Bradley Bozeman - tough, competitive center.' },
+      { name: 'Domani Jackson', position: 'CB', school: 'Alabama', grade: 79, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685402.png', analysis: 'Athletic corner with good length and coverage potential. Jackson shows flashes of press ability and solid speed. His physical traits give him developmental upside as a corner. NFL Comparison: Greg Stroman - athletic corner with developmental traits.' },
+      { name: 'Jake Slaughter', position: 'C', school: 'Florida', grade: 78.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4682506.png', analysis: 'Experienced center with solid technique and consistency. Slaughter shows good snap mechanics and blocking fundamentals. His reliability makes him a solid backup center option. NFL Comparison: Ethan Pocic - reliable backup center with experience.' },
+      { name: 'John Mateer', position: 'QB', school: 'Oklahoma', grade: 78.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4915980.png', analysis: 'Dual-threat quarterback with good mobility and playmaking ability. Mateer shows ability to extend plays with his legs and decent arm strength. His athleticism gives him developmental QB2 potential. NFL Comparison: Tyler Huntley - mobile backup QB with playmaking ability.' },
+      { name: 'Drew Allar', position: 'QB', school: 'Penn State', grade: 78, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4714771.png', analysis: 'Big-armed quarterback with good size and pocket presence. Allar shows ability to make tight-window throws and solid decision-making. His arm talent and pedigree give him developmental QB potential. NFL Comparison: Sam Darnold - talented QB with developmental potential.' },
+      { name: 'Carter Smith', position: 'OT', school: 'Indiana', grade: 78, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4819239.png', analysis: 'Solid tackle with good length and improving technique. Smith shows consistency in pass protection and solid fundamentals. His steady play makes him a developmental tackle option. NFL Comparison: Jamarco Jones - reliable backup tackle with fundamentals.' },
+      { name: 'Michael Taaffe', position: 'S', school: 'Texas', grade: 77.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4880346.png', analysis: 'Physical safety with good tackling ability and run support. Taaffe shows toughness near the line and developing coverage skills. His physicality makes him a valuable special teams contributor. NFL Comparison: Deon Bush - physical safety with special teams value.' },
+      { name: 'Eric Singleton Jr.', position: 'WR', school: 'Auburn', grade: 77, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5095360.png', analysis: 'Speedy receiver with good vertical ability and route running. Singleton shows ability to stretch the field and make plays downfield. His speed makes him a vertical threat. NFL Comparison: John Ross - speed receiver with vertical ability.' },
+      { name: 'Austin Siereveld', position: 'OT', school: 'Ohio State', grade: 77, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4917984.png', analysis: 'Developing tackle with good size and improving fundamentals. Siereveld shows potential in pass protection and continues to develop. His Ohio State coaching gives him developmental potential. NFL Comparison: Thayer Munford - developmental tackle with size.' },
+      { name: 'Kaytron Allen', position: 'RB', school: 'Penn State', grade: 76.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685246.png', analysis: 'Physical runner with good power and contact balance. Allen shows ability to run between the tackles and solid hands. His physicality makes him a valuable short-yardage back. NFL Comparison: Damien Harris - physical downhill runner.' },
+      { name: 'Chris Brazzell II', position: 'WR', school: 'Tennessee', grade: 76.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5091739.png', analysis: 'Big receiver with good size and developing route running. Brazzell shows ability to win contested catches and solid hands. His size makes him a red zone option. NFL Comparison: Josh Palmer - big receiver with developing skills.' },
+      { name: 'Antonio Williams', position: 'WR', school: 'Clemson', grade: 76, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5081432.png', analysis: 'Athletic receiver with good speed and route running ability. Williams shows ability to create separation and make plays. His athleticism makes him an intriguing developmental receiver. NFL Comparison: Laviska Shenault - athletic playmaker with versatility.' },
+      { name: 'Garrett Nussmeier', position: 'QB', school: 'LSU', grade: 76, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4567747.png', analysis: 'Experienced quarterback with good arm strength and leadership. Nussmeier shows ability to make throws and manage the game. His experience makes him a solid developmental QB. NFL Comparison: Will Grier - experienced college QB with arm talent.' },
+      { name: 'Carson Beck', position: 'QB', school: 'Miami', grade: 75.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4430841.png', analysis: 'Veteran quarterback with good size and pocket awareness. Beck shows experience reading defenses and solid arm talent. His veteran presence makes him a backup QB option. NFL Comparison: Jake Fromm - experienced QB with game management skills.' },
+      { name: 'Jadarian Price', position: 'RB', school: 'Notre Dame', grade: 75, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685512.png', analysis: 'Explosive runner with good speed and elusiveness. Price shows ability to hit holes quickly and make defenders miss. His burst makes him a change-of-pace back. NFL Comparison: Nyheim Hines - elusive speedster with receiving ability.' },
+      { name: 'Zachariah Branch', position: 'WR', school: 'Georgia', grade: 75, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870612.png', analysis: 'Dynamic playmaker with excellent speed and return ability. Branch shows big-play potential as a receiver and returner. His explosiveness makes him a special teams weapon. NFL Comparison: Mecole Hardman - speed weapon with return value.' },
+      { name: 'Kamari Ramsey', position: 'S', school: 'USC', grade: 74.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685518.png', analysis: 'Athletic safety with good range and ball skills. Ramsey shows ability to cover ground and make plays on the ball. His athleticism makes him a developmental safety. NFL Comparison: Terrell Burgess - athletic safety with coverage ability.' },
+      { name: 'A\'Mauri Washington', position: 'DT', school: 'Oregon', grade: 74.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4899488.png', analysis: 'Big defensive tackle with good size and power. Washington shows ability to occupy blockers and clog running lanes. His size makes him a valuable rotational nose tackle. NFL Comparison: Daniel Ekuale - big-bodied rotational nose tackle.' },
+      { name: 'Quincy Rhodes Jr.', position: 'EDGE', school: 'Arkansas', grade: 74, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4918136.png', analysis: 'Athletic edge rusher with good speed and developing moves. Rhodes shows ability to bend and hustle to the ball. His motor makes him a rotational pass rusher. NFL Comparison: Wyatt Hubert - developmental edge with motor.' },
+      { name: 'LaNorris Sellers', position: 'QB', school: 'South Carolina', grade: 74, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4875127.png', analysis: 'Athletic quarterback with good mobility and arm strength. Sellers shows ability to make plays with his legs and developing accuracy. His dual-threat ability makes him a developmental project. NFL Comparison: Malik Willis - athletic project QB with tools.' },
+      { name: 'Domonique Orange', position: 'DT', school: 'Iowa State', grade: 73.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4698728.png', analysis: 'Strong interior defender with good power and effort. Orange shows ability to push the pocket and pursue. His strength makes him a rotational interior defender. NFL Comparison: Grady Jarrett - undersized interior force with power.' },
+      { name: 'Jaishawn Barham', position: 'LB', school: 'Michigan', grade: 73, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685266.png', analysis: 'Versatile linebacker with good athleticism and football IQ. Barham shows ability to play multiple positions and special teams value. His versatility makes him a valuable depth piece. NFL Comparison: Curtis Bolton - versatile backup linebacker.' },
+      { name: 'Michael Trigg', position: 'TE', school: 'Baylor', grade: 73, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4594749.png', analysis: 'Athletic tight end with good hands and route running. Trigg shows ability to create separation and make plays. His receiving ability makes him a developmental pass-catching TE. NFL Comparison: Ian Thomas - athletic receiving tight end.' },
+      { name: 'Deion Burks', position: 'WR', school: 'Oklahoma', grade: 73, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4683151.png', analysis: 'Big receiver with good size and contested-catch ability. Burks shows solid hands and improving route running. His size makes him a developmental red zone target. NFL Comparison: Allen Lazard - big-bodied possession receiver.' },
+      { name: 'Derrick Moore', position: 'EDGE', school: 'Michigan', grade: 72.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685461.png', analysis: 'Physical edge rusher with good power and motor. Moore shows ability to set the edge and developing pass-rush moves. His effort and toughness make him a developmental rotational edge. NFL Comparison: Austin Bryant - developmental edge with physicality.' },
+      { name: 'Zane Durant', position: 'DT', school: 'Penn State', grade: 72.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685347.png', analysis: 'Solid defensive tackle with good strength and fundamentals. Durant shows ability to hold the point and pursue. His Penn State coaching makes him a reliable backup interior defender. NFL Comparison: Tyler Lancaster - solid backup interior defender.' },
+      { name: 'Darrell Jackson Jr.', position: 'DT', school: 'Florida State', grade: 72, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4612836.png', analysis: 'Powerful interior defender with good size and strength. Jackson shows ability to clog lanes and occupy blockers. His power makes him a rotational run-stuffer. NFL Comparison: Corey Liuget - powerful rotational interior presence.' },
+      { name: 'Josiah Trotter', position: 'LB', school: 'Missouri', grade: 72, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870998.png', analysis: 'Instinctive linebacker with good football IQ and tackling. Trotter shows solid fundamentals and understanding of the game. His intelligence makes him a valuable backup linebacker. NFL Comparison: Joe Schobert - smart backup linebacker with fundamentals.' },
+      { name: 'Dontay Corleone', position: 'DT', school: 'Cincinnati', grade: 71, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4594205.png', analysis: 'Physical nose tackle with good power and toughness. Corleone shows ability to anchor and clog the middle. His strength makes him a developmental nose tackle. NFL Comparison: Eli Ankou - powerful backup nose tackle.' },
+      { name: 'Anthony Lucas', position: 'DT', school: 'USC', grade: 71, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685442.png', analysis: 'Athletic interior defender with good quickness and motor. Lucas shows ability to penetrate gaps and pursue. His athleticism makes him an intriguing developmental tackle. NFL Comparison: Matt Ioannidis - athletic interior defender with upside.' },
+      { name: 'Jeremiah Cobb', position: 'RB', school: 'Auburn', grade: 70.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870642.png', analysis: 'Versatile running back with good hands and vision. Cobb shows ability to contribute on third down and as a receiver. His versatility makes him a valuable depth running back. NFL Comparison: Boston Scott - versatile change-of-pace back.' },
+      { name: 'Mikail Kamara', position: 'EDGE', school: 'Indiana', grade: 70.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4696051.png', analysis: 'Developing edge rusher with good length and athleticism. Kamara shows flashes of pass-rush ability and motor. His physical tools give him developmental upside. NFL Comparison: Quinton Bell - developmental edge with tools.' },
+      { name: 'Tacario Davis', position: 'CB', school: 'Washington', grade: 70, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4726127.png', analysis: 'Quick corner with good ball skills and competitiveness. Davis shows solid technique in coverage and willingness to tackle. His competitive nature makes him a depth corner option. NFL Comparison: Torry McTyer - developmental corner with competitiveness.' },
+      { name: 'Jack Endries', position: 'TE', school: 'Texas', grade: 70, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5085189.png', analysis: 'Big tight end with good hands and developing blocking. Endries shows ability to be a red zone target and improving route running. His size makes him a developmental H-back type. NFL Comparison: Eric Saubert - big-bodied backup tight end.' },
+      { name: 'Jyaire Hill', position: 'CB', school: 'Michigan', grade: 69.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4918449.png', analysis: 'Smooth corner with good technique and ball awareness. Hill shows solid coverage skills and good recovery speed. His consistency makes him a developmental outside corner. NFL Comparison: Tre Brown - technically sound corner with good awareness.' },
+      { name: 'Julian Neal', position: 'CB', school: 'Arkansas', grade: 69.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870831.png', analysis: 'Physical corner with good size and press technique. Neal shows willingness to support the run and compete at the catch point. His physicality makes him an intriguing boundary corner. NFL Comparison: Isaac Yiadom - physical developmental corner.' },
       // Ranks 101-150
-      { name: 'Kenyatta Jackson Jr.', position: 'EDGE', school: 'Ohio State', grade: 47, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870781.png', analysis: 'Long edge rusher with good athleticism and developing technique. Jackson shows pass-rush potential and motor. His length gives him developmental upside as a rotational edge. NFL Comparison: Tariq Woolen (converted) - long athlete with tools.' },
-      { name: 'DeMonte Capehart', position: 'DT', school: 'Clemson', grade: 47, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4426347.png', analysis: 'Massive nose tackle with elite strength and anchor. Capehart clogs the middle and occupies blockers. His power makes him a space-eating run defender. NFL Comparison: Danny Shelton - massive run-stuffing nose tackle.' },
-      { name: 'Bray Hubbard', position: 'S', school: 'Alabama', grade: 46, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870658.png', analysis: 'Rangy safety with good instincts and tackling. Hubbard shows ability to play center field and provide run support. His versatility makes him a backup safety with special teams value. NFL Comparison: Miles Killebrew - versatile safety with special teams ability.' },
-      { name: 'Caden Curry', position: 'EDGE', school: 'Ohio State', grade: 46, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870659.png', analysis: 'Powerful edge defender with good strength and motor. Curry shows ability to set the edge and developing pass-rush moves. His physicality makes him a developmental 3-4 end. NFL Comparison: Jonathan Greenard - powerful edge with developing pass rush.' },
-      { name: 'Patrick Payton', position: 'EDGE', school: 'LSU', grade: 45, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870907.png', analysis: 'Quick edge rusher with good bend and burst. Payton shows ability to win with speed and developing hand usage. His athleticism makes him a rotational pass rusher. NFL Comparison: Carl Granderson - quick rotational edge rusher.' },
-      { name: 'Devin Moore', position: 'CB', school: 'Florida', grade: 45, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870737.png', analysis: 'Athletic corner with good speed and recovery ability. Moore shows solid coverage skills and willingness to tackle. His athleticism gives him developmental potential as a nickel corner. NFL Comparison: Anthony Averett - athletic developmental corner.' },
-      { name: 'Rayshaun Benny', position: 'DT', school: 'Michigan', grade: 44, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870619.png', analysis: 'Physical interior defender with good strength and technique. Benny shows ability to control gaps and pursue. His fundamentals make him a solid rotational defensive tackle. NFL Comparison: Vincent Taylor - solid rotational interior defender.' },
-      { name: 'Lander Barton', position: 'LB', school: 'Utah', grade: 44, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870625.png', analysis: 'Instinctive linebacker with good football IQ and tackling. Barton shows solid fundamentals and understanding. His intelligence makes him a backup linebacker with special teams value. NFL Comparison: Nathan Gerry - smart backup linebacker.' },
-      { name: 'James Smith', position: 'DT', school: 'Alabama', grade: 43, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870961.png', analysis: 'Strong interior defender with good power and motor. Smith shows ability to anchor and push the pocket. His strength makes him a rotational run-stopping tackle. NFL Comparison: Rodney Coe - powerful rotational nose tackle.' },
-      { name: 'Amare Ferrell', position: 'S', school: 'Indiana', grade: 43, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870712.png', analysis: 'Hard-hitting safety with good size and physicality. Ferrell shows strong run support and developing coverage skills. His toughness makes him a depth strong safety. NFL Comparison: Damontae Kazee - physical strong safety.' },
-      { name: 'Omar Cooper Jr.', position: 'WR', school: 'Indiana', grade: 42, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870674.png', analysis: 'Speedy receiver with good acceleration and route running. Cooper shows ability to create separation and make plays after the catch. His speed makes him a developmental slot receiver. NFL Comparison: Darius Jennings - quick slot receiver.' },
-      { name: 'Tim Keenan III', position: 'DT', school: 'Alabama', grade: 42, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870786.png', analysis: 'Athletic defensive tackle with good quickness and pursuit. Keenan shows ability to penetrate and disrupt. His Alabama pedigree makes him an intriguing developmental tackle. NFL Comparison: McTelvin Agim - athletic interior defender with upside.' },
-      { name: 'Kevin Coleman Jr.', position: 'WR', school: 'Missouri', grade: 41, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870669.png', analysis: 'Explosive receiver with elite speed and big-play ability. Coleman shows ability to take the top off defenses and track deep balls. His speed makes him a developmental vertical threat. NFL Comparison: Willie Snead - quick receiver with deep speed.' },
-      { name: 'Brian Parker II', position: 'OT', school: 'Duke', grade: 41, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870905.png', analysis: 'Athletic tackle with good length and footwork. Parker shows solid technique and improving strength. His athleticism makes him a developmental swing tackle. NFL Comparison: Alex Taylor - athletic developmental tackle.' },
-      { name: 'Max Llewellyn', position: 'EDGE', school: 'Iowa', grade: 40, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870826.png', analysis: 'Relentless edge defender with high motor and effort. Llewellyn shows good technique and pursuit. His Iowa coaching makes him a fundamentally sound rotational edge. NFL Comparison: Nick Vigil - high-effort developmental edge.' },
-      { name: 'Cade Klubnik', position: 'QB', school: 'Clemson', grade: 40, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685309.png', analysis: 'Dual-threat quarterback with good mobility and arm strength. Klubnik shows ability to extend plays and improving decision-making. His athleticism makes him a developmental backup QB. NFL Comparison: Jacoby Brissett - mobile backup with starting experience.' },
-      { name: 'Isaac Smith', position: 'S', school: 'Mississippi State', grade: 39, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870967.png', analysis: 'Physical safety with good size and tackling. Smith shows strong box presence and developing coverage. His physicality makes him a depth strong safety. NFL Comparison: Dean Marlowe - physical backup safety.' },
-      { name: 'Nick Singleton', position: 'RB', school: 'Penn State', grade: 39, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685464.png', analysis: 'Explosive running back with elite speed and big-play ability. Singleton shows home-run threat and improving vision. His speed makes him a change-of-pace back. NFL Comparison: Raheem Mostert - explosive speed back.' },
-      { name: 'Rod Moore', position: 'S', school: 'Michigan', grade: 38, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4426356.png', analysis: 'Ball-hawking safety with excellent instincts and range. Moore shows great anticipation and playmaking ability. His coverage skills make him a free safety prospect. NFL Comparison: Jessie Bates - instinctive center fielder.' },
-      { name: 'Raylen Wilson', position: 'LB', school: 'Georgia', grade: 38, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870740.png', analysis: 'Athletic linebacker with good speed and coverage ability. Wilson shows versatility and special teams value. His Georgia pedigree makes him a developmental linebacker. NFL Comparison: Quay Walker - athletic Georgia linebacker.' },
-      { name: 'Demond Claiborne', position: 'RB', school: 'Wake Forest', grade: 37, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870668.png', analysis: 'Versatile back with good receiving skills and vision. Claiborne shows ability to contribute on third down. His pass-catching makes him a depth running back. NFL Comparison: Nyheim Hines - versatile receiving back.' },
-      { name: 'Chase Bisontis', position: 'OG', school: 'Texas A&M', grade: 37, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870635.png', analysis: 'Powerful guard with good strength and run-blocking ability. Bisontis shows physicality at the point of attack. His power makes him a developmental guard. NFL Comparison: Nate Herbig - powerful backup guard.' },
-      { name: 'Chandler Rivers', position: 'CB', school: 'Duke', grade: 36, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870943.png', analysis: 'Quick corner with good ball skills and competitiveness. Rivers shows solid technique and awareness. His competitiveness makes him a depth corner. NFL Comparison: Kevin King - tall developmental corner.' },
-      { name: 'Malachi Fields', position: 'WR', school: 'Notre Dame', grade: 36, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870722.png', analysis: 'Reliable receiver with good hands and route running. Fields shows consistency and understanding of leverage. His reliability makes him a depth possession receiver. NFL Comparison: Equanimeous St. Brown - tall Notre Dame receiver.' },
-      { name: 'Jacob Rodriguez', position: 'LB', school: 'Texas Tech', grade: 35, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870947.png', analysis: 'Instinctive linebacker with good tackling and pursuit. Rodriguez shows solid fundamentals and motor. His instincts make him a backup linebacker. NFL Comparison: Dakota Allen - instinctive Texas Tech linebacker.' },
-      { name: 'Ar\'Maj Reed-Adams', position: 'OG', school: 'Texas A&M', grade: 35, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870935.png', analysis: 'Physical guard with good size and strength. Reed-Adams shows ability to move defenders in the run game. His physicality makes him a developmental interior lineman. NFL Comparison: Jordan Meredith - physical backup guard.' },
-      { name: 'T.J. Hall', position: 'CB', school: 'Iowa', grade: 34, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870748.png', analysis: 'Fundamentally sound corner with good technique and positioning. Hall shows Iowa coaching and consistency. His technique makes him a developmental corner. NFL Comparison: Michael Ojemudia - technically sound Iowa corner.' },
-      { name: 'Blake Miller', position: 'OT', school: 'Clemson', grade: 34, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4871049.png', analysis: 'Athletic tackle with good length and footwork. Miller shows solid pass protection and improving strength. His athleticism makes him a developmental tackle. NFL Comparison: Jordan Mills - athletic developmental tackle.' },
-      { name: 'T.J. Guy', position: 'EDGE', school: 'Michigan', grade: 33, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870745.png', analysis: 'Motor-driven edge rusher with relentless effort. Guy shows good pursuit and developing pass-rush moves. His motor makes him a rotational edge. NFL Comparison: Frank Clark - relentless Michigan edge.' },
-      { name: 'Kage Casey', position: 'OT', school: 'Boise State', grade: 33, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870648.png', analysis: 'Big tackle with good strength and toughness. Casey shows solid fundamentals and improving technique. His size makes him a developmental swing tackle. NFL Comparison: David Bakhtiari (Boise State) - developmental tackle prospect.' },
-      { name: 'Parker Brailsford', position: 'C', school: 'Alabama', grade: 32, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4431508.png', analysis: 'Solid center with good intelligence and communication. Brailsford shows ability to make line calls and anchor. His Alabama coaching makes him a developmental center. NFL Comparison: Bradley Bozeman - Alabama center with smarts.' },
-      { name: 'Aaron Anderson', position: 'WR', school: 'LSU', grade: 32, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870611.png', analysis: 'Athletic receiver with good speed and ball tracking. Anderson shows ability to win vertically and make contested catches. His athleticism makes him a developmental receiver. NFL Comparison: Terrace Marshall Jr. - athletic LSU receiver.' },
-      { name: 'Beau Stephens', position: 'OG', school: 'Iowa', grade: 31, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870976.png', analysis: 'Fundamentally sound guard with good technique and effort. Stephens shows Iowa coaching and consistency. His fundamentals make him a backup guard. NFL Comparison: Sean Harlow - Iowa developmental guard.' },
-      { name: 'Jalen Huskey', position: 'S', school: 'Maryland', grade: 31, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870772.png', analysis: 'Athletic safety with good range and ball skills. Huskey shows ability to cover ground and make plays. His athleticism makes him a depth safety. NFL Comparison: Deon Bush - athletic Maryland safety.' },
-      { name: 'Bishop Fitzgerald', position: 'S', school: 'USC', grade: 30, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870724.png', analysis: 'Physical safety with good tackling and run support. Fitzgerald shows strong box presence and toughness. His physicality makes him a backup strong safety. NFL Comparison: Su\'a Cravens - physical USC safety.' },
-      { name: 'Earnest Greene III', position: 'OT', school: 'Georgia', grade: 30, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870739.png', analysis: 'Big tackle with good strength and footwork. Greene shows Georgia coaching and improving technique. His size makes him a developmental tackle. NFL Comparison: D\'Marcus Hayes - Georgia developmental tackle.' },
-      { name: 'Trey Moore', position: 'EDGE', school: 'Texas', grade: 29, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870869.png', analysis: 'Athletic edge rusher with good length and speed. Moore shows pass-rush upside and motor. His athleticism makes him a developmental edge. NFL Comparison: Joseph Ossai - athletic Texas edge.' },
-      { name: 'Boubacar Traore', position: 'EDGE', school: 'Notre Dame', grade: 29, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870999.png', analysis: 'Physical edge defender with good power and effort. Traore shows ability to set the edge and pursue. His physicality makes him a rotational edge. NFL Comparison: Julian Okwara - Notre Dame developmental edge.' },
-      { name: 'Oscar Delp', position: 'TE', school: 'Georgia', grade: 28, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870687.png', analysis: 'Athletic tight end with good receiving skills and route running. Delp shows ability to create separation and make plays. His receiving ability makes him a pass-catching TE. NFL Comparison: Brevin Jordan - athletic receiving tight end.' },
-      { name: 'D.J. Campbell', position: 'OG', school: 'Texas', grade: 28, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870646.png', analysis: 'Powerful guard with good strength and run-blocking. Campbell shows ability to move defenders and anchor. His power makes him a developmental guard. NFL Comparison: Denzel Okafor - powerful developmental guard.' },
-      { name: 'Jude Bowry', position: 'OT', school: 'Boston College', grade: 27, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870640.png', analysis: 'Athletic tackle with good length and mobility. Bowry shows solid pass protection and improving strength. His athleticism makes him a developmental swing tackle. NFL Comparison: Ben Petrula - BC developmental tackle.' },
-      { name: 'Josh Moten', position: 'CB', school: 'Southern Miss', grade: 27, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870868.png', analysis: 'Quick corner with good ball skills and instincts. Moten shows ability to make plays on the ball. His ball skills make him a depth corner. NFL Comparison: Ky'el Hemby - small school developmental corner.' },
-      { name: 'Eric Rivers', position: 'WR', school: 'Georgia Tech', grade: 26, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870942.png', analysis: 'Athletic receiver with good speed and hands. Rivers shows ability to stretch the field and make plays. His speed makes him a developmental receiver. NFL Comparison: Jalen Camp - Georgia Tech athletic receiver.' },
-      { name: 'Emmett Johnson', position: 'RB', school: 'Nebraska', grade: 26, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4871042.png', analysis: 'Physical running back with good power and toughness. Johnson shows ability to run between the tackles. His power makes him a short-yardage back. NFL Comparison: Devine Ozigbo - physical Nebraska back.' },
-      { name: 'Kelby Collins', position: 'DT', school: 'Alabama', grade: 25, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870671.png', analysis: 'Strong interior defender with good power and anchor. Collins shows Alabama coaching and fundamentals. His strength makes him a rotational tackle. NFL Comparison: D.J. Dale - Alabama developmental tackle.' },
-      { name: 'Drew Shelton', position: 'OT', school: 'Penn State', grade: 25, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870959.png', analysis: 'Big tackle with good strength and length. Shelton shows solid fundamentals and improving technique. His size makes him a developmental tackle. NFL Comparison: Will Fries - Penn State developmental tackle.' },
-      { name: 'Jermaine Mathews Jr.', position: 'CB', school: 'Ohio State', grade: 24, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870849.png', analysis: 'Quick corner with good technique and ball skills. Mathews shows Ohio State coaching and awareness. His technique makes him a depth corner. NFL Comparison: Sevyn Banks - Ohio State developmental corner.' },
-      { name: 'Josh Thompson', position: 'OG', school: 'LSU', grade: 24, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870984.png', analysis: 'Physical guard with good strength and toughness. Thompson shows ability to move defenders in the run game. His power makes him a developmental guard. NFL Comparison: Ed Ingram - LSU powerful guard.' },
-      { name: 'Dae\'Quan Wright', position: 'TE', school: 'Ole Miss', grade: 23, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4871022.png', analysis: 'Big tight end with good hands and size. Wright shows ability to be a red zone target. His size makes him a developmental blocking tight end. NFL Comparison: Dawson Knox - big Ole Miss tight end.' },
-      { name: 'Albert Regis', position: 'DT', school: 'Texas A&M', grade: 23, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870938.png', analysis: 'Strong nose tackle with good power and anchor. Regis shows ability to clog the middle and occupy blockers. His strength makes him a developmental nose tackle. NFL Comparison: McKinnley Jackson - Texas A&M nose tackle.' },
+      { name: 'Kenyatta Jackson Jr.', position: 'EDGE', school: 'Ohio State', grade: 69, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5081821.png', analysis: 'Long edge rusher with good athleticism and developing technique. Jackson shows pass-rush potential and motor. His length gives him developmental upside as a rotational edge. NFL Comparison: Tariq Woolen (converted) - long athlete with tools.' },
+      { name: 'DeMonte Capehart', position: 'DT', school: 'Clemson', grade: 69, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4426347.png', analysis: 'Massive nose tackle with elite strength and anchor. Capehart clogs the middle and occupies blockers. His power makes him a space-eating run defender. NFL Comparison: Danny Shelton - massive run-stuffing nose tackle.' },
+      { name: 'Bray Hubbard', position: 'S', school: 'Alabama', grade: 68.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870658.png', analysis: 'Rangy safety with good instincts and tackling. Hubbard shows ability to play center field and provide run support. His versatility makes him a backup safety with special teams value. NFL Comparison: Miles Killebrew - versatile safety with special teams ability.' },
+      { name: 'Caden Curry', position: 'EDGE', school: 'Ohio State', grade: 68.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870659.png', analysis: 'Powerful edge defender with good strength and motor. Curry shows ability to set the edge and developing pass-rush moves. His physicality makes him a developmental 3-4 end. NFL Comparison: Jonathan Greenard - powerful edge with developing pass rush.' },
+      { name: 'Patrick Payton', position: 'EDGE', school: 'LSU', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870907.png', analysis: 'Quick edge rusher with good bend and burst. Payton shows ability to win with speed and developing hand usage. His athleticism makes him a rotational pass rusher. NFL Comparison: Carl Granderson - quick rotational edge rusher.' },
+      { name: 'Devin Moore', position: 'CB', school: 'Florida', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870737.png', analysis: 'Athletic corner with good speed and recovery ability. Moore shows solid coverage skills and willingness to tackle. His athleticism gives him developmental potential as a nickel corner. NFL Comparison: Anthony Averett - athletic developmental corner.' },
+      { name: 'Rayshaun Benny', position: 'DT', school: 'Michigan', grade: 67, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870619.png', analysis: 'Physical interior defender with good strength and technique. Benny shows ability to control gaps and pursue. His fundamentals make him a solid rotational defensive tackle. NFL Comparison: Vincent Taylor - solid rotational interior defender.' },
+      { name: 'Lander Barton', position: 'LB', school: 'Utah', grade: 67, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870625.png', analysis: 'Instinctive linebacker with good football IQ and tackling. Barton shows solid fundamentals and understanding. His intelligence makes him a backup linebacker with special teams value. NFL Comparison: Nathan Gerry - smart backup linebacker.' },
+      { name: 'James Smith', position: 'DT', school: 'Alabama', grade: 66.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870961.png', analysis: 'Strong interior defender with good power and motor. Smith shows ability to anchor and push the pocket. His strength makes him a rotational run-stopping tackle. NFL Comparison: Rodney Coe - powerful rotational nose tackle.' },
+      { name: 'Amare Ferrell', position: 'S', school: 'Indiana', grade: 66.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870712.png', analysis: 'Hard-hitting safety with good size and physicality. Ferrell shows strong run support and developing coverage skills. His toughness makes him a depth strong safety. NFL Comparison: Damontae Kazee - physical strong safety.' },
+      { name: 'Omar Cooper Jr.', position: 'WR', school: 'Indiana', grade: 66, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870674.png', analysis: 'Speedy receiver with good acceleration and route running. Cooper shows ability to create separation and make plays after the catch. His speed makes him a developmental slot receiver. NFL Comparison: Darius Jennings - quick slot receiver.' },
+      { name: 'Tim Keenan III', position: 'DT', school: 'Alabama', grade: 66, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870786.png', analysis: 'Athletic defensive tackle with good quickness and pursuit. Keenan shows ability to penetrate and disrupt. His Alabama pedigree makes him an intriguing developmental tackle. NFL Comparison: McTelvin Agim - athletic interior defender with upside.' },
+      { name: 'Kevin Coleman Jr.', position: 'WR', school: 'Missouri', grade: 65.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870669.png', analysis: 'Explosive receiver with elite speed and big-play ability. Coleman shows ability to take the top off defenses and track deep balls. His speed makes him a developmental vertical threat. NFL Comparison: Willie Snead - quick receiver with deep speed.' },
+      { name: 'Brian Parker II', position: 'OT', school: 'Duke', grade: 65.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870905.png', analysis: 'Athletic tackle with good length and footwork. Parker shows solid technique and improving strength. His athleticism makes him a developmental swing tackle. NFL Comparison: Alex Taylor - athletic developmental tackle.' },
+      { name: 'Max Llewellyn', position: 'EDGE', school: 'Iowa', grade: 65, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870826.png', analysis: 'Relentless edge defender with high motor and effort. Llewellyn shows good technique and pursuit. His Iowa coaching makes him a fundamentally sound rotational edge. NFL Comparison: Nick Vigil - high-effort developmental edge.' },
+      { name: 'Cade Klubnik', position: 'QB', school: 'Clemson', grade: 65, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685309.png', analysis: 'Dual-threat quarterback with good mobility and arm strength. Klubnik shows ability to extend plays and improving decision-making. His athleticism makes him a developmental backup QB. NFL Comparison: Jacoby Brissett - mobile backup with starting experience.' },
+      { name: 'Isaac Smith', position: 'S', school: 'Mississippi State', grade: 64.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870967.png', analysis: 'Physical safety with good size and tackling. Smith shows strong box presence and developing coverage. His physicality makes him a depth strong safety. NFL Comparison: Dean Marlowe - physical backup safety.' },
+      { name: 'Nick Singleton', position: 'RB', school: 'Penn State', grade: 64.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685464.png', analysis: 'Explosive running back with elite speed and big-play ability. Singleton shows home-run threat and improving vision. His speed makes him a change-of-pace back. NFL Comparison: Raheem Mostert - explosive speed back.' },
+      { name: 'Rod Moore', position: 'S', school: 'Michigan', grade: 64, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4426356.png', analysis: 'Ball-hawking safety with excellent instincts and range. Moore shows great anticipation and playmaking ability. His coverage skills make him a free safety prospect. NFL Comparison: Jessie Bates - instinctive center fielder.' },
+      { name: 'Raylen Wilson', position: 'LB', school: 'Georgia', grade: 64, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870740.png', analysis: 'Athletic linebacker with good speed and coverage ability. Wilson shows versatility and special teams value. His Georgia pedigree makes him a developmental linebacker. NFL Comparison: Quay Walker - athletic Georgia linebacker.' },
+      { name: 'Demond Claiborne', position: 'RB', school: 'Wake Forest', grade: 63, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4832846.png', analysis: 'Versatile back with good receiving skills and vision. Claiborne shows ability to contribute on third down. His pass-catching makes him a depth running back. NFL Comparison: Nyheim Hines - versatile receiving back.' },
+      { name: 'Chase Bisontis', position: 'OG', school: 'Texas A&M', grade: 63, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870635.png', analysis: 'Powerful guard with good strength and run-blocking ability. Bisontis shows physicality at the point of attack. His power makes him a developmental guard. NFL Comparison: Nate Herbig - powerful backup guard.' },
+      { name: 'Chandler Rivers', position: 'CB', school: 'Duke', grade: 62.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870943.png', analysis: 'Quick corner with good ball skills and competitiveness. Rivers shows solid technique and awareness. His competitiveness makes him a depth corner. NFL Comparison: Kevin King - tall developmental corner.' },
+      { name: 'Malachi Fields', position: 'WR', school: 'Notre Dame', grade: 62.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870722.png', analysis: 'Reliable receiver with good hands and route running. Fields shows consistency and understanding of leverage. His reliability makes him a depth possession receiver. NFL Comparison: Equanimeous St. Brown - tall Notre Dame receiver.' },
+      { name: 'Jacob Rodriguez', position: 'LB', school: 'Texas Tech', grade: 62, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870947.png', analysis: 'Instinctive linebacker with good tackling and pursuit. Rodriguez shows solid fundamentals and motor. His instincts make him a backup linebacker. NFL Comparison: Dakota Allen - instinctive Texas Tech linebacker.' },
+      { name: 'Ar\'Maj Reed-Adams', position: 'OG', school: 'Texas A&M', grade: 62, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870935.png', analysis: 'Physical guard with good size and strength. Reed-Adams shows ability to move defenders in the run game. His physicality makes him a developmental interior lineman. NFL Comparison: Jordan Meredith - physical backup guard.' },
+      { name: 'T.J. Hall', position: 'CB', school: 'Iowa', grade: 61.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870748.png', analysis: 'Fundamentally sound corner with good technique and positioning. Hall shows Iowa coaching and consistency. His technique makes him a developmental corner. NFL Comparison: Michael Ojemudia - technically sound Iowa corner.' },
+      { name: 'Blake Miller', position: 'OT', school: 'Clemson', grade: 61.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4871049.png', analysis: 'Athletic tackle with good length and footwork. Miller shows solid pass protection and improving strength. His athleticism makes him a developmental tackle. NFL Comparison: Jordan Mills - athletic developmental tackle.' },
+      { name: 'T.J. Guy', position: 'EDGE', school: 'Michigan', grade: 61, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4600387.png', analysis: 'Motor-driven edge rusher with relentless effort. Guy shows good pursuit and developing pass-rush moves. His motor makes him a rotational edge. NFL Comparison: Frank Clark - relentless Michigan edge.' },
+      { name: 'Kage Casey', position: 'OT', school: 'Boise State', grade: 61, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870648.png', analysis: 'Big tackle with good strength and toughness. Casey shows solid fundamentals and improving technique. His size makes him a developmental swing tackle. NFL Comparison: David Bakhtiari (Boise State) - developmental tackle prospect.' },
+      { name: 'Parker Brailsford', position: 'C', school: 'Alabama', grade: 60.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4431508.png', analysis: 'Solid center with good intelligence and communication. Brailsford shows ability to make line calls and anchor. His Alabama coaching makes him a developmental center. NFL Comparison: Bradley Bozeman - Alabama center with smarts.' },
+      { name: 'Aaron Anderson', position: 'WR', school: 'LSU', grade: 60.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870611.png', analysis: 'Athletic receiver with good speed and ball tracking. Anderson shows ability to win vertically and make contested catches. His athleticism makes him a developmental receiver. NFL Comparison: Terrace Marshall Jr. - athletic LSU receiver.' },
+      { name: 'Beau Stephens', position: 'OG', school: 'Iowa', grade: 60, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4592823.png', analysis: 'Fundamentally sound guard with good technique and effort. Stephens shows Iowa coaching and consistency. His fundamentals make him a backup guard. NFL Comparison: Sean Harlow - Iowa developmental guard.' },
+      { name: 'Jalen Huskey', position: 'S', school: 'Maryland', grade: 60, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870772.png', analysis: 'Athletic safety with good range and ball skills. Huskey shows ability to cover ground and make plays. His athleticism makes him a depth safety. NFL Comparison: Deon Bush - athletic Maryland safety.' },
+      { name: 'Bishop Fitzgerald', position: 'S', school: 'USC', grade: 59, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870724.png', analysis: 'Physical safety with good tackling and run support. Fitzgerald shows strong box presence and toughness. His physicality makes him a backup strong safety. NFL Comparison: Su\'a Cravens - physical USC safety.' },
+      { name: 'Earnest Greene III', position: 'OT', school: 'Georgia', grade: 59, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870739.png', analysis: 'Big tackle with good strength and footwork. Greene shows Georgia coaching and improving technique. His size makes him a developmental tackle. NFL Comparison: D\'Marcus Hayes - Georgia developmental tackle.' },
+      { name: 'Trey Moore', position: 'EDGE', school: 'Texas', grade: 58.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870869.png', analysis: 'Athletic edge rusher with good length and speed. Moore shows pass-rush upside and motor. His athleticism makes him a developmental edge. NFL Comparison: Joseph Ossai - athletic Texas edge.' },
+      { name: 'Boubacar Traore', position: 'EDGE', school: 'Notre Dame', grade: 58.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870999.png', analysis: 'Physical edge defender with good power and effort. Traore shows ability to set the edge and pursue. His physicality makes him a rotational edge. NFL Comparison: Julian Okwara - Notre Dame developmental edge.' },
+      { name: 'Oscar Delp', position: 'TE', school: 'Georgia', grade: 58, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870687.png', analysis: 'Athletic tight end with good receiving skills and route running. Delp shows ability to create separation and make plays. His receiving ability makes him a pass-catching TE. NFL Comparison: Brevin Jordan - athletic receiving tight end.' },
+      { name: 'D.J. Campbell', position: 'OG', school: 'Texas', grade: 58, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870646.png', analysis: 'Powerful guard with good strength and run-blocking. Campbell shows ability to move defenders and anchor. His power makes him a developmental guard. NFL Comparison: Denzel Okafor - powerful developmental guard.' },
+      { name: 'Jude Bowry', position: 'OT', school: 'Boston College', grade: 57.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870640.png', analysis: 'Athletic tackle with good length and mobility. Bowry shows solid pass protection and improving strength. His athleticism makes him a developmental swing tackle. NFL Comparison: Ben Petrula - BC developmental tackle.' },
+      { name: 'Josh Moten', position: 'CB', school: 'Southern Miss', grade: 57.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870868.png', analysis: 'Quick corner with good ball skills and instincts. Moten shows ability to make plays on the ball. His ball skills make him a depth corner. NFL Comparison: Kyel Hemby - small school developmental corner.' },
+      { name: 'Eric Rivers', position: 'WR', school: 'Georgia Tech', grade: 57, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870942.png', analysis: 'Athletic receiver with good speed and hands. Rivers shows ability to stretch the field and make plays. His speed makes him a developmental receiver. NFL Comparison: Jalen Camp - Georgia Tech athletic receiver.' },
+      { name: 'Emmett Johnson', position: 'RB', school: 'Nebraska', grade: 57, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4871042.png', analysis: 'Physical running back with good power and toughness. Johnson shows ability to run between the tackles. His power makes him a short-yardage back. NFL Comparison: Devine Ozigbo - physical Nebraska back.' },
+      { name: 'Kelby Collins', position: 'DT', school: 'Alabama', grade: 56.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870671.png', analysis: 'Strong interior defender with good power and anchor. Collins shows Alabama coaching and fundamentals. His strength makes him a rotational tackle. NFL Comparison: D.J. Dale - Alabama developmental tackle.' },
+      { name: 'Drew Shelton', position: 'OT', school: 'Penn State', grade: 56.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870959.png', analysis: 'Big tackle with good strength and length. Shelton shows solid fundamentals and improving technique. His size makes him a developmental tackle. NFL Comparison: Will Fries - Penn State developmental tackle.' },
+      { name: 'Jermaine Mathews Jr.', position: 'CB', school: 'Ohio State', grade: 56, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870849.png', analysis: 'Quick corner with good technique and ball skills. Mathews shows Ohio State coaching and awareness. His technique makes him a depth corner. NFL Comparison: Sevyn Banks - Ohio State developmental corner.' },
+      { name: 'Josh Thompson', position: 'OG', school: 'LSU', grade: 56, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870984.png', analysis: 'Physical guard with good strength and toughness. Thompson shows ability to move defenders in the run game. His power makes him a developmental guard. NFL Comparison: Ed Ingram - LSU powerful guard.' },
+      { name: 'Dae\'Quan Wright', position: 'TE', school: 'Ole Miss', grade: 55.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4871022.png', analysis: 'Big tight end with good hands and size. Wright shows ability to be a red zone target. His size makes him a developmental blocking tight end. NFL Comparison: Dawson Knox - big Ole Miss tight end.' },
+      { name: 'Albert Regis', position: 'DT', school: 'Texas A&M', grade: 55.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870938.png', analysis: 'Strong nose tackle with good power and anchor. Regis shows ability to clog the middle and occupy blockers. His strength makes him a developmental nose tackle. NFL Comparison: McKinnley Jackson - Texas A&M nose tackle.' },
       // Ranks 151-200
-      { name: 'J\'Mari Taylor', position: 'RB', school: 'Virginia', grade: 22, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870983.png', analysis: 'Elusive running back with good vision and quickness. Taylor shows ability to make defenders miss and find creases. His elusiveness makes him a change-of-pace back. NFL Comparison: J.D. McKissic - elusive receiving back.' },
-      { name: 'J.C. Davis', position: 'OT', school: 'Illinois', grade: 22, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870680.png', analysis: 'Athletic tackle with good length and mobility. Davis shows solid pass protection and improving strength. His athleticism makes him a developmental swing tackle. NFL Comparison: Vederian Lowe - Illinois developmental tackle.' },
-      { name: 'Aaron Graves', position: 'DT', school: 'Iowa', grade: 21, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870741.png', analysis: 'Fundamentally sound tackle with good technique and motor. Graves shows Iowa coaching and consistency. His technique makes him a rotational tackle. NFL Comparison: Chauncey Golston - Iowa developmental tackle.' },
-      { name: 'Jimmy Rolder', position: 'LB', school: 'Michigan', grade: 21, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870946.png', analysis: 'Physical linebacker with good tackling and effort. Rolder shows Michigan coaching and toughness. His physicality makes him a backup linebacker. NFL Comparison: Josh Ross - Michigan developmental linebacker.' },
-      { name: 'Jaeden Roberts', position: 'OG', school: 'Alabama', grade: 20, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870944.png', analysis: 'Powerful guard with good strength and run-blocking. Roberts shows Alabama pedigree and fundamentals. His power makes him a developmental guard. NFL Comparison: Lester Cotton - Alabama developmental guard.' },
-      { name: 'DeShon Singleton', position: 'S', school: 'Nebraska', grade: 20, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870962.png', analysis: 'Hard-hitting safety with good physicality and run support. Singleton shows strong box presence. His toughness makes him a backup strong safety. NFL Comparison: Lamar Jackson (Nebraska) - physical safety.' },
-      { name: 'Wendell Moe Jr.', position: 'OG', school: 'Tennessee', grade: 19, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870864.png', analysis: 'Big guard with good size and strength. Moe shows ability to move defenders in the run game. His size makes him a developmental guard. NFL Comparison: Jerome Carvin - Tennessee developmental guard.' },
-      { name: 'Lawson Luckie', position: 'TE', school: 'Georgia', grade: 19, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870830.png', analysis: 'Athletic tight end with good hands and route running. Luckie shows Georgia coaching and receiving ability. His athleticism makes him a pass-catching TE. NFL Comparison: Charlie Woerner - Georgia tight end.' },
-      { name: 'Peyton Bowen', position: 'S', school: 'Oklahoma', grade: 18, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870638.png', analysis: 'Versatile safety with good instincts and coverage ability. Bowen shows ability to play multiple positions. His versatility makes him a depth safety. NFL Comparison: Justin Broiles - versatile Oklahoma safety.' },
-      { name: 'Isaiah Sategna III', position: 'WR', school: 'Oklahoma', grade: 18, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870954.png', analysis: 'Explosive receiver with elite speed and return ability. Sategna shows big-play potential on offense and special teams. His speed makes him a gadget player. NFL Comparison: Mecole Hardman - explosive speed specialist.' },
-      { name: 'Will Lee III', position: 'CB', school: 'Texas A&M', grade: 17, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870818.png', analysis: 'Quick corner with good ball skills and competitiveness. Lee shows solid technique and awareness. His competitiveness makes him a depth corner. NFL Comparison: Keldrick Carper - Texas A&M developmental corner.' },
-      { name: 'Tyrique Tucker', position: 'DT', school: 'Indiana', grade: 17, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4871005.png', analysis: 'Athletic tackle with good quickness and motor. Tucker shows ability to penetrate and disrupt. His athleticism makes him a rotational tackle. NFL Comparison: Jerome Johnson - Indiana developmental tackle.' },
-      { name: 'Alex Harkey', position: 'OT', school: 'Oregon', grade: 16, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870750.png', analysis: 'Big tackle with good length and strength. Harkey shows solid fundamentals and improving technique. His size makes him a developmental tackle. NFL Comparison: George Moore - Oregon developmental tackle.' },
-      { name: 'Le\'Veon Moss', position: 'RB', school: 'Texas A&M', grade: 16, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870873.png', analysis: 'Physical running back with good power and size. Moss shows ability to run through tackles and finish runs. His power makes him a short-yardage option. NFL Comparison: Zack Moss - powerful physical back.' },
-      { name: 'Bryce Boettcher', position: 'LB', school: 'Oregon', grade: 15, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870639.png', analysis: 'Hard-hitting linebacker with good tackling and motor. Boettcher shows Oregon coaching and effort. His toughness makes him a backup linebacker with special teams value. NFL Comparison: Troy Dye - Oregon developmental linebacker.' },
-      { name: 'Taylen Green', position: 'QB', school: 'Arkansas', grade: 15, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870742.png', analysis: 'Dual-threat quarterback with excellent mobility and improving accuracy. Green shows ability to create plays with his legs. His athleticism makes him a developmental QB. NFL Comparison: Malik Willis - athletic developmental QB.' },
-      { name: 'Hank Beatty', position: 'WR', school: 'Illinois', grade: 14, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870627.png', analysis: 'Reliable receiver with good hands and route running. Beatty shows consistency and understanding. His reliability makes him a depth receiver. NFL Comparison: Dazz Newsome - Illinois possession receiver.' },
-      { name: 'Louis Moore', position: 'S', school: 'Indiana', grade: 14, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870867.png', analysis: 'Athletic safety with good range and ball skills. Moore shows ability to cover ground and make plays. His athleticism makes him a depth safety. NFL Comparison: Devon Key - Indiana safety prospect.' },
-      { name: 'Trey Zuhn III', position: 'OT', school: 'Texas A&M', grade: 13, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870731.png', analysis: 'Big tackle with good size and strength. Zuhn shows solid fundamentals and improving technique. His size makes him a developmental tackle. NFL Comparison: Dan Moore Jr. - developmental tackle prospect.' },
-      { name: 'Keionte Scott', position: 'S', school: 'Miami', grade: 13, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870958.png', analysis: 'Physical safety with good tackling and run support. Scott shows Miami toughness and aggressiveness. His physicality makes him a backup strong safety. NFL Comparison: Amari Carter - Miami physical safety.' },
-      { name: 'Aiden Fisher', position: 'LB', school: 'Indiana', grade: 12, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870723.png', analysis: 'Instinctive linebacker with good football IQ and tackling. Fisher shows solid fundamentals and motor. His instincts make him a backup linebacker. NFL Comparison: Micah McFadden - Indiana linebacker.' },
-      { name: 'Collin Wright', position: 'CB', school: 'Stanford', grade: 12, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5081800.png', analysis: 'Technical corner with good footwork and positioning. Wright shows Stanford coaching and intelligence. His technique makes him a depth corner. NFL Comparison: Paulson Adebo - Stanford technical corner.' },
-      { name: 'Ted Hurst', position: 'WR', school: 'Georgia State', grade: 11, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870773.png', analysis: 'Productive receiver with good hands and route running. Hurst shows ability to get open and make catches. His production makes him a depth receiver. NFL Comparison: Roger Lewis - small school productive receiver.' },
-      { name: 'P.J. Williams', position: 'OT', school: 'SMU', grade: 11, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4871016.png', analysis: 'Athletic tackle with good length and mobility. Williams shows solid pass protection and improving strength. His athleticism makes him a developmental tackle. NFL Comparison: Jake Brendel - SMU developmental lineman.' },
-      { name: 'Xavier Scott', position: 'CB', school: 'Illinois', grade: 10, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870957.png', analysis: 'Quick corner with good ball skills and competitiveness. Scott shows solid technique and awareness. His competitiveness makes him a depth corner. NFL Comparison: Tahveon Nicholson - Illinois developmental corner.' },
-      { name: 'Chase Roberts', position: 'WR', school: 'BYU', grade: 10, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870945.png', analysis: 'Reliable receiver with good hands and route running. Roberts shows consistency and understanding. His reliability makes him a depth receiver. NFL Comparison: Neil Pau\'u - BYU possession receiver.' },
-      { name: 'Eric O\'Neill', position: 'EDGE', school: 'Rutgers', grade: 9, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870889.png', analysis: 'Motor-driven edge rusher with good effort and pursuit. O\'Neill shows relentless motor and developing technique. His effort makes him a depth edge. NFL Comparison: Elijah McGuire (converted) - Rutgers athlete.' },
-      { name: 'Roman Hemby', position: 'RB', school: 'Indiana', grade: 9, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870756.png', analysis: 'Quick running back with good vision and elusiveness. Hemby shows ability to make defenders miss. His quickness makes him a change-of-pace back. NFL Comparison: Stevie Scott - Indiana running back.' },
-      { name: 'Kahlil Benson', position: 'OT', school: 'Indiana', grade: 8, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870629.png', analysis: 'Big tackle with good size and strength. Benson shows solid fundamentals and improving technique. His size makes him a developmental tackle. NFL Comparison: Caleb Jones - Indiana developmental lineman.' },
-      { name: 'Justin Joly', position: 'TE', school: 'NC State', grade: 8, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870779.png', analysis: 'Athletic tight end with good hands and route running. Joly shows receiving ability and developing blocking. His athleticism makes him a pass-catching TE. NFL Comparison: Dylan Parham - NC State athlete.' },
-      { name: 'Stephen Daley', position: 'EDGE', school: 'Indiana', grade: 7, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870679.png', analysis: 'Relentless edge rusher with high motor and effort. Daley shows good pursuit and developing technique. His motor makes him a depth edge. NFL Comparison: Allen Stallings - Indiana defensive end.' },
-      { name: 'Thaddeus Dixon', position: 'CB', school: 'North Carolina', grade: 7, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870692.png', analysis: 'Quick corner with good ball skills and competitiveness. Dixon shows solid technique and awareness. His competitiveness makes him a depth corner. NFL Comparison: Storm Duck - North Carolina corner.' },
-      { name: 'Riley Nowakowski', position: 'TE', school: 'Indiana', grade: 6, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870882.png', analysis: 'Big tight end with good hands and developing blocking. Nowakowski shows ability to be a red zone target. His size makes him a developmental tight end. NFL Comparison: Peyton Hendershot - Indiana tight end.' },
-      { name: 'Hezekiah Masses', position: 'CB', school: 'California', grade: 6, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870841.png', analysis: 'Athletic corner with good speed and recovery ability. Masses shows solid coverage skills and athleticism. His speed makes him a depth corner. NFL Comparison: Josh Drayden - Cal developmental corner.' },
-      { name: 'Kelley Jones', position: 'CB', school: 'Mississippi State', grade: 5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870778.png', analysis: 'Physical corner with good size and press technique. Jones shows willingness to compete at the catch point. His physicality makes him a depth corner. NFL Comparison: Martin Emerson - Mississippi State corner.' },
-      { name: 'Trinidad Chambliss', position: 'QB', school: 'Ole Miss', grade: 5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870652.png', analysis: 'Developmental quarterback with good arm strength and mobility. Chambliss shows raw physical tools and improving mechanics. His athleticism makes him a practice squad QB. NFL Comparison: Shea Patterson - Ole Miss developmental QB.' },
-      { name: 'Peter Clarke', position: 'TE', school: 'Temple', grade: 52 },
-      { name: 'Isaiah Smith', position: 'EDGE', school: 'SMU', grade: 52 },
-      { name: 'Skyler Bell', position: 'WR', school: 'Connecticut', grade: 50 },
-      { name: 'Nadame Tucker', position: 'EDGE', school: 'Western Michigan', grade: 50 },
-      { name: 'Keanu Tanuvasa', position: 'DT', school: 'BYU', grade: 48 },
-      { name: 'Ephesians Prysock', position: 'CB', school: 'Washington', grade: 48 },
-      { name: 'O\'Mega Blake', position: 'WR', school: 'Arkansas', grade: 50 },
+      { name: 'J\'Mari Taylor', position: 'RB', school: 'Virginia', grade: 54.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870983.png', analysis: 'Elusive running back with good vision and quickness. Taylor shows ability to make defenders miss and find creases. His elusiveness makes him a change-of-pace back. NFL Comparison: J.D. McKissic - elusive receiving back.' },
+      { name: 'J.C. Davis', position: 'OT', school: 'Illinois', grade: 54.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870680.png', analysis: 'Athletic tackle with good length and mobility. Davis shows solid pass protection and improving strength. His athleticism makes him a developmental swing tackle. NFL Comparison: Vederian Lowe - Illinois developmental tackle.' },
+      { name: 'Aaron Graves', position: 'DT', school: 'Iowa', grade: 54, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870741.png', analysis: 'Fundamentally sound tackle with good technique and motor. Graves shows Iowa coaching and consistency. His technique makes him a rotational tackle. NFL Comparison: Chauncey Golston - Iowa developmental tackle.' },
+      { name: 'Jimmy Rolder', position: 'LB', school: 'Michigan', grade: 54, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870946.png', analysis: 'Physical linebacker with good tackling and effort. Rolder shows Michigan coaching and toughness. His physicality makes him a backup linebacker. NFL Comparison: Josh Ross - Michigan developmental linebacker.' },
+      { name: 'Jaeden Roberts', position: 'OG', school: 'Alabama', grade: 53.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870944.png', analysis: 'Powerful guard with good strength and run-blocking. Roberts shows Alabama pedigree and fundamentals. His power makes him a developmental guard. NFL Comparison: Lester Cotton - Alabama developmental guard.' },
+      { name: 'DeShon Singleton', position: 'S', school: 'Nebraska', grade: 53.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870962.png', analysis: 'Hard-hitting safety with good physicality and run support. Singleton shows strong box presence. His toughness makes him a backup strong safety. NFL Comparison: Lamar Jackson (Nebraska) - physical safety.' },
+      { name: 'Wendell Moe Jr.', position: 'OG', school: 'Tennessee', grade: 53, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870864.png', analysis: 'Big guard with good size and strength. Moe shows ability to move defenders in the run game. His size makes him a developmental guard. NFL Comparison: Jerome Carvin - Tennessee developmental guard.' },
+      { name: 'Lawson Luckie', position: 'TE', school: 'Georgia', grade: 53, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870830.png', analysis: 'Athletic tight end with good hands and route running. Luckie shows Georgia coaching and receiving ability. His athleticism makes him a pass-catching TE. NFL Comparison: Charlie Woerner - Georgia tight end.' },
+      { name: 'Peyton Bowen', position: 'S', school: 'Oklahoma', grade: 52.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870638.png', analysis: 'Versatile safety with good instincts and coverage ability. Bowen shows ability to play multiple positions. His versatility makes him a depth safety. NFL Comparison: Justin Broiles - versatile Oklahoma safety.' },
+      { name: 'Isaiah Sategna III', position: 'WR', school: 'Oklahoma', grade: 52.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870954.png', analysis: 'Explosive receiver with elite speed and return ability. Sategna shows big-play potential on offense and special teams. His speed makes him a gadget player. NFL Comparison: Mecole Hardman - explosive speed specialist.' },
+      { name: 'Will Lee III', position: 'CB', school: 'Texas A&M', grade: 52, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870818.png', analysis: 'Quick corner with good ball skills and competitiveness. Lee shows solid technique and awareness. His competitiveness makes him a depth corner. NFL Comparison: Keldrick Carper - Texas A&M developmental corner.' },
+      { name: 'Tyrique Tucker', position: 'DT', school: 'Indiana', grade: 52, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4871005.png', analysis: 'Athletic tackle with good quickness and motor. Tucker shows ability to penetrate and disrupt. His athleticism makes him a rotational tackle. NFL Comparison: Jerome Johnson - Indiana developmental tackle.' },
+      { name: 'Alex Harkey', position: 'OT', school: 'Oregon', grade: 51.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870750.png', analysis: 'Big tackle with good length and strength. Harkey shows solid fundamentals and improving technique. His size makes him a developmental tackle. NFL Comparison: George Moore - Oregon developmental tackle.' },
+      { name: 'Le\'Veon Moss', position: 'RB', school: 'Texas A&M', grade: 51.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870873.png', analysis: 'Physical running back with good power and size. Moss shows ability to run through tackles and finish runs. His power makes him a short-yardage option. NFL Comparison: Zack Moss - powerful physical back.' },
+      { name: 'Bryce Boettcher', position: 'LB', school: 'Oregon', grade: 50.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870639.png', analysis: 'Hard-hitting linebacker with good tackling and motor. Boettcher shows Oregon coaching and effort. His toughness makes him a backup linebacker with special teams value. NFL Comparison: Troy Dye - Oregon developmental linebacker.' },
+      { name: 'Taylen Green', position: 'QB', school: 'Arkansas', grade: 50.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4431325.png', analysis: 'Dual-threat quarterback with excellent mobility and improving accuracy. Green shows ability to create plays with his legs. His athleticism makes him a developmental QB. NFL Comparison: Malik Willis - athletic developmental QB.' },
+      { name: 'Hank Beatty', position: 'WR', school: 'Illinois', grade: 50, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870627.png', analysis: 'Reliable receiver with good hands and route running. Beatty shows consistency and understanding. His reliability makes him a depth receiver. NFL Comparison: Dazz Newsome - Illinois possession receiver.' },
+      { name: 'Louis Moore', position: 'S', school: 'Indiana', grade: 50, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870867.png', analysis: 'Athletic safety with good range and ball skills. Moore shows ability to cover ground and make plays. His athleticism makes him a depth safety. NFL Comparison: Devon Key - Indiana safety prospect.' },
+      { name: 'Trey Zuhn III', position: 'OT', school: 'Texas A&M', grade: 49.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870731.png', analysis: 'Big tackle with good size and strength. Zuhn shows solid fundamentals and improving technique. His size makes him a developmental tackle. NFL Comparison: Dan Moore Jr. - developmental tackle prospect.' },
+      { name: 'Keionte Scott', position: 'S', school: 'Miami', grade: 49.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870958.png', analysis: 'Physical safety with good tackling and run support. Scott shows Miami toughness and aggressiveness. His physicality makes him a backup strong safety. NFL Comparison: Amari Carter - Miami physical safety.' },
+      { name: 'Aiden Fisher', position: 'LB', school: 'Indiana', grade: 49, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4912338.png', analysis: 'Instinctive linebacker with good football IQ and tackling. Fisher shows solid fundamentals and motor. His instincts make him a backup linebacker. NFL Comparison: Micah McFadden - Indiana linebacker.' },
+      { name: 'Collin Wright', position: 'CB', school: 'Stanford', grade: 49, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5081800.png', analysis: 'Technical corner with good footwork and positioning. Wright shows Stanford coaching and intelligence. His technique makes him a depth corner. NFL Comparison: Paulson Adebo - Stanford technical corner.' },
+      { name: 'Ted Hurst', position: 'WR', school: 'Georgia State', grade: 48.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870773.png', analysis: 'Productive receiver with good hands and route running. Hurst shows ability to get open and make catches. His production makes him a depth receiver. NFL Comparison: Roger Lewis - small school productive receiver.' },
+      { name: 'P.J. Williams', position: 'OT', school: 'SMU', grade: 48.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4871016.png', analysis: 'Athletic tackle with good length and mobility. Williams shows solid pass protection and improving strength. His athleticism makes him a developmental tackle. NFL Comparison: Jake Brendel - SMU developmental lineman.' },
+      { name: 'Xavier Scott', position: 'CB', school: 'Illinois', grade: 48, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870957.png', analysis: 'Quick corner with good ball skills and competitiveness. Scott shows solid technique and awareness. His competitiveness makes him a depth corner. NFL Comparison: Tahveon Nicholson - Illinois developmental corner.' },
+      { name: 'Chase Roberts', position: 'WR', school: 'BYU', grade: 48, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4714388.png', analysis: 'Reliable receiver with good hands and route running. Roberts shows consistency and understanding. His reliability makes him a depth receiver. NFL Comparison: Neil Pau\'u - BYU possession receiver.' },
+      { name: 'Eric O\'Neill', position: 'EDGE', school: 'Rutgers', grade: 47.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870889.png', analysis: 'Motor-driven edge rusher with good effort and pursuit. O\'Neill shows relentless motor and developing technique. His effort makes him a depth edge. NFL Comparison: Elijah McGuire (converted) - Rutgers athlete.' },
+      { name: 'Roman Hemby', position: 'RB', school: 'Indiana', grade: 47.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4688835.png', analysis: 'Quick running back with good vision and elusiveness. Hemby shows ability to make defenders miss. His quickness makes him a change-of-pace back. NFL Comparison: Stevie Scott - Indiana running back.' },
+      { name: 'Kahlil Benson', position: 'OT', school: 'Indiana', grade: 46.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870629.png', analysis: 'Big tackle with good size and strength. Benson shows solid fundamentals and improving technique. His size makes him a developmental tackle. NFL Comparison: Caleb Jones - Indiana developmental lineman.' },
+      { name: 'Justin Joly', position: 'TE', school: 'NC State', grade: 46.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870779.png', analysis: 'Athletic tight end with good hands and route running. Joly shows receiving ability and developing blocking. His athleticism makes him a pass-catching TE. NFL Comparison: Dylan Parham - NC State athlete.' },
+      { name: 'Stephen Daley', position: 'EDGE', school: 'Indiana', grade: 46, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870679.png', analysis: 'Relentless edge rusher with high motor and effort. Daley shows good pursuit and developing technique. His motor makes him a depth edge. NFL Comparison: Allen Stallings - Indiana defensive end.' },
+      { name: 'Thaddeus Dixon', position: 'CB', school: 'North Carolina', grade: 46, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870692.png', analysis: 'Quick corner with good ball skills and competitiveness. Dixon shows solid technique and awareness. His competitiveness makes him a depth corner. NFL Comparison: Storm Duck - North Carolina corner.' },
+      { name: 'Riley Nowakowski', position: 'TE', school: 'Indiana', grade: 45.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870882.png', analysis: 'Big tight end with good hands and developing blocking. Nowakowski shows ability to be a red zone target. His size makes him a developmental tight end. NFL Comparison: Peyton Hendershot - Indiana tight end.' },
+      { name: 'Hezekiah Masses', position: 'CB', school: 'California', grade: 45.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870841.png', analysis: 'Athletic corner with good speed and recovery ability. Masses shows solid coverage skills and athleticism. His speed makes him a depth corner. NFL Comparison: Josh Drayden - Cal developmental corner.' },
+      { name: 'Kelley Jones', position: 'CB', school: 'Mississippi State', grade: 45, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870778.png', analysis: 'Physical corner with good size and press technique. Jones shows willingness to compete at the catch point. His physicality makes him a depth corner. NFL Comparison: Martin Emerson - Mississippi State corner.' },
+      { name: 'Peter Clarke', position: 'TE', school: 'Temple', grade: 72, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870666.png', analysis: 'Big tight end with good size and hands. Clarke shows solid receiving skills and developing blocking. His size makes him a developmental H-back. NFL Comparison: Kenny Yeboah - Temple tight end.' },
+      { name: 'Isaiah Smith', position: 'EDGE', school: 'SMU', grade: 72, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870964.png', analysis: 'Athletic edge rusher with good speed and motor. Smith shows pass-rush upside and effort. His athleticism makes him a developmental edge. NFL Comparison: Delontae Scott - SMU edge rusher.' },
+      { name: 'Skyler Bell', position: 'WR', school: 'Connecticut', grade: 70.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870628.png', analysis: 'Productive receiver with good hands and route running. Bell shows consistency and ability to get open. His production makes him a depth receiver. NFL Comparison: Aaron McLean - UConn receiver.' },
+      { name: 'Nadame Tucker', position: 'EDGE', school: 'Western Michigan', grade: 70.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4871004.png', analysis: 'Motor-driven edge rusher with good effort and pursuit. Tucker shows relentless motor and developing technique. His effort makes him a depth edge. NFL Comparison: Ali Fayad - MAC edge rusher.' },
+      { name: 'Keanu Tanuvasa', position: 'DT', school: 'BYU', grade: 69.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870982.png', analysis: 'Physical nose tackle with good power and toughness. Tanuvasa shows ability to anchor and clog the middle. His power makes him a developmental nose tackle. NFL Comparison: Khyiris Tonga - BYU nose tackle.' },
+      { name: 'Ephesians Prysock', position: 'CB', school: 'Washington', grade: 69.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870932.png', analysis: 'Athletic corner with good size and recovery speed. Prysock shows solid coverage skills and athleticism. His size makes him a developmental boundary corner. NFL Comparison: Elijah Molden - Washington corner.' },
+      { name: 'O\'Mega Blake', position: 'WR', school: 'Arkansas', grade: 70.5, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870637.png', analysis: 'Athletic receiver with good speed and ball tracking. Blake shows ability to stretch the field and make plays. His speed makes him a developmental deep threat. NFL Comparison: Treylon Burks - Arkansas athletic receiver.' },
       // Ranks 201-250
-      { name: 'Josh Cameron', position: 'WR', school: 'Baylor', grade: 45 },
-      { name: 'Joe Royer', position: 'TE', school: 'Cincinnati', grade: 45 },
-      { name: 'Sawyer Robertson', position: 'QB', school: 'Baylor', grade: 45 },
-      { name: 'Niki Prongos', position: 'OT', school: 'Stanford', grade: 45 },
-      { name: 'Ernest Hausmann', position: 'LB', school: 'Michigan', grade: 45 },
-      { name: 'Bryce Foster', position: 'C', school: 'Kansas', grade: 45 },
-      { name: 'Kyle Louis', position: 'LB', school: 'Pittsburgh', grade: 45 },
-      { name: 'C.J. Daniels', position: 'WR', school: 'Miami', grade: 45 },
-      { name: 'V.J. Payne', position: 'S', school: 'Kansas State', grade: 45 },
-      { name: 'Jam Miller', position: 'RB', school: 'Alabama', grade: 45 },
-      { name: 'Matt Gulbin', position: 'C', school: 'Michigan State', grade: 45 },
-      { name: 'Keylan Rutledge', position: 'OG', school: 'Georgia Tech', grade: 45 },
-      { name: 'DeAndre Moore Jr.', position: 'WR', school: 'Texas', grade: 45 },
-      { name: 'Rodrick Pleasant', position: 'CB', school: 'UCLA', grade: 45 },
-      { name: 'Darius Taylor', position: 'RB', school: 'Minnesota', grade: 45 },
-      { name: 'Xavier Nwankpa', position: 'S', school: 'Iowa', grade: 45 },
-      { name: 'Terion Stewart', position: 'RB', school: 'Virginia Tech', grade: 45 },
-      { name: 'Keyron Crawford', position: 'EDGE', school: 'Auburn', grade: 45 },
-      { name: 'Keagen Trost', position: 'OT', school: 'Missouri', grade: 45 },
-      { name: 'Colbie Young', position: 'WR', school: 'Georgia', grade: 45 },
-      { name: 'Christian Gray', position: 'CB', school: 'Notre Dame', grade: 45 },
-      { name: 'Justin Jefferson', position: 'LB', school: 'Alabama', grade: 45 },
-      { name: 'Isaiah Horton', position: 'WR', school: 'Alabama', grade: 45 },
-      { name: 'Ethan Burke', position: 'DT', school: 'Texas', grade: 45 },
-      { name: 'Evan Stewart', position: 'WR', school: 'Oregon', grade: 45 },
-      { name: 'Connor Tollison', position: 'C', school: 'Missouri', grade: 45 },
-      { name: 'Max Iheanachor', position: 'OT', school: 'Arizona State', grade: 45 },
-      { name: 'Deven Eastern', position: 'DT', school: 'Minnesota', grade: 45 },
-      { name: 'Noah Whittington', position: 'RB', school: 'Oregon', grade: 45 },
-      { name: 'Zakee Wheatley', position: 'S', school: 'Penn State', grade: 45 },
-      { name: 'Tanner Koziol', position: 'TE', school: 'Houston', grade: 45 },
-      { name: 'Bryan Thomas Jr.', position: 'EDGE', school: 'South Carolina', grade: 45 },
-      { name: 'Jakobe Thomas', position: 'S', school: 'Miami', grade: 45 },
-      { name: 'Cam\'Ron Stewart', position: 'EDGE', school: 'Temple', grade: 45 },
-      { name: 'Chris McClellan', position: 'DT', school: 'Missouri', grade: 45 },
-      { name: 'Skyler Gill-Howard', position: 'DT', school: 'Texas Tech', grade: 45 },
-      { name: 'Jalen Catalon', position: 'S', school: 'Missouri', grade: 45 },
-      { name: 'Kaleb Proctor', position: 'DT', school: 'SE Louisiana', grade: 45 },
-      { name: 'Harrison Wallace III', position: 'WR', school: 'Ole Miss', grade: 45 },
-      { name: 'Cameron Ball', position: 'DT', school: 'Arkansas', grade: 45 },
-      { name: 'Josh Gesky', position: 'OG', school: 'Illinois', grade: 45 },
-      { name: 'Diego Pavia', position: 'QB', school: 'Vanderbilt', grade: 45 },
-      { name: 'Carson Hinzman', position: 'C', school: 'Ohio State', grade: 45 },
-      { name: 'Barion Brown', position: 'WR', school: 'LSU', grade: 45 },
-      { name: 'Pat Coogan', position: 'C', school: 'Indiana', grade: 45 },
-      { name: 'Bryson Washington', position: 'RB', school: 'Baylor', grade: 45 },
-      { name: 'Keyshaun Elliott', position: 'LB', school: 'Arizona State', grade: 45 },
-      { name: 'Anez Cooper', position: 'OG', school: 'Miami', grade: 45 },
-      { name: 'West Weeks', position: 'LB', school: 'LSU', grade: 45 },
-      { name: 'Genesis Smith', position: 'S', school: 'Arizona State', grade: 45 },
+      { name: 'Josh Cameron', position: 'WR', school: 'Baylor', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870645.png', analysis: 'Reliable receiver with good hands and route running. Cameron shows consistency and understanding. His reliability makes him a depth receiver. NFL Comparison: Denzel Mims - Baylor receiver.' },
+      { name: 'Joe Royer', position: 'TE', school: 'Cincinnati', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870951.png', analysis: 'Athletic tight end with good receiving skills. Royer shows ability to create separation and solid hands. His athleticism makes him a pass-catching TE. NFL Comparison: Leonard Taylor - Cincinnati tight end.' },
+      { name: 'Sawyer Robertson', position: 'QB', school: 'Baylor', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870949.png', analysis: 'Developmental quarterback with good arm and poise. Robertson shows solid decision-making and improving accuracy. His fundamentals make him a backup QB. NFL Comparison: Charlie Brewer - Baylor developmental QB.' },
+      { name: 'Niki Prongos', position: 'OT', school: 'Stanford', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5086031.png', analysis: 'Technical tackle with good footwork and intelligence. Prongos shows Stanford coaching and fundamentals. His technique makes him a developmental tackle. NFL Comparison: Foster Sarell - Stanford tackle.' },
+      { name: 'Ernest Hausmann', position: 'LB', school: 'Michigan', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870753.png', analysis: 'Physical linebacker with good tackling and motor. Hausmann shows Michigan coaching and effort. His physicality makes him a backup linebacker. NFL Comparison: Cameron McGrone - Michigan linebacker.' },
+      { name: 'Bryce Foster', position: 'C', school: 'Kansas', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870729.png', analysis: 'Strong center with good power and intelligence. Foster shows ability to make line calls and anchor. His strength makes him a developmental center. NFL Comparison: Creed Humphrey - Oklahoma center.' },
+      { name: 'Kyle Louis', position: 'LB', school: 'Pittsburgh', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870825.png', analysis: 'Instinctive linebacker with good tackling and pursuit. Louis shows solid fundamentals and motor. His instincts make him a backup linebacker. NFL Comparison: SirVocea Dennis - Pittsburgh linebacker.' },
+      { name: 'C.J. Daniels', position: 'WR', school: 'Miami', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870678.png', analysis: 'Athletic receiver with good speed and hands. Daniels shows ability to make plays and stretch the field. His athleticism makes him a developmental receiver. NFL Comparison: KJ Osborn - Miami receiver.' },
+      { name: 'V.J. Payne', position: 'S', school: 'Kansas State', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870904.png', analysis: 'Physical safety with good tackling and run support. Payne shows strong box presence and toughness. His physicality makes him a backup strong safety. NFL Comparison: Josh Hayes - Kansas State safety.' },
+      { name: 'Jam Miller', position: 'RB', school: 'Alabama', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870855.png', analysis: 'Physical running back with good power and vision. Miller shows Alabama coaching and toughness. His power makes him a short-yardage back. NFL Comparison: Brian Robinson - Alabama power back.' },
+      { name: 'Matt Gulbin', position: 'C', school: 'Michigan State', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870744.png', analysis: 'Solid center with good intelligence and fundamentals. Gulbin shows ability to make line calls. His intelligence makes him a developmental center. NFL Comparison: Matt Allen - Michigan State center.' },
+      { name: 'Keylan Rutledge', position: 'OG', school: 'Georgia Tech', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870952.png', analysis: 'Physical guard with good strength and run-blocking. Rutledge shows ability to move defenders. His power makes him a developmental guard. NFL Comparison: Zach Quinney - Georgia Tech guard.' },
+      { name: 'DeAndre Moore Jr.', position: 'WR', school: 'Texas', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870871.png', analysis: 'Athletic receiver with good speed and ball tracking. Moore shows ability to stretch the field and make plays. His speed makes him a developmental receiver. NFL Comparison: Jordan Whittington - Texas receiver.' },
+      { name: 'Rodrick Pleasant', position: 'CB', school: 'UCLA', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870928.png', analysis: 'Quick corner with good ball skills and competitiveness. Pleasant shows solid technique and awareness. His competitiveness makes him a depth corner. NFL Comparison: Stephan Blaylock - UCLA corner.' },
+      { name: 'Darius Taylor', position: 'RB', school: 'Minnesota', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870981.png', analysis: 'Elusive running back with good vision and quickness. Taylor shows ability to make defenders miss. His elusiveness makes him a change-of-pace back. NFL Comparison: Mohamed Ibrahim - Minnesota running back.' },
+      { name: 'Xavier Nwankpa', position: 'S', school: 'Iowa', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685491.png', analysis: 'Ball-hawking safety with good instincts and range. Nwankpa shows Iowa coaching and awareness. His instincts make him a developmental free safety. NFL Comparison: Kaevon Merriweather - Iowa safety.' },
+      { name: 'Terion Stewart', position: 'RB', school: 'Virginia Tech', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870975.png', analysis: 'Physical running back with good power and toughness. Stewart shows ability to run through tackles. His power makes him a short-yardage option. NFL Comparison: Raheem Blackshear - Virginia Tech back.' },
+      { name: 'Keyron Crawford', position: 'EDGE', school: 'Auburn', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870677.png', analysis: 'Athletic edge rusher with good speed and motor. Crawford shows pass-rush upside and effort. His athleticism makes him a developmental edge. NFL Comparison: Big Kat Bryant - Auburn edge rusher.' },
+      { name: 'Keagen Trost', position: 'OT', school: 'Missouri', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4871000.png', analysis: 'Big tackle with good size and strength. Trost shows solid fundamentals and improving technique. His size makes him a developmental tackle. NFL Comparison: Javon Foster - Missouri tackle.' },
+      { name: 'Colbie Young', position: 'WR', school: 'Georgia', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5092508.png', analysis: 'Athletic receiver with good size and ball skills. Young shows ability to win contested catches. His size makes him a developmental receiver. NFL Comparison: Kearis Jackson - Georgia receiver.' },
+      { name: 'Christian Gray', position: 'CB', school: 'Notre Dame', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5156508.png', analysis: 'Physical corner with press coverage ability and NFL size. Gray shows good technique and competitiveness. His physicality makes him a late-round developmental corner. NFL Comparison: Cam Taylor-Britt - physical Notre Dame corner.' },
+      { name: 'Justin Jefferson', position: 'LB', school: 'Alabama', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870663.png', analysis: 'Athletic linebacker with good instincts from Alabama defense. Jefferson shows pursuit ability and tackling. His athleticism makes him a developmental linebacker. NFL Comparison: Christian Harris - Alabama linebacker prospect.' },
+      { name: 'Isaiah Horton', position: 'WR', school: 'Alabama', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5156560.png', analysis: 'Speed receiver with deep threat ability and big play potential. Horton shows vertical threat capability. His speed makes him a developmental deep threat. NFL Comparison: John Metchie - Alabama speed receiver.' },
+      { name: 'Ethan Burke', position: 'DT', school: 'Texas', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870824.png', analysis: 'Solid interior defender with good size and strength. Burke shows ability to occupy blockers and clog lanes. His size makes him a developmental nose tackle. NFL Comparison: Byron Murphy - Texas defensive tackle.' },
+      { name: 'Evan Stewart', position: 'WR', school: 'Oregon', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870852.png', analysis: 'Dynamic playmaker with exceptional speed and route running ability. Stewart shows elite separation skills and consistency. His talent makes him a high-upside receiver. NFL Comparison: Jaxon Smith-Njigba - elite route runner with separation.' },
+      { name: 'Connor Tollison', position: 'C', school: 'Missouri', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870699.png', analysis: 'Smart center with good technique and football IQ. Tollison shows consistency in protection and line calls. His reliability makes him a developmental center. NFL Comparison: Creed Humphrey - Missouri center.' },
+      { name: 'Max Iheanachor', position: 'OT', school: 'Arizona State', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5150136.png', analysis: 'Tall tackle with good athleticism and length. Iheanachor shows potential in pass protection. His tools make him a developmental tackle. NFL Comparison: Dohnovan West - athletic developmental lineman.' },
+      { name: 'Deven Eastern', position: 'DT', school: 'Minnesota', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4609203.png', analysis: 'Physical defensive tackle with good strength and motor. Eastern shows ability to penetrate and disrupt. His strength makes him a rotational defensive tackle. NFL Comparison: Esezi Otomewo - Minnesota defensive tackle.' },
+      { name: 'Noah Whittington', position: 'RB', school: 'Oregon', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4432631.png', analysis: 'Elusive back with good vision and quickness. Whittington shows ability to make defenders miss. His elusiveness makes him a developmental backup. NFL Comparison: CJ Verdell - Oregon running back.' },
+      { name: 'Zakee Wheatley', position: 'S', school: 'Penn State', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870796.png', analysis: 'Versatile safety with good range and ball skills. Wheatley shows ability to play both deep and in the box. His versatility makes him a developmental safety. NFL Comparison: Ji Ayir Brown - Penn State safety.' },
+      { name: 'Tanner Koziol', position: 'TE', school: 'Houston', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4917427.png', analysis: 'Reliable tight end with good blocking and receiving skills. Koziol shows consistency and toughness. His reliability makes him a developmental tight end. NFL Comparison: Christian Trahan - Houston tight end.' },
+      { name: 'Bryan Thomas Jr.', position: 'EDGE', school: 'South Carolina', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870815.png', analysis: 'Athletic edge rusher with good speed and bend. Thomas shows potential as a speed rusher. His athleticism makes him a developmental edge. NFL Comparison: Jordan Burch - South Carolina edge rusher.' },
+      { name: 'Jakobe Thomas', position: 'S', school: 'Miami', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870754.png', analysis: 'Physical safety with good tackling and run support. Thomas shows toughness and aggressiveness. His physicality makes him a developmental strong safety. NFL Comparison: Kamren Kinchens - Miami safety.' },
+      { name: 'CamRon Stewart', position: 'EDGE', school: 'Temple', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870828.png', analysis: 'Quick edge rusher with good motor and effort. Stewart shows relentless pursuit. His motor makes him a developmental edge. NFL Comparison: Arnold Ebiketie - Temple edge rusher.' },
+      { name: 'Chris McClellan', position: 'DT', school: 'Missouri', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870701.png', analysis: 'Strong interior lineman with good power and size. McClellan shows ability to anchor against the run. His strength makes him a developmental run stuffer. NFL Comparison: Kobie Whiteside - Missouri defensive tackle.' },
+      { name: 'Skyler Gill-Howard', position: 'DT', school: 'Texas Tech', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870836.png', analysis: 'Active defensive tackle with good quickness and penetration. Gill-Howard shows disruptive ability. His quickness makes him a developmental three-tech. NFL Comparison: Tony Bradford - Texas Tech defensive tackle.' },
+      { name: 'Jalen Catalon', position: 'S', school: 'Missouri', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870704.png', analysis: 'Instinctive safety with good ball skills and range. Catalon shows playmaking ability. His instincts make him a developmental free safety. NFL Comparison: Trey Dean - versatile safety prospect.' },
+      { name: 'Kaleb Proctor', position: 'DT', school: 'SE Louisiana', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870888.png', analysis: 'Raw defensive tackle from small school with good size. Proctor shows potential and athleticism. His rawness makes him a developmental project. NFL Comparison: Khyiris Tonga - small school defensive tackle.' },
+      { name: 'Harrison Wallace III', position: 'WR', school: 'Ole Miss', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4699354.png', analysis: 'Smooth receiver with good hands and route running. Wallace shows consistency and reliability. His smoothness makes him a developmental slot receiver. NFL Comparison: Malik Heath - Ole Miss receiver.' },
+      { name: 'Cameron Ball', position: 'DT', school: 'Arkansas', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870939.png', analysis: 'Physical nose tackle with good strength and size. Ball shows ability to clog running lanes. His strength makes him a developmental run defender. NFL Comparison: Isaiah Nichols - Arkansas defensive tackle.' },
+      { name: 'Josh Gesky', position: 'OG', school: 'Illinois', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870733.png', analysis: 'Solid guard with good technique and consistency. Gesky shows understanding of blocking schemes. His reliability makes him a developmental interior lineman. NFL Comparison: Kendrick Green - Illinois guard.' },
+      { name: 'Diego Pavia', position: 'QB', school: 'Vanderbilt', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/5084180.png', analysis: 'Gritty quarterback with good toughness and competitiveness. Pavia shows leadership and heart. His toughness makes him a developmental backup. NFL Comparison: Jake Haener - tough underdog quarterback.' },
+      { name: 'Carson Hinzman', position: 'C', school: 'Ohio State', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685384.png', analysis: 'Smart center with good football IQ and technique. Hinzman shows consistency in protection. His intelligence makes him a developmental center. NFL Comparison: Josh Myers - Ohio State center.' },
+      { name: 'Barion Brown', position: 'WR', school: 'LSU', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4698597.png', analysis: 'Explosive receiver with elite speed and return ability. Brown shows game-breaking speed. His speed makes him a developmental deep threat and returner. NFL Comparison: Jameson Williams - elite speed threat.' },
+      { name: 'Pat Coogan', position: 'C', school: 'Indiana', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870735.png', analysis: 'Experienced center with good size and strength. Coogan shows leadership and reliability. His experience makes him a developmental center. NFL Comparison: Dylan Parham - reliable interior lineman.' },
+      { name: 'Bryson Washington', position: 'RB', school: 'Baylor', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4954455.png', analysis: 'Powerful back with good vision and contact balance. Washington shows ability to break tackles. His power makes him a short-yardage back. NFL Comparison: Abram Smith - Baylor power back.' },
+      { name: 'Keyshaun Elliott', position: 'LB', school: 'Arizona State', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870933.png', analysis: 'Athletic linebacker with good speed and sideline-to-sideline range. Elliott shows pursuit ability. His athleticism makes him a developmental linebacker. NFL Comparison: Darien Butler - Arizona State linebacker.' },
+      { name: 'Anez Cooper', position: 'OG', school: 'Miami', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4905597.png', analysis: 'Physical guard with good power and nastiness. Cooper shows ability to move defenders. His physicality makes him a developmental guard. NFL Comparison: Jalen Rivers - Miami guard.' },
+      { name: 'West Weeks', position: 'LB', school: 'LSU', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870749.png', analysis: 'Instinctive linebacker with good football IQ and tackling. Weeks shows understanding of the position. His instincts make him a developmental linebacker. NFL Comparison: Greg Penn - LSU linebacker.' },
+      { name: 'Genesis Smith', position: 'S', school: 'Arizona State', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870936.png', analysis: 'Rangy safety with good ball skills and coverage ability. Smith shows playmaking potential. His range makes him a developmental free safety. NFL Comparison: Evan Fields - Arizona State safety.' },
       // Ranks 251-300
-      { name: 'Charles Demmings', position: 'CB', school: 'Stephen F Austin', grade: 45 },
-      { name: 'Will Whitson', position: 'EDGE', school: 'Mississippi State', grade: 45 },
-      { name: 'Jalon Kilgore', position: 'S', school: 'South Carolina', grade: 45 },
-      { name: 'Kendal Daniels', position: 'S', school: 'Oklahoma', grade: 45 },
-      { name: 'Bud Clark', position: 'S', school: 'TCU', grade: 45 },
-      { name: 'Logan Fano', position: 'EDGE', school: 'Utah', grade: 45 },
-      { name: 'Red Murdock', position: 'LB', school: 'Buffalo', grade: 45 },
-      { name: 'Brandon Cleveland', position: 'DT', school: 'NC State', grade: 45 },
-      { name: 'Terry Moore', position: 'S', school: 'Duke', grade: 45 },
-      { name: 'Brent Austin', position: 'CB', school: 'Cal', grade: 45 },
-      { name: 'Dametrious Crownover', position: 'OT', school: 'Texas A&M', grade: 45 },
-      { name: 'Wesley Williams', position: 'EDGE', school: 'Duke', grade: 45 },
-      { name: 'Jadon Canady', position: 'CB', school: 'Oregon', grade: 45 },
-      { name: 'Gary Smith III', position: 'DT', school: 'UCLA', grade: 45 },
-      { name: 'Rahsul Faison', position: 'RB', school: 'South Carolina', grade: 45 },
-      { name: 'Marques White', position: 'EDGE', school: 'UMass', grade: 45 },
-      { name: 'Desmond Purnell', position: 'LB', school: 'Kansas State', grade: 45 },
-      { name: 'Kwabena Asamoah', position: 'OG', school: 'Rutgers', grade: 45 },
-      { name: 'Ahmari Harvey', position: 'CB', school: 'Georgia Tech', grade: 45 },
-      { name: 'Sam Roush', position: 'TE', school: 'Stanford', grade: 45 },
-      { name: 'Cyrus Allen', position: 'WR', school: 'Cincinnati', grade: 45 },
-      { name: 'Drew Bobo', position: 'C', school: 'Georgia', grade: 45 },
-      { name: 'Mike Washington Jr.', position: 'RB', school: 'Arkansas', grade: 45 },
-      { name: 'Reggie Virgil', position: 'WR', school: 'Texas Tech', grade: 45 },
-      { name: 'Drayk Bowen', position: 'LB', school: 'Notre Dame', grade: 45 },
-      { name: 'Namdi Obiazor', position: 'LB', school: 'TCU', grade: 45 },
-      { name: 'Sam Hecht', position: 'C', school: 'Kansas State', grade: 45 },
-      { name: 'Tyler Onyedim', position: 'DT', school: 'Texas A&M', grade: 45 },
-      { name: 'Jaren Kump', position: 'C', school: 'Utah', grade: 45 },
-      { name: 'Nate Boerkircher', position: 'TE', school: 'Texas A&M', grade: 45 },
-      { name: 'Kemari Copeland', position: 'DT', school: 'Virginia Tech', grade: 45 },
-      { name: 'Logan Taylor', position: 'OG', school: 'Boston College', grade: 45 },
-      { name: 'Damari Brown', position: 'CB', school: 'Miami', grade: 45 },
-      { name: 'Ryan Baer', position: 'OT', school: 'Pittsburgh', grade: 45 },
-      { name: 'Malik Spencer', position: 'S', school: 'Michigan State', grade: 45 },
-      { name: 'George Gumbs', position: 'EDGE', school: 'Florida', grade: 45 },
-      { name: 'Bryson Eason', position: 'DT', school: 'Tennessee', grade: 45 },
-      { name: 'Gracen Halton', position: 'DT', school: 'Oklahoma', grade: 45 },
-      { name: 'Enrique Cruz Jr.', position: 'OT', school: 'Kansas', grade: 45 },
-      { name: 'Diego Pounds', position: 'OT', school: 'Ole Miss', grade: 45 },
-      { name: 'Adam Randall', position: 'RB', school: 'Clemson', grade: 45 },
-      { name: 'Nick Dawkins', position: 'C', school: 'Penn State', grade: 45 },
-      { name: 'Owen Heinecke', position: 'LB', school: 'Oklahoma', grade: 45 },
-      { name: 'Luke Montgomery', position: 'OG', school: 'Ohio State', grade: 45 },
-      { name: 'James Thompson Jr.', position: 'DT', school: 'Illinois', grade: 45 },
-      { name: 'Kody Huisman', position: 'DT', school: 'Virginia Tech', grade: 45 },
-      { name: 'Preston Zachman', position: 'S', school: 'Wisconsin', grade: 45 },
-      { name: 'Miller Moss', position: 'QB', school: 'Louisville', grade: 45 },
+      { name: 'Charles Demmings', position: 'CB', school: 'Stephen F Austin', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870892.png', analysis: 'Raw corner from small school with good athleticism. Demmings shows potential and competitiveness. His rawness makes him a developmental project. NFL Comparison: Rachad Wildgoose - small school corner.' },
+      { name: 'Will Whitson', position: 'EDGE', school: 'Mississippi State', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870764.png', analysis: 'Athletic edge rusher with good motor and effort. Whitson shows relentless pursuit. His motor makes him a developmental edge. NFL Comparison: Kobe Jones - Mississippi State edge rusher.' },
+      { name: 'Jalon Kilgore', position: 'S', school: 'South Carolina', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870817.png', analysis: 'Physical safety with good tackling and run support. Kilgore shows toughness in the box. His physicality makes him a developmental strong safety. NFL Comparison: Nick Emmanwori - South Carolina safety.' },
+      { name: 'Kendal Daniels', position: 'S', school: 'Oklahoma', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870789.png', analysis: 'Rangy safety with good ball skills and coverage ability. Daniels shows playmaking instincts. His range makes him a developmental free safety. NFL Comparison: Billy Bowman - Oklahoma safety.' },
+      { name: 'Bud Clark', position: 'S', school: 'TCU', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870840.png', analysis: 'Athletic safety with good versatility and ball skills. Clark shows ability to play multiple roles. His versatility makes him a developmental safety. NFL Comparison: Mark Perry - TCU safety.' },
+      { name: 'Logan Fano', position: 'EDGE', school: 'Utah', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4567048.png', analysis: 'Powerful edge defender with exceptional strength at the point of attack. Fano shows ability to set the edge in the run game and generate interior pressure. His power and motor make him an intriguing developmental pass rusher. NFL Comparison: Lukas Van Ness - similar power-based edge with run-stopping ability.' },
+      { name: 'Red Murdock', position: 'LB', school: 'Buffalo', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685264.png', analysis: 'Athletic linebacker with good range and instincts in coverage. Murdock displays solid tackling technique and sideline-to-sideline speed. His versatility allows him to play multiple linebacker positions. NFL Comparison: Kaden Elliss - similar athletic linebacker with coverage skills from mid-major background.' },
+      { name: 'Brandon Cleveland', position: 'DT', school: 'NC State', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4685695.png', analysis: 'Stout interior defender with good gap discipline and run-stopping ability. Cleveland shows solid hand usage and ability to control blockers. His strength makes him a developmental nose tackle. NFL Comparison: Mazi Smith - similar run-stuffing nose tackle with gap control.' },
+      { name: 'Terry Moore', position: 'S', school: 'Duke', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4686182.png', analysis: 'Rangy safety with good ball skills and coverage instincts. Moore displays solid zone awareness and ability to read quarterbacks. His range makes him a developmental free safety prospect. NFL Comparison: JL Skinner - similar rangy safety with ball skills from ACC background.' },
+      { name: 'Brent Austin', position: 'CB', school: 'Cal', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870771.png', analysis: 'Physical corner with good press technique and competitive toughness. Austin shows willingness to support the run and play physical at the line. His physicality makes him a developmental boundary corner. NFL Comparison: Kyu Blu Kelly - similar physical corner with press skills.' },
+      { name: 'Dametrious Crownover', position: 'OT', school: 'Texas A&M', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4686519.png', analysis: 'Massive tackle with good length and power in the run game. Crownover displays solid fundamentals and ability to move defenders in the ground game. His size makes him a developmental right tackle prospect. NFL Comparison: Matt Peart - similar developmental tackle with size and power.' },
+      { name: 'Wesley Williams', position: 'EDGE', school: 'Duke', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4686183.png', analysis: 'Athletic edge rusher with good burst and bend around the corner. Williams shows ability to convert speed to power and finish at the quarterback. His athleticism makes him a developmental edge prospect. NFL Comparison: Malcolm Koonce - similar athletic edge with burst and bend.' },
+      { name: 'Jadon Canady', position: 'CB', school: 'Oregon', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870902.png', analysis: 'Quick-footed corner with good agility and ability to mirror receivers. Canady displays solid ball skills and competitive nature in coverage. His quickness makes him a developmental slot corner. NFL Comparison: Christian Gonzalez - similar Oregon corner with mirror skills and agility.' },
+      { name: 'Gary Smith III', position: 'DT', school: 'UCLA', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870742.png', analysis: 'Disruptive interior defender with good quickness and penetration ability. Smith shows ability to shoot gaps and disrupt running plays. His quickness makes him a developmental three-technique tackle. NFL Comparison: Levi Onwuzurike - similar penetrating three-technique with quickness.' },
+      { name: 'Rahsul Faison', position: 'RB', school: 'South Carolina', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4686340.png', analysis: 'Powerful between-the-tackles runner with good vision and patience. Faison displays ability to break tackles and fall forward for extra yards. His power makes him a developmental short-yardage specialist. NFL Comparison: Justice Hill - similar power back with vision and tackle-breaking ability.' },
+      { name: 'Marques White', position: 'EDGE', school: 'UMass', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870672.png', analysis: 'High-motor edge rusher with relentless pursuit and effort. White shows good chase speed and ability to track down plays from the backside. His motor makes him a developmental rotational edge. NFL Comparison: Trey Hendrickson - similar relentless pass rusher with exceptional motor.' },
+      { name: 'Desmond Purnell', position: 'LB', school: 'Kansas State', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4686279.png', analysis: 'Instinctive linebacker with good tackling and run-fit discipline. Purnell displays solid processing speed and ability to diagnose plays quickly. His instincts make him a developmental Mike linebacker. NFL Comparison: Daniel Bituli - similar instinctive linebacker with tackling ability.' },
+      { name: 'Kwabena Asamoah', position: 'OG', school: 'Rutgers', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870795.png', analysis: 'Powerful guard with good strength and ability to create movement in the run game. Asamoah shows solid anchor against bull rushes and improving pass protection. His power makes him a developmental run-blocking guard. NFL Comparison: John Michael Schmitz - similar powerful interior lineman with run-blocking strength.' },
+      { name: 'Ahmari Harvey', position: 'CB', school: 'Georgia Tech', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870689.png', analysis: 'Long corner with good length and ability to disrupt passing lanes. Harvey displays solid ball skills and competitive nature in contested situations. His length makes him a developmental boundary corner. NFL Comparison: Tre Hawkins III - similar long corner with ball skills.' },
+      { name: 'Sam Roush', position: 'TE', school: 'Stanford', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870726.png', analysis: 'Reliable receiving tight end with good hands and route-running ability. Roush shows solid blocking effort and ability to contribute in the passing game. His hands make him a developmental move tight end. NFL Comparison: Durham Smythe - similar reliable tight end with hands and blocking effort.' },
+      { name: 'Cyrus Allen', position: 'WR', school: 'Cincinnati', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870704.png', analysis: 'Quick receiver with good route-running and separation ability. Allen displays reliable hands and ability to work the middle of the field. His quickness makes him a developmental slot receiver. NFL Comparison: Jauan Jennings - similar possession receiver with route-running skills.' },
+      { name: 'Drew Bobo', position: 'C', school: 'Georgia', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4686033.png', analysis: 'Smart center with good football IQ and line call ability. Bobo shows solid technique and ability to handle interior pressure. His intelligence makes him a developmental backup center. NFL Comparison: Drew Dalman - similar Georgia center with intelligence and technique.' },
+      { name: 'Mike Washington Jr.', position: 'RB', school: 'Arkansas', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870613.png', analysis: 'Elusive runner with good vision and ability to make defenders miss in space. Washington displays solid receiving skills and pass protection awareness. His elusiveness makes him a developmental third-down back. NFL Comparison: AJ Dillon - similar powerful back with receiving skills.' },
+      { name: 'Reggie Virgil', position: 'WR', school: 'Texas Tech', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870832.png', analysis: 'Speed receiver with ability to stretch the field vertically. Virgil shows solid tracking ability on deep balls and yards-after-catch potential. His speed makes him a developmental field-stretcher. NFL Comparison: Marquez Valdes-Scantling - similar vertical threat with speed.' },
+      { name: 'Drayk Bowen', position: 'LB', school: 'Notre Dame', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870655.png', analysis: 'Athletic linebacker with good sideline-to-sideline range and pursuit. Bowen displays solid instincts and ability to play in space. His athleticism makes him a developmental Will linebacker. NFL Comparison: JD Bertrand - similar Notre Dame linebacker with range and instincts.' },
+      { name: 'Namdi Obiazor', position: 'LB', school: 'TCU', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870841.png', analysis: 'Physical linebacker with good tackling and run-stopping ability. Obiazor shows toughness taking on blocks and playing downhill. His physicality makes him a developmental Mike linebacker. NFL Comparison: Shaun Dion Hamilton - similar physical linebacker with tackling ability.' },
+      { name: 'Sam Hecht', position: 'C', school: 'Kansas State', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870776.png', analysis: 'Solid center with good anchor and ability to handle nose tackles. Hecht displays reliable snapping and ability to reach second level. His reliability makes him a developmental backup center. NFL Comparison: Nick Harris - similar reliable center with solid technique.' },
+      { name: 'Tyler Onyedim', position: 'DT', school: 'Texas A&M', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870625.png', analysis: 'Powerful nose tackle with good strength and ability to occupy blockers. Onyedim shows solid gap control and run-stopping ability. His strength makes him a developmental nose tackle. NFL Comparison: Davon Godchaux - similar powerful nose with run-stopping ability.' },
+      { name: 'Jaren Kump', position: 'C', school: 'Utah', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870753.png', analysis: 'Experienced center with good football IQ and pass protection ability. Kump displays solid awareness and ability to handle blitzes. His experience makes him a developmental backup center. NFL Comparison: Connor McGovern - similar versatile interior lineman with experience.' },
+      { name: 'Nate Boerkircher', position: 'TE', school: 'Texas A&M', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870624.png', analysis: 'Blocking-oriented tight end with good strength and ability to move defenders. Boerkircher shows solid effort and improving receiving skills. His blocking makes him a developmental inline tight end. NFL Comparison: Tucker Fisk - similar blocking tight end with effort.' },
+      { name: 'Kemari Copeland', position: 'DT', school: 'Virginia Tech', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870865.png', analysis: 'Athletic interior defender with good quickness and penetration ability. Copeland displays ability to shoot gaps and disrupt plays in the backfield. His quickness makes him a developmental three-technique. NFL Comparison: Jordan Davis - similar athletic interior defender with penetration ability.' },
+      { name: 'Logan Taylor', position: 'OG', school: 'Boston College', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870682.png', analysis: 'Tough guard with good nasty streak and ability to finish blocks. Taylor shows solid power and improving technique in pass protection. His toughness makes him a developmental guard. NFL Comparison: Zion Johnson - similar tough guard with nasty streak.' },
+      { name: 'Damari Brown', position: 'CB', school: 'Miami', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870729.png', analysis: 'Physical corner with good press ability and competitive nature. Brown displays solid recovery speed and willingness to support the run. His physicality makes him a developmental boundary corner. NFL Comparison: Jalen Ramsey - similar physical Miami corner with press skills.' },
+      { name: 'Ryan Baer', position: 'OT', school: 'Pittsburgh', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870718.png', analysis: 'Solid tackle with good length and ability to mirror edge rushers. Baer shows improving technique and solid anchor in pass protection. His length makes him a developmental swing tackle. NFL Comparison: Chukwuma Okorafor - similar Pitt tackle with length and mirror ability.' },
+      { name: 'Malik Spencer', position: 'S', school: 'Michigan State', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870732.png', analysis: 'Versatile safety with ability to play in the box and in coverage. Spencer displays solid tackling and run support instincts. His versatility makes him a developmental strong safety. NFL Comparison: Xavier McKinney - similar versatile safety with tackling ability.' },
+      { name: 'George Gumbs', position: 'EDGE', school: 'Florida', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870650.png', analysis: 'Athletic edge rusher with good length and ability to set the edge. Gumbs shows solid motor and improving pass-rush repertoire. His length makes him a developmental edge defender. NFL Comparison: Josh Uche - similar athletic edge with length and developing moves.' },
+      { name: 'Bryson Eason', position: 'DT', school: 'Tennessee', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870855.png', analysis: 'Powerful interior defender with good strength and ability to control gaps. Eason displays solid run-stopping ability and improving pass-rush moves. His power makes him a developmental nose tackle. NFL Comparison: Jeffery Simmons - similar Tennessee defensive tackle with power.' },
+      { name: 'Gracen Halton', position: 'DT', school: 'Oklahoma', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870790.png', analysis: 'Quick interior defender with good first step and penetration ability. Halton shows ability to disrupt plays in the backfield and collapse the pocket. His quickness makes him a developmental three-technique. NFL Comparison: Perrion Winfrey - similar Oklahoma tackle with quickness and penetration.' },
+      { name: 'Enrique Cruz Jr.', position: 'OT', school: 'Kansas', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870775.png', analysis: 'Athletic tackle with good movement skills and ability to reach second level. Cruz displays solid footwork and improving anchor in pass protection. His athleticism makes him a developmental swing tackle. NFL Comparison: Daniel Faalele - similar athletic tackle with movement skills.' },
+      { name: 'Diego Pounds', position: 'OT', school: 'Ole Miss', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870734.png', analysis: 'Massive tackle with good size and power at the point of attack. Pounds shows ability to create movement in the run game and solid anchor. His size makes him a developmental right tackle. NFL Comparison: Greg Little - similar massive tackle with power in run game.' },
+      { name: 'Adam Randall', position: 'RB', school: 'Clemson', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870636.png', analysis: 'Shifty runner with good change of direction and elusiveness. Randall displays solid vision and ability to make defenders miss in tight spaces. His elusiveness makes him a developmental change-of-pace back. NFL Comparison: Travis Etienne - similar Clemson back with elusiveness and vision.' },
+      { name: 'Nick Dawkins', position: 'C', school: 'Penn State', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870713.png', analysis: 'Smart center with good snap consistency and line communication. Dawkins shows solid technique and ability to handle interior pressure. His intelligence makes him a developmental backup center. NFL Comparison: Juice Scruggs - similar smart center with technique and awareness.' },
+      { name: 'Owen Heinecke', position: 'LB', school: 'Oklahoma', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870791.png', analysis: 'Athletic linebacker with good coverage ability and sideline-to-sideline range. Heinecke displays solid processing speed and tackling in space. His coverage skills make him a developmental Will linebacker. NFL Comparison: Danny Stutsman - similar Oklahoma linebacker with range and coverage ability.' },
+      { name: 'Luke Montgomery', position: 'OG', school: 'Ohio State', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870705.png', analysis: 'Versatile guard with good athleticism and ability to play multiple positions. Montgomery shows solid power and improving technique in pass protection. His versatility makes him a developmental interior lineman. NFL Comparison: Matthew Jones - similar versatile Ohio State guard with athleticism.' },
+      { name: 'James Thompson Jr.', position: 'DT', school: 'Illinois', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870695.png', analysis: 'Powerful nose tackle with good strength and ability to occupy multiple blockers. Thompson displays solid gap control and run-stopping ability. His power makes him a developmental nose tackle. NFL Comparison: Khalen Saunders - similar powerful nose with run-stopping ability.' },
+      { name: 'Kody Huisman', position: 'DT', school: 'Virginia Tech', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870866.png', analysis: 'Quick interior defender with good penetration and disruption ability. Huisman shows ability to shoot gaps and make plays in the backfield. His quickness makes him a developmental three-technique. NFL Comparison: Amare Barno - similar Virginia Tech defender with quickness and penetration.' },
+      { name: 'Preston Zachman', position: 'S', school: 'Wisconsin', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870882.png', analysis: 'Physical safety with good tackling and run support ability. Zachman displays solid instincts and ability to play in the box. His physicality makes him a developmental strong safety. NFL Comparison: Hunter Wohler - similar Wisconsin safety with physicality and tackling.' },
+      { name: 'Miller Moss', position: 'QB', school: 'Louisville', grade: 68, headshot: 'https://a.espncdn.com/i/headshots/college-football/players/full/4870700.png', analysis: 'Intelligent quarterback with good field vision and decision-making ability. Moss displays solid accuracy on short-to-intermediate routes and pocket awareness. His processing speed makes him a developmental backup quarterback. NFL Comparison: Gardner Minshew - similar intelligent QB with accuracy and pocket awareness.' },
     ];
 
     // Add rank to each player (1-based ranking)
@@ -608,8 +608,9 @@ const NFLMockDraft = () => {
 
   const [state, setState] = useState('setup');
   const [rounds, setRounds] = useState(1);
-  const [speed, setSpeed] = useState('medium');
+  const [speed, setSpeed] = useState('fast');
   const [myTeams, setMyTeams] = useState<string[]>([]);
+  const [selectAll, setSelectAll] = useState(false);
   const [pick, setPick] = useState(0);
   const [picks, setPicks] = useState<any[]>([]);
   const [available, setAvailable] = useState(generateProspects());
@@ -630,11 +631,14 @@ const NFLMockDraft = () => {
   const [tradedAwayPicks, setTradedAwayPicks] = useState<DraftPick[]>([]);
   const [counterOffer, setCounterOffer] = useState<any>(null);
   const [selectedCounterPicks, setSelectedCounterPicks] = useState<DraftPick[]>([]);
+  const [selectedCounterGivePicks, setSelectedCounterGivePicks] = useState<DraftPick[]>([]);
   const [showCustomTrade, setShowCustomTrade] = useState(false);
   const [customTradeTeam, setCustomTradeTeam] = useState<string | null>(null);
   const [customTradeGive, setCustomTradeGive] = useState<DraftPick[]>([]);
   const [customTradeReceive, setCustomTradeReceive] = useState<DraftPick[]>([]);
   const [positionFilter, setPositionFilter] = useState<string>('All');
+  const [allTradeOffers, setAllTradeOffers] = useState<any[]>([]);
+  const [currentOfferIndex, setCurrentOfferIndex] = useState(0);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [expandedPlayerAnalysis, setExpandedPlayerAnalysis] = useState<string | null>(null);
   const pickInProgress = useRef(false);
@@ -710,7 +714,13 @@ const NFLMockDraft = () => {
       const playerRank = available.indexOf(player);
       const likelyGone = playerRank < picksBetween;
 
-      if (isElite && isTopNeed && likelyGone) {
+      // Check position scarcity - more motivation if few prospects at position
+      const positionScarcity = available.filter(p =>
+        p.position === player.position && p.grade >= 80
+      ).length;
+      const isPositionScarce = positionScarcity <= 2;
+
+      if (isElite && isTopNeed && (likelyGone || isPositionScarce)) {
         return { wants: true, targetPlayer: player };
       }
     }
@@ -816,12 +826,36 @@ const NFLMockDraft = () => {
   };
 
   const smartAutoPick = (team: string) => {
-    if (pick === 0 && available.some(p => p.name === 'Fernando Mendoza')) {
-      if (Math.random() < 0.97) return available.find(p => p.name === 'Fernando Mendoza');
+    const pickInDraft = pick + 1; // Overall pick number (1-224)
+
+    // ABSOLUTE FLOORS - These players NEVER fall past their floor pick
+
+    // Fernando Mendoza - absolute floor at pick #2
+    if (pickInDraft === 2 && available.some(p => p.name === 'Fernando Mendoza')) {
+      return available.find(p => p.name === 'Fernando Mendoza');
+    }
+
+    // Arvell Reese - absolute floor at pick #10 (should go top 5 naturally)
+    if (pickInDraft === 10 && available.some(p => p.name === 'Arvell Reese')) {
+      return available.find(p => p.name === 'Arvell Reese');
+    }
+
+    // Caleb Downs - absolute floor at pick #10 (should go top 5 naturally)
+    if (pickInDraft === 10 && available.some(p => p.name === 'Caleb Downs')) {
+      return available.find(p => p.name === 'Caleb Downs');
+    }
+
+    // Jordyn Tyson - absolute floor at pick #13
+    if (pickInDraft === 13 && available.some(p => p.name === 'Jordyn Tyson')) {
+      return available.find(p => p.name === 'Jordyn Tyson');
+    }
+
+    // Carnell Tate - absolute floor at pick #13
+    if (pickInDraft === 13 && available.some(p => p.name === 'Carnell Tate')) {
+      return available.find(p => p.name === 'Carnell Tate');
     }
 
     const needs = getTeamNeeds(team);
-    const pickInDraft = pick + 1; // Overall pick number (1-224)
 
     // Positional value - premium positions get bonuses in top 10
     const positionalValue: { [key: string]: number } = {
@@ -840,27 +874,36 @@ const NFLMockDraft = () => {
     };
 
     const scored = available.map(p => {
-      let score = p.grade;
+      let score = p.grade * 2; // Weight grade more heavily
 
-      // Add positional value bonus
-      score += positionalValue[p.position] || 0;
+      // Add positional value bonus (reduced)
+      score += (positionalValue[p.position] || 0) * 0.5;
 
-      // Need bonus - reduced for early picks to favor BPA
+      // Need bonus - much smaller impact, BPA is priority
       const needIdx = needs.indexOf(p.position);
       if (needIdx !== -1) {
-        // Early picks (top 5) care less about need
-        const needWeight = pickInDraft <= 5 ? 0.5 : pickInDraft <= 15 ? 0.75 : 1.0;
-        score += (5 - needIdx) * 3 * needWeight;
+        // Small need bonus, decreases with pick position
+        const needWeight = pickInDraft <= 10 ? 0.3 : pickInDraft <= 20 ? 0.5 : 0.7;
+        score += (5 - needIdx) * 2 * needWeight;
       }
+
+      // Add small random variance (±2 points) to create slight unpredictability
+      score += (Math.random() - 0.5) * 4;
 
       return { player: p, score };
     });
 
     scored.sort((a, b) => b.score - a.score);
 
-    // More randomness for early picks (top 10)
-    const randomRange = pickInDraft <= 10 ? Math.min(5, scored.length) : Math.min(3, scored.length);
-    return scored[Math.floor(Math.random() * randomRange)].player;
+    // Very limited randomness - mostly pick the top player, slight chance of #2
+    const randomChance = Math.random();
+    if (randomChance < 0.85 || scored.length === 1) {
+      // 85% of the time, pick the best available
+      return scored[0].player;
+    } else {
+      // 15% of the time, pick from top 2
+      return scored[Math.floor(Math.random() * Math.min(2, scored.length))].player;
+    }
   };
 
   const makePick = (player: any) => {
@@ -869,6 +912,8 @@ const NFLMockDraft = () => {
     setRecentPicks([newPick, ...recentPicks].slice(0, 3));
     setAvailable(available.filter(p => p.name !== player.name));
     setPendingTradeOffer(null);
+    setAllTradeOffers([]);
+    setCurrentOfferIndex(0);
 
     // Remove the used pick from the team that originally owned this draft slot
     const pickPosition = pick % 32;
@@ -890,6 +935,8 @@ const NFLMockDraft = () => {
     if (!pendingTradeOffer) return;
     executeTrade(pendingTradeOffer);
     setPendingTradeOffer(null);
+    setAllTradeOffers([]);
+    setCurrentOfferIndex(0);
     // DON'T jump to the new pick - let the draft continue normally
     // The draft order has been updated, so when it reaches the traded pick position,
     // the user will be picking there. Continue from current position.
@@ -897,6 +944,79 @@ const NFLMockDraft = () => {
 
   const declineTrade = () => {
     setPendingTradeOffer(null);
+    setAllTradeOffers([]);
+    setCurrentOfferIndex(0);
+  };
+
+  // Handler for Select All teams toggle
+  const handleSelectAll = () => {
+    if (selectAll) {
+      // Deselect all
+      setMyTeams([]);
+      setSelectAll(false);
+    } else {
+      // Select all teams
+      const allTeams = Object.keys(teamLogos);
+      setMyTeams(allTeams);
+      setSelectAll(true);
+    }
+  };
+
+  // Sync selectAll state when individual teams are toggled
+  useEffect(() => {
+    const allTeams = Object.keys(teamLogos);
+    const allSelected = myTeams.length === allTeams.length && myTeams.length > 0;
+    const noneSelected = myTeams.length === 0;
+
+    if (allSelected && !selectAll) {
+      setSelectAll(true);
+    } else if ((noneSelected || (!allSelected && myTeams.length > 0)) && selectAll) {
+      setSelectAll(false);
+    }
+  }, [myTeams.length, selectAll]);
+
+  // Helper function to check if team would want to trade up for current prospects
+  const wouldTeamTradeUpForProspect = (
+    teamName: string,
+    currentPickNum: number,
+    availableProspects: typeof prospects
+  ): boolean => {
+    const teamDraftPos = getTeamDraftPosition(teamName);
+    const needs = getTeamNeeds(teamName).slice(0, 3); // Only top 3 needs
+
+    // Find high-grade prospects (80+) that match their TOP 3 needs
+    const neededProspects = availableProspects.filter(p =>
+      p.grade >= 80 && needs.includes(p.position)
+    );
+
+    // Team wants to trade up if:
+    // 1. There's a high-grade prospect matching their top 3 needs
+    // 2. They're picking at least 3 spots later (significant gap)
+    return neededProspects.length > 0 && (teamDraftPos - currentPickNum) >= 3;
+  };
+
+  // Helper function to check if team is willing to trade down
+  const wouldTeamTradeDown = (
+    teamName: string,
+    teamPickNum: number,
+    availableProspects: typeof prospects
+  ): boolean => {
+    const needs = getTeamNeeds(teamName); // All needs
+
+    // Find prospects matching team needs
+    const neededProspects = availableProspects.filter(p =>
+      needs.includes(p.position)
+    );
+
+    // Team willing to trade down if:
+    // 1. No must-have prospect (97+ grade) matching their top 3 needs, OR
+    // 2. Multiple prospects match needs (flexibility)
+    const topNeeds = needs.slice(0, 3);
+    const mustHaveProspects = neededProspects.filter(p =>
+      p.grade >= 97 && topNeeds.includes(p.position)
+    );
+
+    return mustHaveProspects.length === 0 || neededProspects.length >= 3;
   };
 
   const generateTradeDownOptions = () => {
@@ -905,30 +1025,45 @@ const NFLMockDraft = () => {
     const options: any[] = [];
 
     // Find teams AFTER us that we could trade down to
+    const availableProspects = available;
+
     for (let i = myPickPosition + 1; i < 32; i++) {
       const targetTeam = draftOrder[i];
-      if (myTeams.includes(targetTeam)) continue; // Can't trade with ourselves
+      if (myTeams.includes(targetTeam)) {
+        continue; // Can't trade with ourselves
+      }
+
+      // Smart filtering: Only show teams that actually want to trade up for available prospects
+      if (!wouldTeamTradeUpForProspect(targetTeam, myPickPosition, availableProspects)) continue;
 
       const targetPickNum = currentRound * 32 + i;
       const myPickNum = pick;
 
       const myValue = getPickValue(myPickNum + 1);
       const targetValue = getPickValue(targetPickNum + 1);
+      const valueDifference = myValue - targetValue;
 
       // Calculate what we'd receive (they give us extra picks)
-      const extraPicksReceived = Math.ceil((myValue - targetValue) / getPickValue(Math.min(targetPickNum + 32, rounds * 32)));
+      // Use the value of a mid-round pick for the divisor (more consistent)
+      const nextRoundPickValue = getPickValue(Math.min(targetPickNum + 32, 224));
+      const extraPicksReceived = Math.max(1, Math.ceil(valueDifference / nextRoundPickValue));
 
-      if (extraPicksReceived > 3 || extraPicksReceived < 1) continue;
+      // Require 1-4 extra picks (no one-for-one trades, not too many either)
+      if (extraPicksReceived > 4 || extraPicksReceived < 1) {
+        continue;
+      }
 
       const futurePicks: string[] = [];
       for (let j = 0; j < extraPicksReceived; j++) {
-        const futureRound = currentRound + 2 + j;
-        if (futureRound <= rounds) {
-          // Calculate actual pick number for this round (estimate mid-round for their pick)
-          const estimatedPickNum = (futureRound - 1) * 32 + (i); // Use their position in round
-          futurePicks.push(formatPickDisplay(futureRound, 2026, undefined, estimatedPickNum));
+        // Start from next round (currentRound + 1)
+        const futureRound = currentRound + 1 + j;
+        if (futureRound < 7) {
+          // Use 2026 picks for rounds 1-7, regardless of how many rounds user is drafting
+          const estimatedPickNum = futureRound * 32 + (i); // Use their position in round
+          futurePicks.push(formatPickDisplay(futureRound + 1, 2026, undefined, estimatedPickNum, targetTeam));
         } else {
-          futurePicks.push(formatPickDisplay(j + 2, 2027));
+          // Use 2027 picks if we exceed round 7
+          futurePicks.push(formatPickDisplay(j + 1, 2027, undefined, undefined, targetTeam));
         }
       }
 
@@ -941,7 +1076,6 @@ const NFLMockDraft = () => {
         // AI acceptance probability - they want to move up!
         acceptChance: Math.min(0.85, 0.6 + (extraPicksReceived * 0.1))
       };
-      console.log('Trade DOWN option created:', option);
       options.push(option);
     }
 
@@ -987,11 +1121,17 @@ const NFLMockDraft = () => {
     if (!hasTradeAssets) return options;
 
     // Find teams we could trade with (all teams from current pick forward)
+    const availableProspects = prospects.filter(p => !drafted.includes(p.name));
+
     for (let i = currentPickInRound; i < 32; i++) {
       const targetTeam = draftOrder[i];
       if (myTeams.includes(targetTeam)) continue;
 
       const targetPickNum = currentRound * 32 + i;
+
+      // Smart filtering: Only show teams willing to trade down
+      if (!wouldTeamTradeDown(targetTeam, i, availableProspects)) continue;
+
       const targetValue = getPickValue(targetPickNum + 1);
 
       // If user has a pick this round, calculate based on swapping
@@ -1058,8 +1198,11 @@ const NFLMockDraft = () => {
   };
 
   const offerTradeDown = (option: any) => {
-    if (Math.random() < option.acceptChance) {
-      const userTeam = myTeams[0] || currentTeam;
+    const userTeam = myTeams[0] || currentTeam;
+    // Auto-accept if user controls both teams
+    const controlsBothTeams = myTeams.includes(option.targetTeam);
+
+    if (controlsBothTeams || Math.random() < option.acceptChance) {
 
       // Add the additional picks we're receiving to acquired picks AND teamDraftPicks
       const newAcquired = [...acquiredPicks];
@@ -1194,8 +1337,11 @@ const NFLMockDraft = () => {
     }
   };
   const offerTradeUp = (option: any) => {
-    if (Math.random() < option.acceptChance) {
-      const userTeam = myTeams[0];
+    const userTeam = myTeams[0];
+    // Auto-accept if user controls both teams
+    const controlsBothTeams = myTeams.includes(option.targetTeam);
+
+    if (controlsBothTeams || Math.random() < option.acceptChance) {
 
       // Format picks given for display
       const picksGivenDisplay = option.useFuturePicks
@@ -1273,7 +1419,10 @@ const NFLMockDraft = () => {
       theyGiveExtra: originalOffer.additionalPicks,
     });
     setPendingTradeOffer(null);
+    setAllTradeOffers([]);
+    setCurrentOfferIndex(0);
     setSelectedCounterPicks([]);
+    setSelectedCounterGivePicks([]);
   };
 
   const toggleCounterPick = (pick: DraftPick) => {
@@ -1286,12 +1435,17 @@ const NFLMockDraft = () => {
   };
 
   const submitCounterOffer = () => {
-    if (!counterOffer || selectedCounterPicks.length === 0) return;
+    if (!counterOffer) return;
+
+    const userTeam = myTeams[0];
+
+    // Check if user controls both teams - if so, auto-accept
+    const controlsBothTeams = myTeams.includes(counterOffer.targetTeam);
 
     // Calculate if counter offer is reasonable (70% chance they accept if value is close)
     const acceptChance = Math.min(0.7, 0.3 + (selectedCounterPicks.length * 0.15));
 
-    if (Math.random() < acceptChance) {
+    if (controlsBothTeams || Math.random() < acceptChance) {
       const userTeam = myTeams[0];
 
       const trade = {
@@ -1318,11 +1472,13 @@ const NFLMockDraft = () => {
       executeTrade(trade);
       setCounterOffer(null);
       setSelectedCounterPicks([]);
+      setSelectedCounterGivePicks([]);
       setPick(counterOffer.theyGive);
     } else {
       alert(`${counterOffer.targetTeam} rejected your counter offer.`);
       setCounterOffer(null);
       setSelectedCounterPicks([]);
+      setSelectedCounterGivePicks([]);
     }
   };
 
@@ -1576,11 +1732,30 @@ const NFLMockDraft = () => {
       };
     } else {
       pickInProgress.current = false;
-      // Generate trade offer for user when it's their pick
-      if (!pendingTradeOffer && Math.random() < 0.3) {
-        const offer = generateTradeOffer(currentPick, currentTeamNow, true);
-        if (offer) {
-          setPendingTradeOffer(offer);
+      // Generate random trade offers for user when it's their pick
+      if (!pendingTradeOffer && allTradeOffers.length === 0) {
+        // Use the same logic as generateTradeDownOptions to ensure consistency
+        const tradeDownOffers = generateTradeDownOptions();
+
+        if (tradeDownOffers.length > 0) {
+          // Randomly select 1-3 offers from all available
+          const numOffers = Math.min(tradeDownOffers.length, Math.floor(Math.random() * 3) + 1);
+          const shuffled = [...tradeDownOffers].sort(() => Math.random() - 0.5);
+          const selectedOffers = shuffled.slice(0, numOffers);
+
+          // Convert the offers to the format expected by pendingTradeOffer
+          const formattedOffers = selectedOffers.map(offer => ({
+            fromTeam: offer.targetTeam,
+            toTeam: currentTeamNow,
+            pickGiven: currentPick,
+            pickReceived: offer.targetPickNum,
+            additionalPicks: offer.additionalPicks,
+            forUser: true
+          }));
+
+          setAllTradeOffers(formattedOffers);
+          setCurrentOfferIndex(0);
+          setPendingTradeOffer(formattedOffers[0]);
         }
       }
     }
@@ -1776,7 +1951,18 @@ const NFLMockDraft = () => {
               </div>
 
               <div>
-                <label className="text-white text-lg font-semibold mb-3 block">Teams ({myTeams.length}) - Listed by 1st Pick</label>
+                <div className="flex items-center justify-between mb-3">
+                  <label className="text-white text-lg font-semibold">Teams ({myTeams.length}) - Listed by 1st Pick</label>
+                  <label className="flex items-center space-x-2 cursor-pointer bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg">
+                    <input
+                      type="checkbox"
+                      checked={selectAll}
+                      onChange={handleSelectAll}
+                      className="w-4 h-4 rounded border-gray-300"
+                    />
+                    <span className="text-white font-semibold">Select All</span>
+                  </label>
+                </div>
                 <div className="grid grid-cols-2 gap-2 max-h-96 overflow-y-auto bg-black/20 p-4 rounded-lg">
                   {/* All 32 teams with their first pick - some have 1st round, some have 2nd round as their first */}
                   {[
@@ -2104,24 +2290,36 @@ const NFLMockDraft = () => {
           </div>
         </div>
 
-        {isMyPick && !pendingTradeOffer && !showTradeUp && !showCustomTrade && (
-          <div className="mb-4 flex gap-3">
-            <button
-              onClick={() => openTradeMenu('down')}
-              className="px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-bold flex items-center gap-2"
-            >
-              <ArrowRightLeft className="w-5 h-5" />
-              Trade Down
-            </button>
-            <button
-              onClick={openCustomTrade}
-              className="px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg font-bold flex items-center gap-2"
-            >
-              <ArrowRightLeft className="w-5 h-5" />
-              Custom Trade
-            </button>
-          </div>
-        )}
+        {isMyPick && !pendingTradeOffer && !showTradeUp && !showCustomTrade && (() => {
+          let hasOffers = false;
+          try {
+            const offers = generateTradeDownOptions();
+            hasOffers = offers.length > 0;
+          } catch (e) {
+            console.error('Trade offer error:', e);
+          }
+
+          return (
+            <div className="mb-4 flex gap-3">
+              {hasOffers && (
+                <button
+                  onClick={() => openTradeMenu('down')}
+                  className="px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-bold flex items-center gap-2"
+                >
+                  <ArrowRightLeft className="w-5 h-5" />
+                  Trade Offers
+                </button>
+              )}
+              <button
+                onClick={openCustomTrade}
+                className="px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg font-bold flex items-center gap-2"
+              >
+                <ArrowRightLeft className="w-5 h-5" />
+                Custom Trade
+              </button>
+            </div>
+          );
+        })()}
 
         {!isMyPick && !showTradeUp && !showCustomTrade && (
           <div className="mb-4 flex gap-3 flex-wrap">
@@ -2158,7 +2356,7 @@ const NFLMockDraft = () => {
               <div className="flex items-center gap-3">
                 <ArrowRightLeft className="w-8 h-8 text-purple-400" />
                 <h3 className="text-2xl font-bold text-purple-200">
-                  {tradeMode === 'up' ? 'Trade Up Options' : 'Trade Down Options'}
+                  {tradeMode === 'up' ? 'Trade Up Options' : 'Trade Offers'}
                 </h3>
               </div>
               <button
@@ -2298,9 +2496,35 @@ const NFLMockDraft = () => {
 
         {pendingTradeOffer && isMyPick && !counterOffer && (
           <div className="bg-purple-500/20 backdrop-blur-lg rounded-xl p-6 mb-6 border border-purple-500/50">
-            <div className="flex items-center gap-3 mb-4">
-              <ArrowRightLeft className="w-8 h-8 text-purple-400" />
-              <h3 className="text-2xl font-bold text-purple-200">Trade Offer!</h3>
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-3">
+                <ArrowRightLeft className="w-8 h-8 text-purple-400" />
+                <h3 className="text-2xl font-bold text-purple-200">Trade Offer {allTradeOffers.length > 0 ? `(${currentOfferIndex + 1} of ${allTradeOffers.length})` : ''}</h3>
+              </div>
+              {allTradeOffers.length > 1 && (
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => {
+                      const newIndex = currentOfferIndex > 0 ? currentOfferIndex - 1 : allTradeOffers.length - 1;
+                      setCurrentOfferIndex(newIndex);
+                      setPendingTradeOffer(allTradeOffers[newIndex]);
+                    }}
+                    className="px-3 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-bold"
+                  >
+                    ←
+                  </button>
+                  <button
+                    onClick={() => {
+                      const newIndex = currentOfferIndex < allTradeOffers.length - 1 ? currentOfferIndex + 1 : 0;
+                      setCurrentOfferIndex(newIndex);
+                      setPendingTradeOffer(allTradeOffers[newIndex]);
+                    }}
+                    className="px-3 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-bold"
+                  >
+                    →
+                  </button>
+                </div>
+              )}
             </div>
             <div className="bg-black/20 rounded-lg p-4 mb-4">
               <p className="text-white text-lg mb-2">
@@ -2320,7 +2544,7 @@ const NFLMockDraft = () => {
                 </div>
               </div>
             </div>
-            <div className="flex gap-3">
+            <div className="flex gap-3 mb-3">
               <button
                 onClick={acceptTrade}
                 className="flex-1 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-bold"
@@ -2338,6 +2562,19 @@ const NFLMockDraft = () => {
                 className="flex-1 py-3 bg-red-600/50 hover:bg-red-600 text-white rounded-lg font-bold"
               >
                 Decline
+              </button>
+            </div>
+            <div className="flex justify-center mt-3">
+              <button
+                onClick={() => {
+                  setPendingTradeOffer(null);
+                  setAllTradeOffers([]);
+                  setCurrentOfferIndex(0);
+                  openCustomTrade();
+                }}
+                className="px-4 py-2 bg-cyan-600/70 hover:bg-cyan-600 text-white rounded-lg font-semibold text-sm"
+              >
+                Propose My Own Trade Instead
               </button>
             </div>
           </div>
@@ -2392,11 +2629,47 @@ const NFLMockDraft = () => {
               )}
             </div>
 
+            <div className="mb-4">
+              <p className="text-white font-semibold mb-2">Select additional picks YOU will give them (optional):</p>
+              <p className="text-gray-400 text-xs mb-3">Click on your picks to add them to sweeten the deal</p>
+
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-2 max-h-48 overflow-y-auto">
+                {/* Show user's available picks */}
+                {(teamDraftPicks[myTeams[0]] || []).map((p, i) => {
+                  const isSelected = selectedCounterGivePicks.some(sp => sp.round === p.round && sp.year === p.year);
+                  return (
+                    <button
+                      key={i}
+                      onClick={() => {
+                        const exists = selectedCounterGivePicks.find(sp => sp.round === p.round && sp.year === p.year);
+                        if (exists) {
+                          setSelectedCounterGivePicks(selectedCounterGivePicks.filter(sp => !(sp.round === p.round && sp.year === p.year)));
+                        } else {
+                          setSelectedCounterGivePicks([...selectedCounterGivePicks, p]);
+                        }
+                      }}
+                      className={`p-2 rounded-lg text-sm ${isSelected ? 'bg-red-600 text-white' : 'bg-white/10 text-gray-300 hover:bg-white/20'}`}
+                    >
+                      {formatPickDisplay(p.round, p.year, p.fromTeam)}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {selectedCounterGivePicks.length > 0 && (
+                <div className="mt-3 p-3 bg-red-900/30 rounded-lg">
+                  <p className="text-red-300 font-semibold">You will also give them:</p>
+                  <p className="text-white text-sm">
+                    {selectedCounterGivePicks.map(p => `${p.year} Round ${p.round}`).join(', ')}
+                  </p>
+                </div>
+              )}
+            </div>
+
             <div className="flex gap-3">
               <button
                 onClick={submitCounterOffer}
-                disabled={selectedCounterPicks.length === 0}
-                className={`flex-1 py-3 rounded-lg font-bold ${selectedCounterPicks.length > 0 ? 'bg-green-600 hover:bg-green-700 text-white' : 'bg-gray-600 text-gray-400 cursor-not-allowed'}`}
+                className="flex-1 py-3 rounded-lg font-bold bg-green-600 hover:bg-green-700 text-white"
               >
                 Submit Counter Offer
               </button>
@@ -2430,7 +2703,7 @@ const NFLMockDraft = () => {
             <div className="mb-4">
               <p className="text-white font-semibold mb-2">1. Select team to trade with:</p>
               <div className="grid grid-cols-4 md:grid-cols-6 gap-2 max-h-32 overflow-y-auto">
-                {[...new Set(draftOrder)].filter(t => !myTeams.includes(t)).map(team => (
+                {[...new Set(draftOrder)].filter(t => t !== currentTeam).map(team => (
                   <button
                     key={team}
                     onClick={() => setCustomTradeTeam(team)}
