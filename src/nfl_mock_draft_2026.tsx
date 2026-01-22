@@ -979,7 +979,7 @@ const NFLMockDraft = () => {
   const wouldTeamTradeUpForProspect = (
     teamName: string,
     currentPickNum: number,
-    availableProspects: typeof prospects
+    availableProspects: { name: string; position: string; school: string; grade: number; headshot: string; analysis: string }[]
   ): boolean => {
     const teamDraftPos = getTeamDraftPosition(teamName);
     const needs = getTeamNeeds(teamName).slice(0, 3); // Only top 3 needs
@@ -999,7 +999,7 @@ const NFLMockDraft = () => {
   const wouldTeamTradeDown = (
     teamName: string,
     teamPickNum: number,
-    availableProspects: typeof prospects
+    availableProspects: { name: string; position: string; school: string; grade: number; headshot: string; analysis: string }[]
   ): boolean => {
     const needs = getTeamNeeds(teamName); // All needs
 
@@ -1121,7 +1121,7 @@ const NFLMockDraft = () => {
     if (!hasTradeAssets) return options;
 
     // Find teams we could trade with (all teams from current pick forward)
-    const availableProspects = prospects.filter(p => !drafted.includes(p.name));
+    const availableProspects = available;
 
     for (let i = currentPickInRound; i < 32; i++) {
       const targetTeam = draftOrder[i];
@@ -2020,7 +2020,7 @@ const NFLMockDraft = () => {
           </div>
         </div>
         {/* NFL Draft Theme Audio - must be available in setup state */}
-        <audio ref={draftAudioRef} src="/nfl-draft-theme.mp3" preload="auto" volume="1.0" />
+        <audio ref={draftAudioRef} src="/nfl-draft-theme.mp3" preload="auto" />
       </div>
     );
   }
