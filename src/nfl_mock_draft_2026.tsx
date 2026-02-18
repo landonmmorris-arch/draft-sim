@@ -691,24 +691,48 @@ const NFLMockDraft = () => {
     return name.substring(0, 2).toUpperCase();
   };
 
+  // NFL division mapping for trade reluctance
+  const divisions: { [key: string]: string[] } = {
+    'AFC East': ['Buffalo Bills', 'Miami Dolphins', 'New England Patriots', 'New York Jets'],
+    'AFC North': ['Baltimore Ravens', 'Cincinnati Bengals', 'Cleveland Browns', 'Pittsburgh Steelers'],
+    'AFC South': ['Houston Texans', 'Tennessee Titans', 'Jacksonville Jaguars', 'Indianapolis Colts'],
+    'AFC West': ['Denver Broncos', 'Kansas City Chiefs', 'Las Vegas Raiders', 'Los Angeles Chargers'],
+    'NFC East': ['Dallas Cowboys', 'New York Giants', 'Philadelphia Eagles', 'Washington Commanders'],
+    'NFC North': ['Chicago Bears', 'Detroit Lions', 'Minnesota Vikings', 'Green Bay Packers'],
+    'NFC South': ['Carolina Panthers', 'New Orleans Saints', 'Tampa Bay Buccaneers', 'Atlanta Falcons'],
+    'NFC West': ['Arizona Cardinals', 'Los Angeles Rams', 'San Francisco 49ers', 'Seattle Seahawks'],
+  };
+
+  const areDivisionRivals = (team1: string, team2: string): boolean => {
+    return Object.values(divisions).some(div => div.includes(team1) && div.includes(team2));
+  };
+
   // Check if a team has a compelling reason to trade up (high-grade player filling a need)
   const teamWantsToTradeUp = (team: string, currentPickNum: number) => {
     const teamNeeds = getTeamNeeds(team);
     const teamPickPosition = initialDraftOrder.indexOf(team);
     const picksBetween = teamPickPosition - (currentPickNum % 32);
+    const currentRound = Math.floor(currentPickNum / 32) + 1;
 
     if (picksBetween <= 0) return { wants: false, targetPlayer: null };
 
-    // Look for a player that:
-    // 1. Has grade 85+ (elite prospect)
-    // 2. Fills a top-3 need for the team
-    // 3. Likely won't be available at their pick
+    // Later rounds require bigger gaps and higher grades to motivate a trade
+    const minGrade = currentRound === 1 ? 85 : currentRound === 2 ? 78 : 72;
+    const minPickGap = currentRound === 1 ? 3 : currentRound === 2 ? 5 : 8;
+
+    if (picksBetween < minPickGap) return { wants: false, targetPlayer: null };
+
+    // Look for a player that fills a need and is elite enough to trade up for
     const topAvailable = available.slice(0, Math.min(picksBetween + 3, available.length));
 
     for (const player of topAvailable) {
       const needIndex = teamNeeds.indexOf(player.position);
       const isTopNeed = needIndex >= 0 && needIndex <= 2;
-      const isElite = player.grade >= 85;
+      const isElite = player.grade >= minGrade;
+
+      // QB-needy teams are more aggressive - widen need check for QBs
+      const isQBNeed = teamNeeds[0] === 'QB' && player.position === 'QB';
+      const needMatch = isTopNeed || isQBNeed;
 
       // The earlier the player is in available, the less likely they'll last
       const playerRank = available.indexOf(player);
@@ -716,11 +740,14 @@ const NFLMockDraft = () => {
 
       // Check position scarcity - more motivation if few prospects at position
       const positionScarcity = available.filter(p =>
-        p.position === player.position && p.grade >= 80
+        p.position === player.position && p.grade >= (minGrade - 5)
       ).length;
       const isPositionScarce = positionScarcity <= 2;
 
-      if (isElite && isTopNeed && (likelyGone || isPositionScarce)) {
+      // QB scarcity is extra important - teams panic when QBs are scarce
+      const qbUrgency = isQBNeed && positionScarcity <= 3;
+
+      if (isElite && needMatch && (likelyGone || isPositionScarce || qbUrgency)) {
         return { wants: true, targetPlayer: player };
       }
     }
@@ -741,23 +768,47 @@ const NFLMockDraft = () => {
     // Filter to only teams that actually want to trade up (have a compelling target)
     const motivatedBuyers = potentialBuyers.filter(team => {
       const { wants } = teamWantsToTradeUp(team, currentPickNum);
-      return wants;
+      if (!wants) return false;
+
+      // Division rivals rarely trade with each other (only 15% of the time)
+      if (areDivisionRivals(team, currentTeamName) && Math.random() > 0.15) return false;
+
+      return true;
     });
 
     if (motivatedBuyers.length === 0) return null;
 
-    // Pick a random motivated buyer
-    const buyerTeam = motivatedBuyers[Math.floor(Math.random() * motivatedBuyers.length)];
+    // Prefer the most motivated buyer (closest to the pick, strongest need)
+    const scoredBuyers = motivatedBuyers.map(team => {
+      const { targetPlayer } = teamWantsToTradeUp(team, currentPickNum);
+      const teamPos = initialDraftOrder.indexOf(team);
+      const pickGap = teamPos - (currentPickNum % 32);
+      const needs = getTeamNeeds(team);
+      const needPriority = targetPlayer ? needs.indexOf(targetPlayer.position) : 3;
+      // Score: higher grade target + closer pick gap + higher need priority = more motivated
+      const score = (targetPlayer?.grade || 0) * 2 - pickGap * 3 - needPriority * 5;
+      return { team, score, targetPlayer };
+    }).sort((a, b) => b.score - a.score);
+
+    // Pick from top 3 most motivated (with some randomness)
+    const topBuyers = scoredBuyers.slice(0, Math.min(3, scoredBuyers.length));
+    const selected = topBuyers[Math.floor(Math.random() * topBuyers.length)];
+    const buyerTeam = selected.team;
     const buyerPickPosition = initialDraftOrder.indexOf(buyerTeam);
     const buyerPickNum = currentRound * 32 + buyerPickPosition;
 
-    // Calculate what they'd give up
+    // Calculate what they'd give up using realistic NFL draft value chart
     const currentValue = getPickValue(currentPickNum + 1);
     const buyerValue = getPickValue(buyerPickNum + 1);
+    const valueDiff = currentValue - buyerValue;
 
-    // They need to offer more value
-    const extraPicksNeeded = Math.ceil((currentValue - buyerValue) / getPickValue(Math.min(buyerPickNum + 32, rounds * 32)));
+    if (valueDiff <= 0) return null;
 
+    // They need to offer picks to cover the value gap
+    const nextRoundPickValue = getPickValue(Math.min(buyerPickNum + 32, rounds * 32));
+    const extraPicksNeeded = Math.ceil(valueDiff / nextRoundPickValue);
+
+    // Cap at 3 extra picks - bigger gaps just don't happen
     if (extraPicksNeeded <= 0 || extraPicksNeeded > 3) return null;
 
     // Generate future picks to include
@@ -765,7 +816,6 @@ const NFLMockDraft = () => {
     for (let i = 0; i < extraPicksNeeded; i++) {
       const futureRound = currentRound + 2 + i;
       if (futureRound <= rounds) {
-        // Calculate actual pick number for this round based on buyer's position
         const estimatedPickNum = (futureRound - 1) * 32 + buyerPickPosition;
         futurePicks.push(formatPickDisplay(futureRound, 2026, buyerTeam, estimatedPickNum));
       } else {
@@ -785,23 +835,31 @@ const NFLMockDraft = () => {
 
   const shouldTradingHappen = (pickNum: number, currentTradesThisRound: number) => {
     const pickInCurrentRound = pickNum % 32;
+    const currentRound = Math.floor(pickNum / 32) + 1;
 
-    // Target 2-5 trades per round (randomly chosen at start of each round)
-    // Average will be around 3.5 trades per round
+    // Realistic trade frequency by round:
+    // Round 1: 3-6 trades (most active, teams jockey for QBs and top talent)
+    // Round 2: 2-4 trades
+    // Round 3: 1-3 trades
+    // Round 4+: 1-2 trades
+    const maxTradesByRound = currentRound === 1 ? 6 : currentRound === 2 ? 4 : currentRound === 3 ? 3 : 2;
+    const minTradesByRound = currentRound === 1 ? 3 : currentRound === 2 ? 2 : 1;
+
     const targetTrades = pickInCurrentRound === 0
-      ? Math.floor(Math.random() * 4) + 2  // Random number between 2-5
-      : 4;  // Use max if we're mid-round (will be capped by tradesNeeded)
+      ? Math.floor(Math.random() * (maxTradesByRound - minTradesByRound + 1)) + minTradesByRound
+      : maxTradesByRound;
 
     const remainingPicks = 32 - pickInCurrentRound;
-    const tradesNeeded = Math.max(2, targetTrades) - currentTradesThisRound;
+    const tradesNeeded = Math.max(minTradesByRound, targetTrades) - currentTradesThisRound;
 
-    // Don't stop trades until we hit at least the minimum
-    if (currentTradesThisRound >= 5 || remainingPicks < 3) return false;
+    if (currentTradesThisRound >= maxTradesByRound || remainingPicks < 3) return false;
 
-    // Probability increases as we need more trades with fewer picks left
-    // Higher base probability to ensure we hit 2-5 trades per round
-    const baseProbability = 0.15;  // 15% base chance
-    const urgencyMultiplier = currentTradesThisRound < 2 ? 1.5 : 1.0;  // Higher chance if we haven't hit 2 yet
+    // Don't trade in the first 2 picks of round 1 (picks 1-2 are almost never traded)
+    if (currentRound === 1 && pickInCurrentRound < 2) return false;
+
+    // Base probability scales with round (more trades in earlier rounds)
+    const baseProbability = currentRound === 1 ? 0.18 : currentRound === 2 ? 0.12 : 0.08;
+    const urgencyMultiplier = currentTradesThisRound < minTradesByRound ? 1.5 : 1.0;
     const probability = Math.min(0.35, baseProbability + (tradesNeeded / remainingPicks) * urgencyMultiplier);
 
     return Math.random() < probability;
@@ -982,17 +1040,30 @@ const NFLMockDraft = () => {
     availableProspects: { name: string; position: string; school: string; grade: number; headshot: string; analysis: string }[]
   ): boolean => {
     const teamDraftPos = getTeamDraftPosition(teamName);
-    const needs = getTeamNeeds(teamName).slice(0, 3); // Only top 3 needs
+    const currentRound = Math.floor(pick / 32) + 1;
+    const needs = getTeamNeeds(teamName).slice(0, 3);
 
-    // Find high-grade prospects (80+) that match their TOP 3 needs
+    // Division rivals almost never trade (15% chance)
+    const userTeam = myTeams[0] || draftOrder[currentPickNum % 32];
+    if (areDivisionRivals(teamName, userTeam) && Math.random() > 0.15) return false;
+
+    // Scale grade threshold by round
+    const minGrade = currentRound === 1 ? 82 : currentRound === 2 ? 76 : 70;
+    const minGap = currentRound === 1 ? 3 : currentRound === 2 ? 4 : 6;
+
+    // Find prospects matching their top needs
     const neededProspects = availableProspects.filter(p =>
-      p.grade >= 80 && needs.includes(p.position)
+      p.grade >= minGrade && needs.includes(p.position)
     );
 
-    // Team wants to trade up if:
-    // 1. There's a high-grade prospect matching their top 3 needs
-    // 2. They're picking at least 3 spots later (significant gap)
-    return neededProspects.length > 0 && (teamDraftPos - currentPickNum) >= 3;
+    // QB-needy teams are more desperate
+    const isQBNeedy = needs[0] === 'QB';
+    const qbAvailable = availableProspects.some(p => p.position === 'QB' && p.grade >= minGrade);
+    const qbDesperate = isQBNeedy && qbAvailable;
+
+    // Team wants to trade up if needs match and gap is significant
+    const gap = teamDraftPos - currentPickNum;
+    return (neededProspects.length > 0 || qbDesperate) && gap >= minGap;
   };
 
   // Helper function to check if team is willing to trade down
@@ -1001,22 +1072,41 @@ const NFLMockDraft = () => {
     teamPickNum: number,
     availableProspects: { name: string; position: string; school: string; grade: number; headshot: string; analysis: string }[]
   ): boolean => {
-    const needs = getTeamNeeds(teamName); // All needs
+    const needs = getTeamNeeds(teamName);
+    const topNeeds = needs.slice(0, 3);
+    const currentRound = Math.floor(pick / 32) + 1;
+
+    // Division rivals almost never trade
+    const userTeam = myTeams[0] || draftOrder[pick % 32];
+    if (areDivisionRivals(teamName, userTeam) && Math.random() > 0.15) return false;
+
+    // Teams needing a QB as #1 priority almost never trade down in round 1
+    if (needs[0] === 'QB' && currentRound === 1) {
+      const qbsAvailable = availableProspects.filter(p => p.position === 'QB' && p.grade >= 80);
+      if (qbsAvailable.length <= 3) return false; // Scarce QBs = won't trade down
+    }
 
     // Find prospects matching team needs
     const neededProspects = availableProspects.filter(p =>
       needs.includes(p.position)
     );
 
-    // Team willing to trade down if:
-    // 1. No must-have prospect (97+ grade) matching their top 3 needs, OR
-    // 2. Multiple prospects match needs (flexibility)
-    const topNeeds = needs.slice(0, 3);
+    // Must-have threshold scales by round
+    const mustHaveGrade = currentRound === 1 ? 95 : currentRound === 2 ? 88 : 82;
+
     const mustHaveProspects = neededProspects.filter(p =>
-      p.grade >= 97 && topNeeds.includes(p.position)
+      p.grade >= mustHaveGrade && topNeeds.includes(p.position)
     );
 
-    return mustHaveProspects.length === 0 || neededProspects.length >= 3;
+    // Team willing to trade down if:
+    // 1. No must-have prospect at their position of need
+    // 2. OR enough depth that they'll still get someone good later
+    const hasDepth = topNeeds.some(pos => {
+      const prospectsAtPos = availableProspects.filter(p => p.position === pos && p.grade >= (mustHaveGrade - 8));
+      return prospectsAtPos.length >= 4; // Plenty of options = safe to trade down
+    });
+
+    return mustHaveProspects.length === 0 || hasDepth;
   };
 
   const generateTradeDownOptions = () => {
@@ -1067,14 +1157,25 @@ const NFLMockDraft = () => {
         }
       }
 
+      // AI acceptance probability factors in:
+      // - How many extra picks they're giving (more = less likely)
+      // - How far they're moving up (bigger jumps = more desperate = higher acceptance)
+      // - Division rivalry (less likely)
+      const jumpSize = i - myPickPosition;
+      const isDivRival = areDivisionRivals(targetTeam, myTeams[0] || currentTeam);
+      const baseAccept = 0.55;
+      const jumpBonus = Math.min(0.2, jumpSize * 0.02); // Bigger jump = more motivated
+      const pickPenalty = extraPicksReceived * 0.05; // More picks given = less willing
+      const divPenalty = isDivRival ? 0.3 : 0;
+      const acceptChance = Math.min(0.85, Math.max(0.15, baseAccept + jumpBonus - pickPenalty - divPenalty));
+
       const option = {
         targetTeam,
         targetPickNum,
         targetPickInRound: i + 1,
         myPickNum,
         additionalPicks: futurePicks,
-        // AI acceptance probability - they want to move up!
-        acceptChance: Math.min(0.85, 0.6 + (extraPicksReceived * 0.1))
+        acceptChance
       };
       options.push(option);
     }
@@ -1149,6 +1250,13 @@ const NFLMockDraft = () => {
             futurePicks.push(availableForTrade[j]);
           }
 
+          // Acceptance factors: value offered, division rivalry, how far they're moving back
+          const isDivRival = areDivisionRivals(targetTeam, myTeams[0] || currentTeam);
+          const moveBack = userNextPickPos - i;
+          const tradeUpAccept = Math.min(0.8, Math.max(0.2,
+            0.4 + (extraPicksNeeded * 0.12) + (moveBack > 10 ? 0.1 : 0) - (isDivRival ? 0.25 : 0)
+          ));
+
           options.push({
             targetTeam,
             targetPickNum,
@@ -1157,7 +1265,7 @@ const NFLMockDraft = () => {
             userPickInRound: userNextPickPos + 1,
             additionalPicks: futurePicks,
             useFuturePicks: false,
-            acceptChance: Math.min(0.8, 0.4 + (extraPicksNeeded * 0.15))
+            acceptChance: tradeUpAccept
           });
         }
       } else if (availableForTrade.length > 0) {
@@ -1180,6 +1288,12 @@ const NFLMockDraft = () => {
         }
 
         if (offeredValue >= requiredValue * 0.7) {
+          const isDivRival = areDivisionRivals(targetTeam, myTeams[0] || currentTeam);
+          const valueRatio = offeredValue / requiredValue;
+          const futureAccept = Math.min(0.6, Math.max(0.1,
+            0.2 + (valueRatio * 0.3) + (picksToOffer.length * 0.05) - (isDivRival ? 0.2 : 0)
+          ));
+
           options.push({
             targetTeam,
             targetPickNum,
@@ -1188,7 +1302,7 @@ const NFLMockDraft = () => {
             userPickInRound: null,
             additionalPicks: picksToOffer,
             useFuturePicks: true,
-            acceptChance: Math.min(0.6, 0.3 + (picksToOffer.length * 0.1))
+            acceptChance: futureAccept
           });
         }
       }
@@ -1553,9 +1667,12 @@ const NFLMockDraft = () => {
       receiveValue += baseValue;
     });
 
-    // AI accepts if they're getting good value (or at least close)
+    // AI accepts based on value, division rivalry, and whether trade helps their needs
     const valueRatio = giveValue / Math.max(receiveValue, 1);
-    const acceptChance = valueRatio >= 1.0 ? 0.9 : valueRatio >= 0.8 ? 0.6 : valueRatio >= 0.6 ? 0.3 : 0.1;
+    const isDivRival = areDivisionRivals(customTradeTeam, myTeams[0] || currentTeam);
+    const divPenalty = isDivRival ? 0.25 : 0;
+    const baseAccept = valueRatio >= 1.1 ? 0.9 : valueRatio >= 0.9 ? 0.7 : valueRatio >= 0.7 ? 0.4 : valueRatio >= 0.5 ? 0.15 : 0.05;
+    const acceptChance = Math.max(0.05, baseAccept - divPenalty);
 
     if (Math.random() < acceptChance) {
       const userTeam = myTeams[0];
@@ -1734,12 +1851,16 @@ const NFLMockDraft = () => {
       pickInProgress.current = false;
       // Generate random trade offers for user when it's their pick
       if (!pendingTradeOffer && allTradeOffers.length === 0) {
-        // Use the same logic as generateTradeDownOptions to ensure consistency
         const tradeDownOffers = generateTradeDownOptions();
 
         if (tradeDownOffers.length > 0) {
-          // Randomly select 1-3 offers from all available
-          const numOffers = Math.min(tradeDownOffers.length, Math.floor(Math.random() * 3) + 1);
+          // Not every pick gets trade offers (60% chance in R1, 40% in R2, 25% later)
+          const offerChance = round === 1 ? 0.6 : round === 2 ? 0.4 : 0.25;
+          if (Math.random() > offerChance) {
+            // No offers this pick
+          } else {
+          // Realistically 1-2 offers max
+          const numOffers = Math.min(tradeDownOffers.length, Math.random() < 0.7 ? 1 : 2);
           const shuffled = [...tradeDownOffers].sort(() => Math.random() - 0.5);
           const selectedOffers = shuffled.slice(0, numOffers);
 
@@ -1756,6 +1877,7 @@ const NFLMockDraft = () => {
           setAllTradeOffers(formattedOffers);
           setCurrentOfferIndex(0);
           setPendingTradeOffer(formattedOffers[0]);
+          }
         }
       }
     }
