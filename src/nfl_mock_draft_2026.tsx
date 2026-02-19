@@ -806,20 +806,43 @@ const NFLMockDraft = () => {
 
     // They need to offer picks to cover the value gap
     const nextRoundPickValue = getPickValue(Math.min(buyerPickNum + 32, rounds * 32));
-    const extraPicksNeeded = Math.ceil(valueDiff / nextRoundPickValue);
+    let extraPicksNeeded = Math.ceil(valueDiff / nextRoundPickValue);
 
     // Cap at 3 extra picks - bigger gaps just don't happen
     if (extraPicksNeeded <= 0 || extraPicksNeeded > 3) return null;
 
-    // Generate future picks to include
+    // Sometimes the buyer wants an additional pick from the seller (30% chance)
+    // This makes the trade more realistic - e.g. "I'll give you my 1st + 3rd,
+    // but I also want your 4th rounder"
+    let requestedPick: string | null = null;
+    if (Math.random() < 0.30 && extraPicksNeeded >= 1) {
+      // They want a mid-to-late round pick from the selling team
+      const requestableRound = currentRound + 3 + Math.floor(Math.random() * 2); // Ask for a pick 3-4 rounds later
+      if (requestableRound <= 7) {
+        const sellerPos = initialDraftOrder.indexOf(currentTeamName);
+        const requestedPickNum = (requestableRound - 1) * 32 + (sellerPos !== -1 ? sellerPos : 16);
+        requestedPick = formatPickDisplay(requestableRound, 2026, undefined, requestedPickNum);
+        // Since they're asking for a pick back, they give one more pick in return
+        extraPicksNeeded += 1;
+      }
+    }
+
+    // Generate compensation picks - mix of current year and future years
     const futurePicks: string[] = [];
     for (let i = 0; i < extraPicksNeeded; i++) {
       const futureRound = currentRound + 2 + i;
-      if (futureRound <= rounds) {
+
+      // Variety in compensation: sometimes use 2027/2028 picks instead of 2026
+      const useFutureYear = futureRound > rounds || Math.random() < 0.35;
+
+      if (!useFutureYear && futureRound <= rounds) {
         const estimatedPickNum = (futureRound - 1) * 32 + buyerPickPosition;
         futurePicks.push(formatPickDisplay(futureRound, 2026, buyerTeam, estimatedPickNum));
       } else {
-        futurePicks.push(formatPickDisplay(i + 2, 2027, buyerTeam));
+        // Use 2027 picks most of the time, occasionally 2028
+        const futureYear = Math.random() < 0.8 ? 2027 : 2028;
+        const futureRoundNum = Math.min(currentRound + 1 + i, 7);
+        futurePicks.push(formatPickDisplay(futureRoundNum, futureYear, buyerTeam));
       }
     }
 
@@ -829,6 +852,7 @@ const NFLMockDraft = () => {
       pickGiven: currentPickNum,
       pickReceived: buyerPickNum,
       additionalPicks: futurePicks,
+      requestedPick, // Pick they want from you (in addition to current pick)
       forUser
     };
   };
@@ -1145,15 +1169,19 @@ const NFLMockDraft = () => {
 
       const futurePicks: string[] = [];
       for (let j = 0; j < extraPicksReceived; j++) {
-        // Start from next round (currentRound + 1)
         const futureRound = currentRound + 1 + j;
-        if (futureRound < 7) {
-          // Use 2026 picks for rounds 1-7, regardless of how many rounds user is drafting
-          const estimatedPickNum = futureRound * 32 + (i); // Use their position in round
+
+        // Mix of 2026 and future year picks for variety
+        const useFutureYear = futureRound >= 7 || Math.random() < 0.30;
+
+        if (!useFutureYear && futureRound < 7) {
+          const estimatedPickNum = futureRound * 32 + (i);
           futurePicks.push(formatPickDisplay(futureRound + 1, 2026, undefined, estimatedPickNum, targetTeam));
         } else {
-          // Use 2027 picks if we exceed round 7
-          futurePicks.push(formatPickDisplay(j + 1, 2027, undefined, undefined, targetTeam));
+          // 2027 or occasionally 2028 picks
+          const futureYear = Math.random() < 0.8 ? 2027 : 2028;
+          const futureRoundNum = Math.min(currentRound + 1 + j, 7);
+          futurePicks.push(formatPickDisplay(futureRoundNum, futureYear, undefined, undefined, targetTeam));
         }
       }
 
@@ -1865,14 +1893,33 @@ const NFLMockDraft = () => {
           const selectedOffers = shuffled.slice(0, numOffers);
 
           // Convert the offers to the format expected by pendingTradeOffer
-          const formattedOffers = selectedOffers.map(offer => ({
-            fromTeam: offer.targetTeam,
-            toTeam: currentTeamNow,
-            pickGiven: currentPick,
-            pickReceived: offer.targetPickNum,
-            additionalPicks: offer.additionalPicks,
-            forUser: true
-          }));
+          const formattedOffers = selectedOffers.map(offer => {
+            // Sometimes the team trading up also wants one of your later picks (25% chance)
+            let requestedPick: string | null = null;
+            if (Math.random() < 0.25) {
+              const askRound = Math.floor(currentPick / 32) + 4 + Math.floor(Math.random() * 2); // 4-5 rounds later
+              if (askRound <= 7) {
+                const userTeam = myTeams[0] || currentTeamNow;
+                const userPos = initialDraftOrder.indexOf(userTeam);
+                const askPickNum = (askRound - 1) * 32 + (userPos !== -1 ? userPos : 16);
+                requestedPick = formatPickDisplay(askRound, 2026, undefined, askPickNum);
+                // Give an extra pick in return
+                const bonusYear = Math.random() < 0.7 ? 2027 : 2028;
+                const bonusRound = Math.min(askRound - 1, 7);
+                offer.additionalPicks.push(formatPickDisplay(bonusRound, bonusYear, undefined, undefined, offer.targetTeam));
+              }
+            }
+
+            return {
+              fromTeam: offer.targetTeam,
+              toTeam: currentTeamNow,
+              pickGiven: currentPick,
+              pickReceived: offer.targetPickNum,
+              additionalPicks: offer.additionalPicks,
+              requestedPick,
+              forUser: true
+            };
+          });
 
           setAllTradeOffers(formattedOffers);
           setCurrentOfferIndex(0);
@@ -2656,6 +2703,9 @@ const NFLMockDraft = () => {
                 <div>
                   <p className="text-gray-400 text-sm mb-1">You give:</p>
                   <p className="text-white font-semibold">Pick #{pendingTradeOffer.pickGiven + 1} (current)</p>
+                  {pendingTradeOffer.requestedPick && (
+                    <p className="text-red-400 font-semibold">+ {pendingTradeOffer.requestedPick}</p>
+                  )}
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm mb-1">You receive:</p>
