@@ -2120,7 +2120,11 @@ const NFLMockDraft = () => {
       <div className="min-h-screen football-bg p-6">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
-            <h1 className="text-4xl font-bold text-white mb-6">Draft Setup</h1>
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nfl.png&w=80&h=80" alt="NFL" className="w-16 h-16" />
+              <h1 className="text-4xl font-bold text-white">Draft Setup</h1>
+              <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nfl.png&w=80&h=80" alt="NFL" className="w-16 h-16" />
+            </div>
             
             <div className="space-y-6">
               <div>

@@ -5,21 +5,21 @@
 .football-bg {
   background-color: #1a5c2a;
   background-image:
-    /* Yard lines - bold horizontal white lines */
+    /* Yard lines - white horizontal lines */
     repeating-linear-gradient(
       to bottom,
       transparent,
       transparent 146px,
-      rgba(255,255,255,0.15) 146px,
-      rgba(255,255,255,0.15) 150px
+      rgba(255,255,255,0.55) 146px,
+      rgba(255,255,255,0.55) 150px
     ),
-    /* Hash marks - left side */
+    /* Hash marks */
     repeating-linear-gradient(
       to bottom,
       transparent,
       transparent 28px,
-      rgba(255,255,255,0.08) 28px,
-      rgba(255,255,255,0.08) 30px
+      rgba(255,255,255,0.2) 28px,
+      rgba(255,255,255,0.2) 30px
     ),
     /* Field green gradient with darker edges like a real field */
     linear-gradient(
@@ -44,7 +44,7 @@
   bottom: 0;
   background:
     /* Sideline white borders */
-    linear-gradient(to right, rgba(255,255,255,0.12) 0px, rgba(255,255,255,0.06) 4px, transparent 6px, transparent calc(100% - 6px), rgba(255,255,255,0.06) calc(100% - 4px), rgba(255,255,255,0.12) 100%),
+    linear-gradient(to right, rgba(255,255,255,0.4) 0px, rgba(255,255,255,0.2) 4px, transparent 6px, transparent calc(100% - 6px), rgba(255,255,255,0.2) calc(100% - 4px), rgba(255,255,255,0.4) 100%),
     /* Grass stripe pattern - alternating light/dark like a mowed field */
     repeating-linear-gradient(
       to bottom,
