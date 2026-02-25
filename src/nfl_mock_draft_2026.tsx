@@ -37,6 +37,41 @@ const NFLMockDraft = () => {
     'Atlanta Falcons': 'https://a.espncdn.com/i/teamlogos/nfl/500/atl.png',
   };
 
+  const teamColors: { [key: string]: [string, string] } = {
+    'Las Vegas Raiders': ['#000000', '#a5acaf'],
+    'New York Jets': ['#125740', '#000000'],
+    'Arizona Cardinals': ['#97233f', '#000000'],
+    'Tennessee Titans': ['#0c2340', '#4b92db'],
+    'New York Giants': ['#0b2265', '#a71930'],
+    'Cleveland Browns': ['#311d00', '#ff3c00'],
+    'Washington Commanders': ['#5a1414', '#ffb612'],
+    'New Orleans Saints': ['#d3bc8d', '#101820'],
+    'Kansas City Chiefs': ['#e31837', '#ffb81c'],
+    'Cincinnati Bengals': ['#fb4f14', '#000000'],
+    'Miami Dolphins': ['#008e97', '#fc4c02'],
+    'Dallas Cowboys': ['#003594', '#869397'],
+    'Los Angeles Rams': ['#003594', '#ffd100'],
+    'Baltimore Ravens': ['#241773', '#000000'],
+    'Tampa Bay Buccaneers': ['#d50a0a', '#34302b'],
+    'Detroit Lions': ['#0076b6', '#b0b7bc'],
+    'Minnesota Vikings': ['#4f2683', '#ffc62f'],
+    'Carolina Panthers': ['#0085ca', '#101820'],
+    'Pittsburgh Steelers': ['#ffb612', '#101820'],
+    'Los Angeles Chargers': ['#0080c6', '#ffc20e'],
+    'Philadelphia Eagles': ['#004c54', '#a5acaf'],
+    'Chicago Bears': ['#0b162a', '#c83803'],
+    'Buffalo Bills': ['#00338d', '#c60c30'],
+    'San Francisco 49ers': ['#aa0000', '#b3995d'],
+    'Houston Texans': ['#03202f', '#a71930'],
+    'New England Patriots': ['#002244', '#c60c30'],
+    'Denver Broncos': ['#fb4f14', '#002244'],
+    'Seattle Seahawks': ['#002244', '#69be28'],
+    'Green Bay Packers': ['#203731', '#ffb612'],
+    'Indianapolis Colts': ['#002c5f', '#a2aaad'],
+    'Jacksonville Jaguars': ['#006778', '#d7a22a'],
+    'Atlanta Falcons': ['#a71930', '#000000'],
+  };
+
   const initialDraftOrder = [
     'Las Vegas Raiders', 'New York Jets', 'Arizona Cardinals', 'Tennessee Titans',
     'New York Giants', 'Cleveland Browns', 'Washington Commanders', 'New Orleans Saints',
@@ -651,6 +686,17 @@ const NFLMockDraft = () => {
   const isMyPick = myTeams.includes(currentTeam);
   const round = Math.floor(pick / 32) + 1;
   const pickInRound = (pick % 32) + 1;
+
+  const singleTeamBgStyle = myTeams.length === 1 && teamColors[myTeams[0]]
+    ? {
+        backgroundColor: teamColors[myTeams[0]][0],
+        backgroundImage: `
+          repeating-linear-gradient(to bottom, transparent, transparent 146px, rgba(255,255,255,0.25) 146px, rgba(255,255,255,0.25) 150px),
+          repeating-linear-gradient(to bottom, transparent, transparent 28px, rgba(255,255,255,0.1) 28px, rgba(255,255,255,0.1) 30px),
+          linear-gradient(to right, ${teamColors[myTeams[0]][0]} 0%, ${teamColors[myTeams[0]][1]} 50%, ${teamColors[myTeams[0]][0]} 100%)
+        `,
+      }
+    : undefined;
 
   const getTeamNeeds = (team: string) => teamNeeds[team as keyof typeof teamNeeds] || [];
 
@@ -2117,7 +2163,7 @@ const NFLMockDraft = () => {
 
   if (state === 'setup') {
     return (
-      <div className="min-h-screen football-bg p-6">
+      <div className={`min-h-screen p-6 ${singleTeamBgStyle ? '' : 'football-bg'}`} style={singleTeamBgStyle}>
         <div className="max-w-4xl mx-auto">
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
             <div className="flex items-center justify-center gap-4 mb-6">
@@ -2228,7 +2274,7 @@ const NFLMockDraft = () => {
 
   if (state === 'complete') {
     return (
-      <div className="min-h-screen football-bg p-6">
+      <div className={`min-h-screen p-6 ${singleTeamBgStyle ? '' : 'football-bg'}`} style={singleTeamBgStyle}>
         <div className="max-w-6xl mx-auto">
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 mb-6 border border-white/20">
             <div className="flex justify-between items-center">
@@ -2416,7 +2462,7 @@ const NFLMockDraft = () => {
   const currentNeeds = getTeamNeeds(currentTeam);
 
   return (
-    <div className="min-h-screen football-bg p-6">
+    <div className={`min-h-screen p-6 ${singleTeamBgStyle ? '' : 'football-bg'}`} style={singleTeamBgStyle}>
       <div className="max-w-7xl mx-auto">
         {recentTrade && !recentTrade.forUser && (
           <div className="bg-orange-500/20 backdrop-blur-lg rounded-xl p-4 mb-4 border border-orange-500/50 animate-pulse">
