@@ -2288,26 +2288,11 @@ const NFLMockDraft = () => {
     </div>
   );
 
-  // Team branding when single team selected - logos on sides + center watermark
+  // Team branding when single team selected - center watermark
   const teamLogoWatermark = myTeams.length === 1 && teamLogos[myTeams[0]] ? (
-    <>
-      {/* Center watermark */}
-      <div className="fixed inset-0 pointer-events-none flex items-center justify-center" style={{zIndex: 2}}>
-        <img src={teamLogos[myTeams[0]]} alt="" className="w-72 h-72 opacity-15" />
-      </div>
-      {/* Left side logos */}
-      <div className="fixed left-2 top-0 bottom-0 pointer-events-none flex flex-col justify-evenly items-center" style={{zIndex: 2, width: '50px'}}>
-        {[0,1,2,3,4].map(i => (
-          <img key={`left-${i}`} src={teamLogos[myTeams[0]]} alt="" className="w-10 h-10 opacity-20" />
-        ))}
-      </div>
-      {/* Right side logos */}
-      <div className="fixed right-2 top-0 bottom-0 pointer-events-none flex flex-col justify-evenly items-center" style={{zIndex: 2, width: '50px'}}>
-        {[0,1,2,3,4].map(i => (
-          <img key={`right-${i}`} src={teamLogos[myTeams[0]]} alt="" className="w-10 h-10 opacity-20" />
-        ))}
-      </div>
-    </>
+    <div className="fixed inset-0 pointer-events-none flex items-center justify-center" style={{zIndex: 2}}>
+      <img src={teamLogos[myTeams[0]]} alt="" className="w-72 h-72 opacity-15" />
+    </div>
   ) : null;
 
   const aestheticsToggle = (
@@ -2322,20 +2307,23 @@ const NFLMockDraft = () => {
 
   if (fieldMode) {
     return (
-      <div className="min-h-screen football-bg">
-        {showAesthetics && combineOverlay}
+      <>
         {aestheticsToggle}
-      </div>
+        <div className="min-h-screen football-bg">
+          {showAesthetics && combineOverlay}
+        </div>
+      </>
     );
   }
 
   if (state === 'setup') {
     return (
-      <div className={`min-h-screen p-6 ${showAesthetics && singleTeamBgStyle ? '' : 'football-bg'}`} style={showAesthetics ? singleTeamBgStyle : undefined}>
-        {showAesthetics && combineOverlay}
-        {showAesthetics && teamLogoWatermark}
+      <>
         {aestheticsToggle}
-        <div className="max-w-4xl mx-auto">
+        <div className={`min-h-screen p-6 ${showAesthetics && singleTeamBgStyle ? '' : 'football-bg'}`} style={showAesthetics ? singleTeamBgStyle : undefined}>
+          {showAesthetics && combineOverlay}
+          {showAesthetics && teamLogoWatermark}
+          <div className="max-w-4xl mx-auto">
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
             <div className="flex items-center justify-center gap-4 mb-6">
               <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nfl.png&w=80&h=80" alt="NFL" className="w-16 h-16" />
@@ -2430,7 +2418,7 @@ const NFLMockDraft = () => {
                 </div>
               </div>
 
-              <button onClick={() => setState('drafting')}
+              <button onClick={() => { setShowAesthetics(false); setState('drafting'); }}
                 className="w-full py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-lg font-bold text-xl">
                 {myTeams.length > 0 ? 'Start Draft' : 'Start Draft (Spectator Mode)'}
               </button>
@@ -2439,22 +2427,24 @@ const NFLMockDraft = () => {
         </div>
         {/* NFL Draft Theme Audio - must be available in setup state */}
         <audio ref={draftAudioRef} src="/nfl-draft-theme.mp3" preload="auto" />
-      </div>
+        </div>
+      </>
     );
   }
 
   if (state === 'complete') {
     return (
-      <div className={`min-h-screen p-6 ${showAesthetics && singleTeamBgStyle ? '' : 'football-bg'}`} style={showAesthetics ? singleTeamBgStyle : undefined}>
-        {showAesthetics && combineOverlay}
-        {showAesthetics && teamLogoWatermark}
+      <>
         {aestheticsToggle}
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 mb-6 border border-white/20">
-            <div className="flex justify-between items-center">
-              <div className="flex items-center gap-3">
-                <Trophy className="w-12 h-12 text-yellow-400" />
-                <h1 className="text-4xl font-bold text-white">Draft Complete!</h1>
+        <div className={`min-h-screen p-6 ${showAesthetics && singleTeamBgStyle ? '' : 'football-bg'}`} style={showAesthetics ? singleTeamBgStyle : undefined}>
+          {showAesthetics && combineOverlay}
+          {showAesthetics && teamLogoWatermark}
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 mb-6 border border-white/20">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-3">
+                  <Trophy className="w-12 h-12 text-yellow-400" />
+                  <h1 className="text-4xl font-bold text-white">Draft Complete!</h1>
               </div>
               <button onClick={() => window.location.reload()}
                 className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-semibold">
@@ -2630,17 +2620,19 @@ const NFLMockDraft = () => {
           </div>
         </div>
       </div>
+      </>
     );
   }
 
   const currentNeeds = getTeamNeeds(currentTeam);
 
   return (
-    <div className={`min-h-screen p-6 ${showAesthetics && singleTeamBgStyle ? '' : 'football-bg'}`} style={showAesthetics ? singleTeamBgStyle : undefined}>
-      {showAesthetics && combineOverlay}
-      {showAesthetics && teamLogoWatermark}
+    <>
       {aestheticsToggle}
-      <div className="max-w-7xl mx-auto">
+      <div className={`min-h-screen p-6 ${showAesthetics && singleTeamBgStyle ? '' : 'football-bg'}`} style={showAesthetics ? singleTeamBgStyle : undefined}>
+        {showAesthetics && combineOverlay}
+        {showAesthetics && teamLogoWatermark}
+        <div className="max-w-7xl mx-auto">
         {recentTrade && !recentTrade.forUser && (
           <div className="bg-orange-500/20 backdrop-blur-lg rounded-xl p-4 mb-4 border border-orange-500/50 animate-pulse">
             <div className="flex items-center gap-3">
@@ -3375,6 +3367,7 @@ const NFLMockDraft = () => {
         <audio ref={draftAudioRef} src="/nfl-draft-theme.mp3" preload="auto" />
       </div>
     </div>
+    </>
   );
 };
 
