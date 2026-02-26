@@ -5,7 +5,6 @@
 .football-bg {
   background-color: #1a5c2a;
   background-image:
-    /* Yard lines - white horizontal lines */
     repeating-linear-gradient(
       to bottom,
       transparent,
@@ -13,7 +12,6 @@
       rgba(255,255,255,0.55) 146px,
       rgba(255,255,255,0.55) 150px
     ),
-    /* Hash marks */
     repeating-linear-gradient(
       to bottom,
       transparent,
@@ -21,7 +19,6 @@
       rgba(255,255,255,0.2) 28px,
       rgba(255,255,255,0.2) 30px
     ),
-    /* Field green gradient with darker edges like a real field */
     linear-gradient(
       to right,
       #0e3d1a 0%,
@@ -44,9 +41,7 @@
   right: 0;
   bottom: 0;
   background:
-    /* Sideline white borders */
     linear-gradient(to right, rgba(255,255,255,0.4) 0px, rgba(255,255,255,0.2) 4px, transparent 6px, transparent calc(100% - 6px), rgba(255,255,255,0.2) calc(100% - 4px), rgba(255,255,255,0.4) 100%),
-    /* Grass stripe pattern - alternating light/dark like a mowed field */
     repeating-linear-gradient(
       to bottom,
       rgba(255,255,255,0.03) 0px,
@@ -54,7 +49,6 @@
       rgba(0,0,0,0.05) 75px,
       rgba(0,0,0,0.05) 150px
     ),
-    /* Grass texture */
     url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M20 18v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM0 18v-4h2v4h4v2H2v4H0v-4h-4v-2h4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   pointer-events: none;
   z-index: 0;
@@ -65,7 +59,9 @@
   z-index: 1;
 }
 
-/* 8-bit combine overlay */
+/* ========================================
+   NFL COMBINE OVERLAY
+   ======================================== */
 .combine-overlay {
   position: fixed;
   top: 0;
@@ -77,298 +73,228 @@
   overflow: hidden;
 }
 
-/* 8-bit pixel player base */
-.pixel-player {
+/* Big combine title banner */
+.combine-banner {
   position: absolute;
-  image-rendering: pixelated;
-  width: 14px;
-  height: 18px;
-}
-
-/* --- STATION LABELS --- */
-.station-label {
-  position: absolute;
+  top: 1%;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: 'Courier New', monospace;
-  font-size: 9px;
+  font-size: 14px;
   font-weight: bold;
-  color: rgba(255,255,255,0.5);
-  letter-spacing: 1px;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 4px;
   text-transform: uppercase;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
   white-space: nowrap;
-}
-
-/* --- STATION AREAS (dashed borders) --- */
-.station-area {
-  position: absolute;
-  border: 1px dashed rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.15);
+  padding: 4px 20px;
+  background: rgba(0,0,0,0.15);
   border-radius: 4px;
 }
 
-/* ====== 40-YARD DASH STATION (top-left area) ====== */
-.dash-station {
-  top: 5%;
-  left: 2%;
-  width: 45%;
-  height: 18%;
+/* 8-bit pixel player */
+.pixel-player {
+  position: absolute;
+  image-rendering: pixelated;
+  width: 16px;
+  height: 20px;
 }
-.dash-label {
-  top: 5%;
-  left: 4%;
+
+/* Station labels */
+.station-label {
+  position: absolute;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  font-weight: bold;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+  white-space: nowrap;
+  background: rgba(0,0,0,0.2);
+  padding: 2px 8px;
+  border-radius: 2px;
 }
-/* Start and finish lines */
+
+/* Station areas */
+.station-area {
+  position: absolute;
+  border: 2px dashed rgba(255,255,255,0.25);
+  border-radius: 6px;
+  background: rgba(0,0,0,0.06);
+}
+
+/* ====== 40-YARD DASH (top area, wide) ====== */
+.dash-station { top: 6%; left: 3%; width: 44%; height: 20%; }
+.dash-label { top: 6.5%; left: 5%; }
 .dash-start-line, .dash-finish-line {
   position: absolute;
-  width: 2px;
-  height: 14%;
-  background: rgba(255,255,255,0.35);
-  top: 7%;
-}
-.dash-start-line { left: 6%; }
-.dash-finish-line { left: 44%; }
-
-.runner-1 {
+  width: 3px;
+  height: 16%;
   top: 8%;
-  animation: run-dash 4s linear infinite;
 }
-.runner-2 {
-  top: 13%;
-  animation: run-dash 4.5s linear infinite 1.5s;
+.dash-start-line { left: 7%; background: rgba(255,255,255,0.5); }
+.dash-finish-line { left: 44%; background: rgba(255,0,0,0.5); }
+/* "START" and "FINISH" sub-labels */
+.dash-start-text, .dash-finish-text {
+  position: absolute;
+  font-family: 'Courier New', monospace;
+  font-size: 7px;
+  color: rgba(255,255,255,0.4);
+  top: 24%;
 }
-.runner-3 {
-  top: 18%;
-  animation: run-dash 3.8s linear infinite 3s;
-}
+.dash-start-text { left: 5.5%; }
+.dash-finish-text { left: 42.5%; color: rgba(255,100,100,0.5); }
+
+.runner-1 { top: 10%; animation: run-dash 3.5s linear infinite; }
+.runner-2 { top: 15%; animation: run-dash 4s linear infinite 1s; }
+.runner-3 { top: 20%; animation: run-dash 3.2s linear infinite 2.2s; }
 
 @keyframes run-dash {
-  0% { left: 6%; }
-  85% { left: 43%; }
-  86% { left: 43%; opacity: 1; }
-  100% { left: 43%; opacity: 0.3; }
+  0% { left: 7%; }
+  80% { left: 43%; }
+  81%, 100% { left: 43%; opacity: 0.3; }
 }
 
-/* ====== VERTICAL JUMP STATION (top-right) ====== */
-.jump-station {
-  top: 5%;
-  right: 2%;
-  width: 20%;
-  height: 18%;
-}
-.jump-label {
-  top: 5%;
-  right: 4%;
-}
-/* Height measurement pole */
+/* ====== VERTICAL JUMP (top-right) ====== */
+.jump-station { top: 6%; right: 3%; width: 22%; height: 20%; }
+.jump-label { top: 6.5%; right: 5%; }
 .jump-pole {
   position: absolute;
-  width: 3px;
-  height: 14%;
-  top: 7%;
-  right: 14%;
+  width: 4px;
+  height: 16%;
+  top: 8%;
+  right: 12%;
   background: repeating-linear-gradient(
     to bottom,
-    rgba(255,255,255,0.3) 0px,
-    rgba(255,255,255,0.3) 4px,
-    rgba(255,0,0,0.3) 4px,
-    rgba(255,0,0,0.3) 8px
+    rgba(255,255,255,0.4) 0px,
+    rgba(255,255,255,0.4) 5px,
+    rgba(255,0,0,0.4) 5px,
+    rgba(255,0,0,0.4) 10px
   );
+  border-radius: 2px;
+}
+/* Vanes/flags on pole */
+.jump-vane {
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  background: rgba(255,200,0,0.5);
+  right: calc(12% + 4px);
 }
 
-.jumper-1 {
-  top: 16%;
-  right: 15%;
-  animation: vertical-jump 2s ease-in-out infinite;
-}
-.jumper-2 {
-  top: 16%;
-  right: 20%;
-  animation: vertical-jump 2.2s ease-in-out infinite 0.8s;
-}
+.jumper-1 { top: 18%; right: 13%; animation: vertical-jump 2s ease-in-out infinite; }
+.jumper-2 { top: 18%; right: 19%; animation: vertical-jump 2.3s ease-in-out infinite 0.8s; }
+.jumper-3 { top: 18%; right: 25%; animation: vertical-jump 1.8s ease-in-out infinite 1.5s; }
 
 @keyframes vertical-jump {
   0%, 100% { transform: translateY(0); }
-  35% { transform: translateY(-30px); }
-  50% { transform: translateY(-34px); }
-  65% { transform: translateY(-30px); }
+  30% { transform: translateY(-35px); }
+  45% { transform: translateY(-40px); }
+  60% { transform: translateY(-35px); }
 }
 
-/* ====== BENCH PRESS STATION (middle-left) ====== */
-.bench-station {
-  top: 30%;
-  left: 2%;
-  width: 22%;
-  height: 16%;
-}
-.bench-label {
-  top: 30%;
-  left: 4%;
-}
-/* Bench/rack */
+/* ====== BENCH PRESS (middle-left) ====== */
+.bench-station { top: 32%; left: 3%; width: 24%; height: 18%; }
+.bench-label { top: 32.5%; left: 5%; }
 .bench-rack {
   position: absolute;
-  width: 30px;
-  height: 4px;
-  background: rgba(150,150,150,0.4);
-  top: 39%;
-  left: 8%;
-  border-radius: 1px;
+  width: 35px;
+  height: 5px;
+  background: rgba(180,180,180,0.45);
+  border-radius: 2px;
 }
-/* Weight plates */
 .weight-plate {
   position: absolute;
-  width: 4px;
-  height: 10px;
-  background: rgba(100,100,100,0.5);
-  top: 36%;
+  width: 5px;
+  height: 14px;
+  background: rgba(120,120,120,0.5);
   border-radius: 1px;
 }
-.weight-left { left: 7%; }
-.weight-right { left: calc(8% + 28px); }
 
-.bench-1 {
-  top: 35%;
-  left: 10%;
-  animation: bench-press 1.8s ease-in-out infinite;
-}
-.bench-2 {
-  top: 35%;
-  left: 16%;
-  animation: bench-press 2s ease-in-out infinite 0.7s;
-}
+.bench-1 { top: 38%; left: 8%; animation: bench-press 1.6s ease-in-out infinite; }
+.bench-2 { top: 43%; left: 8%; animation: bench-press 1.9s ease-in-out infinite 0.6s; }
+.bench-3 { top: 38%; left: 18%; animation: bench-press 1.7s ease-in-out infinite 1.2s; }
 
 @keyframes bench-press {
   0%, 100% { transform: scaleY(1); }
-  40% { transform: scaleY(0.82); }
-  50% { transform: scaleY(0.8); }
-  60% { transform: scaleY(0.82); }
+  35% { transform: scaleY(0.78); }
+  50% { transform: scaleY(0.75); }
+  65% { transform: scaleY(0.78); }
 }
 
-/* ====== 3-CONE DRILL STATION (middle-right) ====== */
-.cone-station {
-  top: 30%;
-  right: 2%;
-  width: 25%;
-  height: 16%;
-}
-.cone-label {
-  top: 30%;
-  right: 4%;
-}
-
+/* ====== 3-CONE DRILL (middle-right) ====== */
+.cone-station { top: 32%; right: 3%; width: 26%; height: 18%; }
+.cone-label { top: 32.5%; right: 5%; }
 .pixel-cone {
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   background: #ff6600;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   image-rendering: pixelated;
+  opacity: 0.7;
 }
-
-.cone-drill-1 {
-  top: 38%;
-  right: 14%;
-  animation: cone-drill 3.5s ease-in-out infinite;
-}
+.cone-drill-1 { top: 42%; right: 12%; animation: cone-drill 3.5s ease-in-out infinite; }
+.cone-drill-2 { top: 42%; right: 20%; animation: cone-drill 4s ease-in-out infinite 1.5s; }
 
 @keyframes cone-drill {
   0% { transform: translate(0, 0) scaleX(1); }
-  20% { transform: translate(35px, -20px) scaleX(1); }
-  40% { transform: translate(0, -40px) scaleX(-1); }
-  60% { transform: translate(-35px, -20px) scaleX(-1); }
-  80% { transform: translate(0, 0) scaleX(1); }
-  100% { transform: translate(0, 0) scaleX(1); }
+  20% { transform: translate(40px, -25px) scaleX(1); }
+  40% { transform: translate(0, -50px) scaleX(-1); }
+  60% { transform: translate(-40px, -25px) scaleX(-1); }
+  80%, 100% { transform: translate(0, 0) scaleX(1); }
 }
 
-/* ====== BROAD JUMP STATION (bottom-left) ====== */
-.broad-station {
-  bottom: 18%;
-  left: 2%;
-  width: 30%;
-  height: 16%;
-}
-.broad-label {
-  bottom: 32%;
-  left: 4%;
-}
-/* Landing pit lines */
+/* ====== BROAD JUMP (bottom-left) ====== */
+.broad-station { bottom: 16%; left: 3%; width: 28%; height: 18%; }
+.broad-label { bottom: 32.5%; left: 5%; }
 .broad-line {
   position: absolute;
-  width: 24%;
-  height: 1px;
-  background: rgba(255,255,255,0.25);
-  left: 4%;
+  width: 22%;
+  height: 2px;
+  background: rgba(255,255,255,0.3);
+  left: 5%;
 }
-
-.broad-jumper-1 {
-  bottom: 24%;
-  left: 6%;
-  animation: broad-jump 3s ease-in-out infinite;
-}
+.broad-jumper-1 { bottom: 22%; left: 7%; animation: broad-jump 3.2s ease-in-out infinite; }
+.broad-jumper-2 { bottom: 26%; left: 7%; animation: broad-jump 3.5s ease-in-out infinite 1.5s; }
 
 @keyframes broad-jump {
   0%, 15% { transform: translate(0, 0) scaleY(1); }
-  25% { transform: translate(0, 0) scaleY(0.8); }
-  40% { transform: translate(40px, -20px) scaleY(1); }
-  55% { transform: translate(70px, 0) scaleY(0.9); }
-  70%, 100% { transform: translate(70px, 0) scaleY(1); opacity: 0.5; }
+  25% { transform: translate(0, 0) scaleY(0.75); }
+  40% { transform: translate(50px, -25px) scaleY(1); }
+  55% { transform: translate(85px, 0) scaleY(0.88); }
+  65%, 100% { transform: translate(85px, 0) scaleY(1); opacity: 0.4; }
 }
 
-/* ====== SHUTTLE RUN / 20-YARD SHUTTLE (bottom-center) ====== */
-.shuttle-station {
-  bottom: 18%;
-  left: 38%;
-  width: 24%;
-  height: 16%;
-}
-.shuttle-label {
-  bottom: 32%;
-  left: 40%;
-}
-/* Shuttle markers */
+/* ====== 20-YARD SHUTTLE (bottom-center) ====== */
+.shuttle-station { bottom: 16%; left: 36%; width: 28%; height: 18%; }
+.shuttle-label { bottom: 32.5%; left: 38%; }
 .shuttle-marker {
   position: absolute;
-  width: 2px;
-  height: 10%;
-  background: rgba(255,255,255,0.25);
-  bottom: 22%;
+  width: 3px;
+  height: 12%;
+  background: rgba(255,255,255,0.3);
+  bottom: 20%;
 }
-
-.shuttle-1 {
-  bottom: 23%;
-  left: 42%;
-  animation: shuttle-run 2.5s ease-in-out infinite;
-}
-.shuttle-2 {
-  bottom: 27%;
-  left: 42%;
-  animation: shuttle-run 2.8s ease-in-out infinite 1.2s;
-}
+.shuttle-1 { bottom: 22%; left: 40%; animation: shuttle-run 2.5s ease-in-out infinite; }
+.shuttle-2 { bottom: 26%; left: 40%; animation: shuttle-run 2.8s ease-in-out infinite 1s; }
+.shuttle-3 { bottom: 22%; left: 48%; animation: shuttle-run 2.3s ease-in-out infinite 2s; }
 
 @keyframes shuttle-run {
   0%, 100% { transform: translateX(0) scaleX(1); }
-  45% { transform: translateX(80px) scaleX(1); }
-  50% { transform: translateX(80px) scaleX(-1); }
+  45% { transform: translateX(90px) scaleX(1); }
+  50% { transform: translateX(90px) scaleX(-1); }
   95% { transform: translateX(0) scaleX(-1); }
 }
 
-/* ====== RECEIVING STATION (bottom-right) ====== */
-.catch-station {
-  bottom: 18%;
-  right: 2%;
-  width: 25%;
-  height: 16%;
-}
-.catch-label {
-  bottom: 32%;
-  right: 4%;
-}
-
-.catcher-1 {
-  bottom: 22%;
-  right: 10%;
-  animation: catch-ball 3s ease-in-out infinite;
-}
-
+/* ====== PASS CATCHING (bottom-right) ====== */
+.catch-station { bottom: 16%; right: 3%; width: 28%; height: 18%; }
+.catch-label { bottom: 32.5%; right: 5%; }
+.catcher-1 { bottom: 20%; right: 8%; animation: catch-ball 3s ease-in-out infinite; }
+.catcher-2 { bottom: 24%; right: 14%; animation: catch-ball 3.5s ease-in-out infinite 1.5s; }
+.thrower-1 { bottom: 22%; right: 28%; }
 .pixel-football {
   position: absolute;
   width: 8px;
@@ -378,53 +304,34 @@
   border-radius: 50%;
   box-shadow: 1px 0 0 #6b3410;
 }
-
-.football-throw-1 {
-  bottom: 26%;
-  animation: throw-ball 3s ease-in-out infinite;
-}
+.football-throw-1 { bottom: 26%; animation: throw-ball 3s ease-in-out infinite; }
+.football-throw-2 { bottom: 30%; animation: throw-ball 3.5s ease-in-out infinite 1.5s; }
 
 @keyframes throw-ball {
-  0% { right: 28%; opacity: 1; transform: rotate(0deg); }
-  35% { right: 14%; opacity: 1; transform: translateY(-25px) rotate(360deg); }
-  45% { right: 11%; opacity: 1; transform: translateY(-10px) rotate(540deg); }
-  50% { right: 10%; opacity: 0; transform: translateY(0px) rotate(600deg); }
-  100% { right: 28%; opacity: 0; }
+  0% { right: 26%; opacity: 1; transform: rotate(0deg); }
+  35% { right: 12%; opacity: 1; transform: translateY(-28px) rotate(360deg); }
+  45% { right: 9%; opacity: 1; transform: translateY(-12px) rotate(540deg); }
+  50% { right: 8%; opacity: 0; transform: translateY(0px) rotate(600deg); }
+  100% { right: 26%; opacity: 0; }
 }
 
 @keyframes catch-ball {
   0%, 30% { transform: translateY(0); }
-  40% { transform: translateY(-20px) rotate(-10deg); }
-  50% { transform: translateY(-22px) rotate(0deg); }
-  60% { transform: translateY(-12px) rotate(5deg); }
+  40% { transform: translateY(-22px) rotate(-12deg); }
+  50% { transform: translateY(-25px) rotate(0deg); }
+  60% { transform: translateY(-15px) rotate(5deg); }
   70%, 100% { transform: translateY(0) rotate(0deg); }
 }
 
-/* --- QB THROWER (for receiving station) --- */
-.thrower-1 {
-  bottom: 24%;
-  right: 26%;
-}
-
-/* --- COACHES / SCOUTS (watching from sidelines) --- */
-.coach-1 {
-  top: 52%;
-  left: 3%;
-  animation: clipboard 2s ease-in-out infinite;
-}
-.coach-2 {
-  top: 52%;
-  right: 3%;
-  animation: clipboard 2.5s ease-in-out infinite 1s;
-}
-.coach-3 {
-  bottom: 6%;
-  left: 50%;
-  animation: clipboard 3s ease-in-out infinite 0.5s;
-}
+/* ====== COACHES / SCOUTS ====== */
+.coach-1 { top: 55%; left: 3%; animation: clipboard 2s ease-in-out infinite; }
+.coach-2 { top: 55%; right: 3%; animation: clipboard 2.5s ease-in-out infinite 1s; }
+.coach-3 { bottom: 8%; left: 20%; animation: clipboard 3s ease-in-out infinite 0.5s; }
+.coach-4 { bottom: 8%; right: 20%; animation: clipboard 2.2s ease-in-out infinite 1.5s; }
+.coach-5 { top: 28%; left: 30%; animation: clipboard 2.8s ease-in-out infinite 0.3s; }
 
 @keyframes clipboard {
   0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(2deg); }
-  75% { transform: rotate(-2deg); }
+  25% { transform: rotate(3deg); }
+  75% { transform: rotate(-3deg); }
 }

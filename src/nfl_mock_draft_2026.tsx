@@ -2166,82 +2166,128 @@ const NFLMockDraft = () => {
   };
 
   // 8-bit pixel art SVGs for combine characters
-  const pixelRunner = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='16' viewBox='0 0 12 16'%3E%3Crect x='4' y='0' width='4' height='4' fill='%23f4c587'/%3E%3Crect x='2' y='4' width='8' height='4' fill='%23ffffff'/%3E%3Crect x='4' y='4' width='4' height='4' fill='%23e53e3e'/%3E%3Crect x='2' y='8' width='3' height='4' fill='%23e53e3e'/%3E%3Crect x='7' y='8' width='3' height='4' fill='%23e53e3e'/%3E%3Crect x='2' y='12' width='3' height='4' fill='%232d3748'/%3E%3Crect x='7' y='12' width='3' height='4' fill='%232d3748'/%3E%3C/svg%3E";
-  const pixelRunner2 = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='16' viewBox='0 0 12 16'%3E%3Crect x='4' y='0' width='4' height='4' fill='%23f4c587'/%3E%3Crect x='2' y='4' width='8' height='4' fill='%23ffffff'/%3E%3Crect x='4' y='4' width='4' height='4' fill='%233182ce'/%3E%3Crect x='2' y='8' width='3' height='4' fill='%233182ce'/%3E%3Crect x='7' y='8' width='3' height='4' fill='%233182ce'/%3E%3Crect x='2' y='12' width='3' height='4' fill='%232d3748'/%3E%3Crect x='7' y='12' width='3' height='4' fill='%232d3748'/%3E%3C/svg%3E";
-  const pixelRunner3 = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='16' viewBox='0 0 12 16'%3E%3Crect x='4' y='0' width='4' height='4' fill='%23d2a679'/%3E%3Crect x='2' y='4' width='8' height='4' fill='%23ffffff'/%3E%3Crect x='4' y='4' width='4' height='4' fill='%23805ad5'/%3E%3Crect x='2' y='8' width='3' height='4' fill='%23805ad5'/%3E%3Crect x='7' y='8' width='3' height='4' fill='%23805ad5'/%3E%3Crect x='2' y='12' width='3' height='4' fill='%232d3748'/%3E%3Crect x='7' y='12' width='3' height='4' fill='%232d3748'/%3E%3C/svg%3E";
-  const pixelCoach = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='16' viewBox='0 0 12 16'%3E%3Crect x='3' y='0' width='6' height='2' fill='%232d3748'/%3E%3Crect x='4' y='2' width='4' height='3' fill='%23f4c587'/%3E%3Crect x='2' y='5' width='8' height='5' fill='%232d3748'/%3E%3Crect x='0' y='6' width='2' height='3' fill='%23f4c587'/%3E%3Crect x='10' y='6' width='2' height='3' fill='%23f4c587'/%3E%3Crect x='3' y='10' width='3' height='6' fill='%232d3748'/%3E%3Crect x='6' y='10' width='3' height='6' fill='%232d3748'/%3E%3C/svg%3E";
-  const pixelJumper = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='16' viewBox='0 0 12 16'%3E%3Crect x='4' y='0' width='4' height='4' fill='%23d2a679'/%3E%3Crect x='2' y='4' width='8' height='4' fill='%23ffffff'/%3E%3Crect x='4' y='4' width='4' height='4' fill='%23dd6b20'/%3E%3Crect x='0' y='5' width='2' height='2' fill='%23f4c587'/%3E%3Crect x='10' y='5' width='2' height='2' fill='%23f4c587'/%3E%3Crect x='2' y='8' width='3' height='4' fill='%23dd6b20'/%3E%3Crect x='7' y='8' width='3' height='4' fill='%23dd6b20'/%3E%3Crect x='2' y='12' width='3' height='4' fill='%232d3748'/%3E%3Crect x='7' y='12' width='3' height='4' fill='%232d3748'/%3E%3C/svg%3E";
+  // NFL Combine uniform: white compression shirt, dark grey shorts, different skin tones
+  // Player 1: light skin, white shirt with NFL shield blue stripe
+  const pixelRunner = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='18' viewBox='0 0 14 18'%3E%3Crect x='5' y='0' width='4' height='4' fill='%23f4c587'/%3E%3Crect x='2' y='4' width='10' height='5' fill='%23e8e8e8'/%3E%3Crect x='5' y='5' width='4' height='2' fill='%23013369'/%3E%3Crect x='0' y='5' width='2' height='3' fill='%23f4c587'/%3E%3Crect x='12' y='5' width='2' height='3' fill='%23f4c587'/%3E%3Crect x='3' y='9' width='3' height='5' fill='%232d2d2d'/%3E%3Crect x='8' y='9' width='3' height='5' fill='%232d2d2d'/%3E%3Crect x='3' y='14' width='3' height='4' fill='%23f4c587'/%3E%3Crect x='8' y='14' width='3' height='4' fill='%23f4c587'/%3E%3C/svg%3E";
+  // Player 2: medium skin
+  const pixelRunner2 = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='18' viewBox='0 0 14 18'%3E%3Crect x='5' y='0' width='4' height='4' fill='%23c68642'/%3E%3Crect x='2' y='4' width='10' height='5' fill='%23e8e8e8'/%3E%3Crect x='5' y='5' width='4' height='2' fill='%23013369'/%3E%3Crect x='0' y='5' width='2' height='3' fill='%23c68642'/%3E%3Crect x='12' y='5' width='2' height='3' fill='%23c68642'/%3E%3Crect x='3' y='9' width='3' height='5' fill='%232d2d2d'/%3E%3Crect x='8' y='9' width='3' height='5' fill='%232d2d2d'/%3E%3Crect x='3' y='14' width='3' height='4' fill='%23c68642'/%3E%3Crect x='8' y='14' width='3' height='4' fill='%23c68642'/%3E%3C/svg%3E";
+  // Player 3: dark skin
+  const pixelRunner3 = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='18' viewBox='0 0 14 18'%3E%3Crect x='5' y='0' width='4' height='4' fill='%238d5524'/%3E%3Crect x='2' y='4' width='10' height='5' fill='%23e8e8e8'/%3E%3Crect x='5' y='5' width='4' height='2' fill='%23013369'/%3E%3Crect x='0' y='5' width='2' height='3' fill='%238d5524'/%3E%3Crect x='12' y='5' width='2' height='3' fill='%238d5524'/%3E%3Crect x='3' y='9' width='3' height='5' fill='%232d2d2d'/%3E%3Crect x='8' y='9' width='3' height='5' fill='%232d2d2d'/%3E%3Crect x='3' y='14' width='3' height='4' fill='%238d5524'/%3E%3Crect x='8' y='14' width='3' height='4' fill='%238d5524'/%3E%3C/svg%3E";
+  // Coach/Scout: dark polo, cap, clipboard
+  const pixelCoach = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='18' viewBox='0 0 14 18'%3E%3Crect x='3' y='0' width='8' height='2' fill='%23013369'/%3E%3Crect x='5' y='2' width='4' height='3' fill='%23f4c587'/%3E%3Crect x='2' y='5' width='10' height='5' fill='%23013369'/%3E%3Crect x='0' y='6' width='2' height='3' fill='%23f4c587'/%3E%3Crect x='12' y='7' width='2' height='4' fill='%23d4a76a'/%3E%3Crect x='3' y='10' width='4' height='8' fill='%232d3748'/%3E%3Crect x='7' y='10' width='4' height='8' fill='%232d3748'/%3E%3C/svg%3E";
+  // Jumper: arms up version, combine shirt
+  const pixelJumper = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='18' viewBox='0 0 14 18'%3E%3Crect x='5' y='0' width='4' height='4' fill='%23c68642'/%3E%3Crect x='2' y='4' width='10' height='5' fill='%23e8e8e8'/%3E%3Crect x='5' y='5' width='4' height='2' fill='%23013369'/%3E%3Crect x='0' y='2' width='2' height='3' fill='%23c68642'/%3E%3Crect x='12' y='2' width='2' height='3' fill='%23c68642'/%3E%3Crect x='3' y='9' width='3' height='5' fill='%232d2d2d'/%3E%3Crect x='8' y='9' width='3' height='5' fill='%232d2d2d'/%3E%3Crect x='3' y='14' width='3' height='4' fill='%23c68642'/%3E%3Crect x='8' y='14' width='3' height='4' fill='%23c68642'/%3E%3C/svg%3E";
 
   const combineOverlay = (
     <div className="combine-overlay">
-      {/* === 40-YARD DASH STATION === */}
+      {/* Banner */}
+      <div className="combine-banner">NFL SCOUTING COMBINE 2026</div>
+
+      {/* === 40-YARD DASH === */}
       <div className="station-area dash-station" />
       <span className="station-label dash-label">40-YD DASH</span>
       <div className="dash-start-line" />
       <div className="dash-finish-line" />
+      <span className="dash-start-text">START</span>
+      <span className="dash-finish-text">FINISH</span>
       <img src={pixelRunner} className="pixel-player runner-1" alt="" />
       <img src={pixelRunner2} className="pixel-player runner-2" alt="" />
       <img src={pixelRunner3} className="pixel-player runner-3" alt="" />
 
-      {/* === VERTICAL JUMP STATION === */}
+      {/* === VERTICAL JUMP === */}
       <div className="station-area jump-station" />
       <span className="station-label jump-label">VERT JUMP</span>
       <div className="jump-pole" />
+      <div className="jump-vane" style={{top: '9%'}} />
+      <div className="jump-vane" style={{top: '11%'}} />
+      <div className="jump-vane" style={{top: '13%'}} />
+      <div className="jump-vane" style={{top: '15%'}} />
+      <div className="jump-vane" style={{top: '17%'}} />
       <img src={pixelJumper} className="pixel-player jumper-1" alt="" />
       <img src={pixelJumper} className="pixel-player jumper-2" alt="" />
+      <img src={pixelRunner} className="pixel-player jumper-3" alt="" />
 
-      {/* === BENCH PRESS STATION === */}
+      {/* === BENCH PRESS === */}
       <div className="station-area bench-station" />
-      <span className="station-label bench-label">BENCH PRESS</span>
-      <div className="bench-rack" />
-      <div className="weight-plate weight-left" />
-      <div className="weight-plate weight-right" />
+      <span className="station-label bench-label">225 LB BENCH</span>
+      <div className="bench-rack" style={{top: '40%', left: '7%'}} />
+      <div className="weight-plate" style={{top: '37%', left: '6%'}} />
+      <div className="weight-plate" style={{top: '37%', left: 'calc(7% + 33px)'}} />
+      <div className="bench-rack" style={{top: '46%', left: '16%'}} />
+      <div className="weight-plate" style={{top: '43%', left: '15%'}} />
+      <div className="weight-plate" style={{top: '43%', left: 'calc(16% + 33px)'}} />
       <img src={pixelRunner2} className="pixel-player bench-1" alt="" />
-      <img src={pixelRunner} className="pixel-player bench-2" alt="" />
+      <img src={pixelRunner3} className="pixel-player bench-2" alt="" />
+      <img src={pixelRunner} className="pixel-player bench-3" alt="" />
 
-      {/* === 3-CONE DRILL STATION === */}
+      {/* === 3-CONE DRILL === */}
       <div className="station-area cone-station" />
       <span className="station-label cone-label">3-CONE DRILL</span>
+      <div className="pixel-cone" style={{top: '42%', right: '12%'}} />
+      <div className="pixel-cone" style={{top: '37%', right: '9%'}} />
+      <div className="pixel-cone" style={{top: '32%', right: '12%'}} />
+      <div className="pixel-cone" style={{top: '42%', right: '22%'}} />
+      <div className="pixel-cone" style={{top: '37%', right: '19%'}} />
+      <div className="pixel-cone" style={{top: '32%', right: '22%'}} />
       <img src={pixelRunner3} className="pixel-player cone-drill-1" alt="" />
-      <div className="pixel-cone" style={{top: '38%', right: '14%'}} />
-      <div className="pixel-cone" style={{top: '34%', right: '11%'}} />
-      <div className="pixel-cone" style={{top: '30%', right: '14%'}} />
+      <img src={pixelRunner} className="pixel-player cone-drill-2" alt="" />
 
-      {/* === BROAD JUMP STATION === */}
+      {/* === BROAD JUMP === */}
       <div className="station-area broad-station" />
       <span className="station-label broad-label">BROAD JUMP</span>
-      <div className="broad-line" style={{bottom: '26%'}} />
-      <div className="broad-line" style={{bottom: '28%'}} />
+      <div className="broad-line" style={{bottom: '24%'}} />
+      <div className="broad-line" style={{bottom: '27%'}} />
       <div className="broad-line" style={{bottom: '30%'}} />
       <img src={pixelJumper} className="pixel-player broad-jumper-1" alt="" />
+      <img src={pixelRunner2} className="pixel-player broad-jumper-2" alt="" />
 
-      {/* === 20-YARD SHUTTLE STATION === */}
+      {/* === 20-YARD SHUTTLE === */}
       <div className="station-area shuttle-station" />
       <span className="station-label shuttle-label">20-YD SHUTTLE</span>
-      <div className="shuttle-marker" style={{left: '42%'}} />
-      <div className="shuttle-marker" style={{left: '56%'}} />
+      <div className="shuttle-marker" style={{left: '40%'}} />
+      <div className="shuttle-marker" style={{left: '58%'}} />
       <img src={pixelRunner} className="pixel-player shuttle-1" alt="" />
       <img src={pixelRunner2} className="pixel-player shuttle-2" alt="" />
+      <img src={pixelRunner3} className="pixel-player shuttle-3" alt="" />
 
-      {/* === RECEIVING / ROUTE RUNNING STATION === */}
+      {/* === PASS CATCHING === */}
       <div className="station-area catch-station" />
       <span className="station-label catch-label">PASS CATCHING</span>
       <img src={pixelCoach} className="pixel-player thrower-1" alt="" />
       <img src={pixelRunner2} className="pixel-player catcher-1" alt="" />
+      <img src={pixelRunner3} className="pixel-player catcher-2" alt="" />
       <div className="pixel-football football-throw-1" />
+      <div className="pixel-football football-throw-2" />
 
-      {/* === COACHES / SCOUTS === */}
+      {/* === COACHES / SCOUTS watching === */}
       <img src={pixelCoach} className="pixel-player coach-1" alt="" />
       <img src={pixelCoach} className="pixel-player coach-2" alt="" />
       <img src={pixelCoach} className="pixel-player coach-3" alt="" />
+      <img src={pixelCoach} className="pixel-player coach-4" alt="" />
+      <img src={pixelCoach} className="pixel-player coach-5" alt="" />
     </div>
   );
 
-  // Team logo watermark when single team selected
+  // Team branding when single team selected - logos on sides + center watermark
   const teamLogoWatermark = myTeams.length === 1 && teamLogos[myTeams[0]] ? (
-    <div className="fixed inset-0 pointer-events-none flex items-center justify-center" style={{zIndex: 2}}>
-      <img src={teamLogos[myTeams[0]]} alt="" className="w-72 h-72 opacity-20" />
-    </div>
+    <>
+      {/* Center watermark */}
+      <div className="fixed inset-0 pointer-events-none flex items-center justify-center" style={{zIndex: 2}}>
+        <img src={teamLogos[myTeams[0]]} alt="" className="w-72 h-72 opacity-15" />
+      </div>
+      {/* Left side logos */}
+      <div className="fixed left-2 top-0 bottom-0 pointer-events-none flex flex-col justify-evenly items-center" style={{zIndex: 2, width: '50px'}}>
+        {[0,1,2,3,4].map(i => (
+          <img key={`left-${i}`} src={teamLogos[myTeams[0]]} alt="" className="w-10 h-10 opacity-20" />
+        ))}
+      </div>
+      {/* Right side logos */}
+      <div className="fixed right-2 top-0 bottom-0 pointer-events-none flex flex-col justify-evenly items-center" style={{zIndex: 2, width: '50px'}}>
+        {[0,1,2,3,4].map(i => (
+          <img key={`right-${i}`} src={teamLogos[myTeams[0]]} alt="" className="w-10 h-10 opacity-20" />
+        ))}
+      </div>
+    </>
   ) : null;
 
   if (state === 'setup') {
