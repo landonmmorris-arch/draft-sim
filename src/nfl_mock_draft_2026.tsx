@@ -2313,7 +2313,7 @@ const NFLMockDraft = () => {
   const aestheticsToggle = (
     <button
       onClick={() => setShowAesthetics(!showAesthetics)}
-      className="fixed bottom-3 left-3 z-50 bg-black/40 hover:bg-black/60 text-white/70 hover:text-white text-xs px-2 py-1 rounded-full backdrop-blur-sm border border-white/20 transition-all"
+      className="fixed bottom-4 left-4 z-50 bg-black/60 hover:bg-black/80 text-white text-sm font-bold px-3 py-2 rounded-lg backdrop-blur-sm border-2 border-white/30 hover:border-white/50 transition-all shadow-lg"
       title={showAesthetics ? 'Hide effects' : 'Show effects'}
     >
       {showAesthetics ? 'FX ON' : 'FX OFF'}
